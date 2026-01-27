@@ -1,0 +1,1718 @@
+%%
+%% This is file `afesbrand.sty',
+%%
+%% Copyright (c) 2025-2026 David Purton <david.purton@afes.org.au>
+%% 
+%% This work may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%% 
+%% This work is "maintained" (as per the LPPL maintenance status)
+%% by David Purton.
+%% 
+\ProvidesExplPackage{afesbrand}{2026/1/29}{1.0a}
+  {AFES Brand Style (DCP)}
+
+\RequirePackage { fontspec }
+\RequirePackage { tikz }
+\RequirePackage { luamplib }
+
+
+%%%
+%%% Colours
+%%%
+
+\definecolorset { RGB / cmyk } { } { }
+  {
+    dustyblue,       153, 217, 232 / 0.37, 0,    0.07, 0;
+    huntergreen,      52,  97,  59 / 0.78, 0.38, 0.86, 0.31;
+    sagegreen,       106, 175, 124 / 0.62, 0.1,  0.65, 0;
+    slatenavy,        36,  44,  55 / 0.82, 0.72, 0.53, 0.57;
+    royalblue,         0, 108, 197 / 0.87, 0.58, 0,    0;
+    digitalpink,     255, 186, 254 / 0.06, 0.4,  0,    0;
+    lemonyellow,     249, 244, 178 / 0.03, 0,    0.37, 0;
+    sunnyyellow,     239, 217,  84 / 0.07, 0.09, 0.8,  0;
+    mustardyellow,   231, 173,  34 / 0.09, 0.32, 1,    0;
+    naturalgrey,     230, 230, 223 / 0.09, 0.06, 0.11, 0;
+    tangerineorange, 255, 102,  34 / 0,    0.74, 0.95, 0;
+    lightorange,     255, 200, 141 / 0,    0.24, 0.48, 0
+  }
+
+\colorlet { DUSTYBLUE }       { dustyblue }
+\colorlet { HUNTERGREEN }     { huntergreen }
+\colorlet { SAGEGREEN }       { sagegreen }
+\colorlet { SLATENAVY }       { slatenavy }
+\colorlet { ROYALBLUE }       { royalblue }
+\colorlet { DIGITALPINK }     { digitalpink }
+\colorlet { LEMONYELLOW }     { lemonyellow }
+\colorlet { SUNNYYELLOW }     { sunnyyellow }
+\colorlet { MUSTARDYELLOW }   { mustardyellow }
+\colorlet { NATURALGREY }     { naturalgrey }
+\colorlet { TANGERINEORANGE } { tangerineorange }
+\colorlet { LIGHTORANGE }     { lightorange }
+
+\keys_define:nn { afesbrand / colour }
+  {
+    , accent  .tl_set:N         = \l__afesbrand_colour_accent_tl
+    , accent  .value_required:n = true
+    , accent  .initial:n        = dustyblue
+    , hero    .tl_set:N         = \l__afesbrand_colour_hero_tl
+    , hero    .value_required:n = true
+    , hero    .initial:n        = huntergreen
+    , neutral .tl_set:N         = \l__afesbrand_colour_neutral_tl
+    , neutral .value_required:n = true
+    , neutral .initial:n        = naturalgrey
+  }
+
+\cs_new_protected:Nn \__afesbrand_set_colours:n
+  {
+    \keys_set_known:nn { afesbrand } {#1}
+    \keys_set_known:nn { afesbrand / colour } {#1}
+    \colorlet { accent }  { \l__afesbrand_colour_accent_tl }
+    \colorlet { hero }    { \l__afesbrand_colour_hero_tl }
+    \colorlet { neutral } { \l__afesbrand_colour_neutral_tl }
+    \colorlet { ACCENT }  { \l__afesbrand_colour_accent_tl }
+    \colorlet { HERO }    { \l__afesbrand_colour_hero_tl }
+    \colorlet { NEUTRAL } { \l__afesbrand_colour_neutral_tl }
+  }
+
+\__afesbrand_set_colours:n { }
+
+
+%%%
+%%% Fonts
+%%%
+
+\tl_new:N \l__afesbrand_font_poetsenone_tl
+\tl_new:N \l__afesbrand_font_livvic_tl
+
+\fontspec_set_family:Nnn \l__afesbrand_font_poetsenone_tl
+  {
+    , LetterSpace = -5
+    , Ligatures   = TeX
+    , WordSpace   = 0.765
+  }
+  { PoetsenOne-Regular.ttf }
+
+\fontspec_set_family:Nnn \l__afesbrand_font_livvic_tl
+  {
+    , Extension      = .ttf
+    , Ligatures      = TeX
+    , FontFace       = { ul } { n }  { Font = *-Thin }
+    , FontFace       = { ul } { it } { Font = *-ThinItalic }
+    , FontFace       = { el } { n }  { Font = *-ExtraLight }
+    , FontFace       = { el } { it } { Font = *-ExtraLightItalic }
+    , FontFace       = { l }  { n }  { Font = *-Light }
+    , FontFace       = { l }  { it } { Font = *-LightItalic }
+    , FontFace       = { sl } { n }  { Font = *-Regular }
+    , FontFace       = { sl } { it } { Font = *-Italic }
+    , UprightFont    = *-Medium
+    , ItalicFont     = *-MediumItalic
+    , FontFace       = { sb } { n }  { Font = *-SemiBold }
+    , FontFace       = { sb } { it } { Font = *-SemiBoldItalic }
+    , BoldFont       = *-Bold
+    , BoldItalicFont = *-BoldItalic
+    , FontFace       = { ub } { n }  { Font = *-Black }
+    , FontFace       = { ub } { it } { Font = *-BlackItalic }
+  }
+  { Livvic }
+
+\keys_define:nn { afesbrand / font }
+  {
+    , family      .tl_set:N         = \l__afesbrand_font_family_tl
+    , family      .value_required:n = true
+    , family      .initial:n        = \familydefault
+    , series      .tl_set:N         = \l__afesbrand_font_series_tl
+    , series      .value_required:n = true
+    , series      .initial:n        = \seriesdefault
+    , shape       .tl_set:N         = \l__afesbrand_font_shape_tl
+    , shape       .value_required:n = true
+    , shape       .initial:n        = \shapedefault
+    , letterspace .tl_set:N         = \l__afesbrand_font_letterspace_tl
+    , letterspace .value_required:n = true
+    , linespace   .tl_set:N         = \l__afesbrand_font_linespace_tl
+    , linespace   .value_required:n = true
+    , relsize     .fp_set:N         = \l__afesbrand_font_relsize_fp
+    , relsize     .value_required:n = true
+    , size        .tl_set:N         = \l__afesbrand_font_size_tl
+    , size        .value_required:n = true
+    , wordspace   .tl_set:N         = \l__afesbrand_font_wordspace_tl
+    , wordspace   .value_required:n = true
+    , wordspace   .initial:n        = 1
+  }
+
+\skip_new:N \l__afesbrand_font_baseline_skip
+
+\cs_new_protected:Nn \__afesbrand_font_select:n
+  {
+    \fp_zero:N \l__afesbrand_font_relsize_fp
+    \tl_set:NV \l__afesbrand_font_size_tl \f@size
+    \keys_set_known:nn { afesbrand } {#1}
+    \keys_set_known:nn { afesbrand / font } {#1}
+    \fp_compare:nNnTF { \l__afesbrand_font_relsize_fp } > { \c_zero_fp }
+      {
+        \tl_set:Ne \l__afesbrand_font_size_tl
+          {
+            \fp_eval:n { \l__afesbrand_font_relsize_fp * \f@size }
+          }
+        \fp_zero:N \l__afesbrand_font_relsize_fp
+      }
+      {
+        \tl_if_regex_match:VnF
+          \l__afesbrand_font_size_tl
+          { \A\d+(?:\.\d+)?\Z }
+          {
+            \l__afesbrand_font_size_tl
+            \tl_set:NV \l__afesbrand_font_size_tl \f@size
+          }
+      }
+    \tl_if_empty:NT \l__afesbrand_font_linespace_tl
+      {
+        \tl_set:Ne \l__afesbrand_font_linespace_tl
+          {
+            \dim_ratio:nn
+              { \f@baselineskip } { \l__afesbrand_font_size_tl pt }
+          }
+      }
+    \skip_set:Nn \l__afesbrand_font_baseline_skip
+      {
+        \fp_eval:n
+          { \l__afesbrand_font_linespace_tl * \l__afesbrand_font_size_tl }
+        pt
+      }
+    \tl_if_empty:NT \l__afesbrand_font_letterspace_tl
+      {
+        \tl_if_eq:NnTF \l__afesbrand_font_family_tl { poetsenone }
+          {
+            \tl_set:Nn \l__afesbrand_font_letterspace_tl { -5 }
+          }
+          {
+            \tl_set:Nn \l__afesbrand_font_letterspace_tl { 0 }
+          }
+      }
+    \tl_if_exist:cT { l__afesbrand_font_ \l__afesbrand_font_family_tl _tl }
+      {
+        \exp_args:Nc \fontfamily
+          { l__afesbrand_font_ \l__afesbrand_font_family_tl _tl }
+      }
+    \fontsize
+      { \l__afesbrand_font_size_tl }
+      {
+        \fp_eval:n
+          { \l__afesbrand_font_linespace_tl * \l__afesbrand_font_size_tl }
+      }
+    \fontseries { \l__afesbrand_font_series_tl }
+    \fontshape { \l__afesbrand_font_shape_tl }
+    \addfontfeatures { LetterSpace = \l__afesbrand_font_letterspace_tl }
+    \dim_set:Nn \l_tmpa_dim { \fontdimen 2 \font }
+    \fontdimen 2 \font = \dim_eval:n
+      { \l__afesbrand_font_wordspace_tl \l_tmpa_dim }
+    \skip_set_eq:NN \baselineskip \l__afesbrand_font_baseline_skip
+    \fp_compare:nNnT
+      { \l__afesbrand_font_linespace_tl } < { 0.9 }
+      {
+        \skip_zero:N \lineskip
+        \skip_set:Nn \lineskiplimit { -1000pt }
+      }
+  }
+
+\cs_new_protected:Nn \__afesbrand_font_body:
+  {
+    \__afesbrand_font_select:n
+      {
+        , family      = livvic
+        , series      = l
+        , size        = \normalsize
+        , linespace   = 1.375
+        , letterspace = 0
+        , wordspace   = 1
+      }
+  }
+
+\cs_new_protected:Nn \__afesbrand_font_head_one:
+  {
+    \__afesbrand_font_select:n
+      {
+        , family      = livvic
+        , series      = ub
+        , relsize     = 3.75
+        , linespace   = 0.9175
+        , letterspace = -0.94
+        , wordspace   = 0.96
+      }
+  }
+
+\cs_new_protected:Nn \__afesbrand_font_head_two:
+  {
+    \__afesbrand_font_select:n
+      {
+        , family      = poetsenone
+        , relsize     = 1.625
+        , series      = m
+        , linespace   = 1
+        , letterspace = -5.05
+        , wordspace   = 1
+      }
+  }
+
+\cs_new_protected:Nn \__afesbrand_font_head_three:
+  {
+    \__afesbrand_font_select:n
+      {
+        , family      = livvic
+        , series      = ub
+        , relsize     = 0.9375
+        , linespace   = 0.9175
+        , letterspace = 10.18
+        , wordspace   = 1.385
+      }
+  }
+
+
+%%%
+%%% Logos
+%%%
+
+\file_input:n { afesbrand_logos.def }
+\file_input:n { afesbrand_logos_focus.def }
+
+\keys_define:nn { afesbrand / logo }
+  {
+    , bgcolor  .meta:n           = { bgcolour = {#1} }
+    , bgcolour .tl_set:N         = \l__afesbrand_logo_bgcolour_tl
+    , bgcolour .value_required:n = true
+    , bgcolour .initial:n        = none
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_logo_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = hero
+    , height   .dim_set:N        = \l__afesbrand_logo_height_dim
+    , height   .value_required:n = true
+    , padding  .choices:nn       = { anchored , centred , none }
+                                   {
+                                     \tl_set_eq:NN
+                                       \l__afesbrand_logo_padding_tl
+                                       \l_keys_choice_tl
+                                   }
+    , padding  .initial:n        = centred
+    , variant  .tl_set:N         = \l__afesbrand_logo_variant_tl
+    , variant  .value_required:n = true
+    , variant  .initial:n        = primary
+    , width    .dim_set:N        = \l__afesbrand_logo_width_dim
+    , width    .value_required:n = true
+  }
+
+\box_new:N \l__afesbrand_logo_box
+
+\cs_new_protected:Nn \__afesbrand_logo:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / logo } {#1}
+      \hbox_set:Nn \l__afesbrand_logo_box
+        {
+          \tikz
+            [
+              x = 1cm , y = 1cm , nonzero~rule
+            ]
+            {
+              \use:c
+                { __afesbrand_logo_#2_ \l__afesbrand_logo_variant_tl :nnn }
+                  { \l__afesbrand_logo_padding_tl }
+                  { \l__afesbrand_logo_bgcolour_tl }
+                  { \l__afesbrand_logo_colour_tl }
+            }
+        }
+      \__afesbrand_resize_use_box:VVN
+        \l__afesbrand_logo_width_dim
+        \l__afesbrand_logo_height_dim
+        \l__afesbrand_logo_box
+    \group_end:
+  }
+
+
+%%%
+%%% Brand Mark
+%%%
+
+\keys_define:nn { afesbrand / mark }
+  {
+    , bgcolor  .meta:n           = { bgcolour = {#1} }
+    , bgcolour .tl_set:N         = \l__afesbrand_mark_bgcolour_tl
+    , bgcolour .value_required:n = true
+    , bgcolour .initial:n        = none
+    , bottom   .tl_set:N         = \l__afesbrand_mark_bottom_tl
+    , bottom   .value_required:n = true
+    , center   .meta:n           = { centre = {#1} }
+    , centre   .tl_set:N         = \l__afesbrand_mark_centre_tl
+    , centre   .value_required:n = true
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_mark_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = hero
+    , height   .dim_set:N        = \l__afesbrand_mark_height_dim
+    , height   .value_required:n = true
+    , left     .tl_set:N         = \l__afesbrand_mark_left_tl
+    , left     .value_required:n = true
+    , padding  .choices:nn       = { anchored , centred , none }
+                                   {
+                                     \tl_set_eq:NN
+                                       \l__afesbrand_mark_padding_tl
+                                       \l_keys_choice_tl
+                                   }
+    , padding  .initial:n        = centred
+    , right    .tl_set:N         = \l__afesbrand_mark_right_tl
+    , right    .value_required:n = true
+    , top      .tl_set:N         = \l__afesbrand_mark_top_tl
+    , top      .value_required:n = true
+    , width    .dim_set:N        = \l__afesbrand_mark_width_dim
+    , width    .value_required:n = true
+  }
+
+\box_new:N \l__afesbrand_mark_box
+
+\cs_new_protected:Nn \__afesbrand_mark:n
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / mark } {#1}
+      \__afesbrand_font_select:n
+        {
+          , family      = livvic
+          , letterspace = 0
+          , linespace   = 0.884 ,
+          , series      = ub
+          , size        = 23.4
+          , wordspace   = 1
+        }
+      \hbox_set:Nn \l__afesbrand_mark_box
+        {
+          \begin { tikzpicture }
+            [
+              , x            = 1cm
+              , y            = 1cm
+              , inner~sep    = 0.2329cm
+              , nonzero~rule = true
+              , outer~sep    = 0cm
+            ]
+            \__afesbrand_logo_brandmark_primary:nnn
+              { \l__afesbrand_mark_padding_tl }
+              { \l__afesbrand_mark_bgcolour_tl }
+              { \l__afesbrand_mark_colour_tl }
+            \tl_if_eq:NnT \l__afesbrand_mark_bgcolour_tl { none }
+              {
+                \tl_set:Nn \l__afesbrand_mark_bgcolour_tl { white }
+              }
+            \node
+              [
+                , align      = left
+                , anchor     = north~west
+                , color      = \l__afesbrand_mark_bgcolour_tl
+                , rotate     = 90
+                , text~width = 4.5962cm
+              ]
+              at ( 0.0 , 1.9554 )
+              {
+                \text_uppercase:n { \l__afesbrand_mark_left_tl }
+              } ;
+            \node
+              [
+                , align      = left
+                , anchor     = north~west
+                , color      = \l__afesbrand_mark_bgcolour_tl
+                , text~width = 4.5148cm
+              ]
+              at ( 0.0 , 7.8449 )
+              {
+                \text_uppercase:n { \l__afesbrand_mark_top_tl }
+              } ;
+            \node
+              [
+                , align      = right
+                , anchor     = north~west
+                , color      = \l__afesbrand_mark_bgcolour_tl
+                , rotate     = -90
+                , text~width = 2.7926cm
+              ]
+              at ( 6.039 , 7.8449 )
+              {
+                \text_uppercase:n { \l__afesbrand_mark_right_tl }
+              } ;
+            \node
+              [
+                , align      = center
+                , anchor     = center
+                , color      = \l__afesbrand_mark_colour_tl
+                , font       = \__afesbrand_font_select:n { size = 25.945 }
+                , text~width = 3.4565cm
+              ]
+              at ( 3.0194 , 4.9002 )
+              {
+                \text_uppercase:n { \l__afesbrand_mark_centre_tl }
+              } ;
+            \node
+              [
+                , align      = left
+                , anchor     = north~west
+                , color      = \l__afesbrand_mark_colour_tl
+                , font       = \__afesbrand_font_select:n { size = 25.945 }
+                , inner~sep  = 0pt
+              ]
+              at ( 6.59 , 1.326 )
+              {
+                \text_uppercase:n { \l__afesbrand_mark_bottom_tl }
+              } ;
+          \end { tikzpicture }
+        }
+      \__afesbrand_resize_use_box:VVN
+        \l__afesbrand_mark_width_dim
+        \l__afesbrand_mark_height_dim
+        \l__afesbrand_mark_box
+    \group_end:
+  }
+
+
+%%%
+%%% Frame Device
+%%%
+
+\keys_define:nn { afesbrand / frame }
+  {
+    , action         .meta:n           = { action / text = {#1} }
+    , action / text  .tl_set:N         = \l__afesbrand_frame_action_text_tl
+    , action / text  .value_required:n = true
+    , action / width .tl_set:N         = \l__afesbrand_frame_action_width_tl
+    , action / width .value_required:n = true
+    , action / width .initial:n        = 3.5em
+    , color          .meta:n           = { colour = {#1} }
+    , colour         .tl_set:N         = \l__afesbrand_frame_colour_tl
+    , colour         .value_required:n = true
+    , colour         .initial:n        = accent
+    , ldx            .dim_set:N        = \l__afesbrand_frame_ldx_dim
+    , ldx            .value_required:n = true
+    , ldy            .dim_set:N        = \l__afesbrand_frame_ldy_dim
+    , ldy            .value_required:n = true
+    , udx            .dim_set:N        = \l__afesbrand_frame_udx_dim
+    , udx            .value_required:n = true
+    , udy            .dim_set:N        = \l__afesbrand_frame_udy_dim
+    , udy            .value_required:n = true
+  }
+
+\box_new:N    \l__afesbrand_frame_action_box
+\coffin_new:N \l__afesbrand_frame_action_coffin
+\coffin_new:N \l__afesbrand_frame_box_coffin
+\coffin_new:N \l__afesbrand_frame_cross_coffin
+\coffin_new:N \l__afesbrand_frame_wave_coffin
+\fp_new:N     \l__afesbrand_frame_scale_fp
+
+\cs_new_protected:Nn \__afesbrand_frame_device:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / frame } {#1}
+      \hcoffin_set:Nn \l__afesbrand_frame_wave_coffin
+        {
+          \__afesbrand_wave_effect:nn {#1} {#2}
+        }
+      \hcoffin_set:Nn \l__afesbrand_frame_box_coffin
+        {
+          \tikz
+            {
+              \path [ fill = \l__afesbrand_frame_colour_tl ] (2.276, 1.5535)
+              -- (0.0, 1.5535) -- (0.0, 5.5534) -- (4.0, 5.5534) -- (4.0,
+              3.3443) -- (3.4858, 3.3443) -- (3.4858, 5.0392) -- (0.5142,
+              5.0392) -- (0.5142, 2.0677) -- (2.276, 2.0677) -- cycle;
+            }
+        }
+      \hcoffin_set:Nn \l__afesbrand_frame_cross_coffin
+        {
+          \tikz
+            {
+              \path [ fill = \l__afesbrand_frame_colour_tl ] (3.4858, 2.9313)
+              -- (3.4858, 2.0677) -- (2.6889, 2.0677) -- (2.6889, 1.5534) --
+              (3.4858, 1.5534) -- (3.4858, 0.0) -- (4.0, 0.0) -- (4.0, 1.5534)
+              -- (4.7139, 1.5534) -- (4.7654, 2.0677) -- (4.0, 2.0677) --
+              (4.0, 2.9313) -- cycle;
+            }
+        }
+      \__afesbrand_font_select:n
+        {
+          , family      = livvic
+          , letterspace = 0
+          , linespace   = 0.884
+          , series      = ub
+          , size = 17.962
+          , wordspace = 1
+        }
+      \fp_set:Nn \l__afesbrand_frame_scale_fp
+        {
+          \dim_ratio:nn
+            { 2 \g__afesbrand_wave_baseline_skip }
+            { \coffin_wd:N \l__afesbrand_frame_box_coffin }
+        }
+      \tl_if_empty:NF \l__afesbrand_frame_action_text_tl
+        {
+          \vbox_set:Nn \l__afesbrand_frame_action_box
+            {
+              \tl_if_empty:NF \l__afesbrand_frame_action_width_tl
+                { \hsize \l__afesbrand_frame_action_width_tl }
+              \raggedright
+              \text_uppercase:n { \l__afesbrand_frame_action_text_tl }
+              \par
+              \__afesbrand_get_text_width:
+            }
+          \vcoffin_set:Nnn \l__afesbrand_frame_action_coffin
+            { \g__afesbrand_text_width_dim }
+            {
+              \raggedright
+              \color { \l__afesbrand_frame_colour_tl }
+              \text_uppercase:n { \l__afesbrand_frame_action_text_tl }
+              \para_end:
+            }
+          \coffin_set_horizontal_pole:Nnn \l__afesbrand_frame_cross_coffin
+            { actiony } { 10.823mm }
+          \coffin_set_vertical_pole:Nnn \l__afesbrand_frame_cross_coffin
+            { actionx } { 17.947mm }
+          \coffin_join:NnnNnnnn
+            \l__afesbrand_frame_cross_coffin { actionx } { actiony }
+            \l__afesbrand_frame_action_coffin { l } { t }
+            { 0pt } { 0pt }
+        }
+      \coffin_set_horizontal_pole:Nnn \l__afesbrand_frame_cross_coffin
+        { framey } { 25.819mm }
+      \coffin_set_vertical_pole:Nnn \l__afesbrand_frame_cross_coffin
+        { framex } { 2.826mm }
+      \coffin_set_horizontal_pole:Nnn \l__afesbrand_frame_box_coffin
+        { framey } { 12.766mm }
+      \coffin_set_vertical_pole:Nnn \l__afesbrand_frame_box_coffin
+        { framex } { 27.902mm }
+      \coffin_scale:Nnn \l__afesbrand_frame_box_coffin
+        { \fp_use:N \l__afesbrand_frame_scale_fp }
+        { \fp_use:N \l__afesbrand_frame_scale_fp }
+      \coffin_scale:Nnn \l__afesbrand_frame_cross_coffin
+        { \fp_use:N \l__afesbrand_frame_scale_fp }
+        { \fp_use:N \l__afesbrand_frame_scale_fp }
+      \coffin_join:NnnNnnnn
+        \l__afesbrand_frame_box_coffin { framex } { framey }
+        \l__afesbrand_frame_wave_coffin { l } { t }
+        {
+          - 0.5 \g__afesbrand_wave_upper_left_dim +
+          \l__afesbrand_frame_udx_dim
+        }
+        { \l__afesbrand_frame_udy_dim }
+      \coffin_join:NnnNnnnn
+        \l__afesbrand_frame_box_coffin { r } { b }
+        \l__afesbrand_frame_cross_coffin { framex } { framey }
+        {
+          - 0.5 \g__afesbrand_wave_lower_right_dim +
+          \l__afesbrand_frame_ldx_dim
+        }
+        { \l__afesbrand_frame_ldy_dim }
+      \coffin_typeset:Nnnnn \l__afesbrand_frame_box_coffin
+        { l } { b } { 0pt } { 0pt }
+    \group_end:
+  }
+
+\keys_define:nn { afesbrand / frame / image }
+  {
+    , bgcolor  .meta:n           = { bgcolour = {#1} }
+    , bgcolour .tl_set:N         = \l__afesbrand_frame_image_bgcolour_tl
+    , bgcolour .value_required:n = true
+    , bgcolour .initial:n        = hero
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_frame_image_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = accent
+    , height   .dim_set:N        = \l__afesbrand_frame_image_height_dim
+    , height   .value_required:n = true
+    , padding  .choices:nn       = { anchored , centred , none }
+                                   {
+                                     \tl_set_eq:NN
+                                       \l__afesbrand_frame_image_padding_tl
+                                       \l_keys_choice_tl
+                                   }
+    , padding  .initial:n        = centred
+    , width  .dim_set:N        = \l__afesbrand_frame_image_width_dim
+    , width  .value_required:n = true
+  }
+
+\box_new:N \l__afesbrand_frame_image_box
+\box_new:N \l__afesbrand_image_box
+\fp_new:N  \l__afesbrand_image_scale_fp
+
+\cs_new_protected:Nn \__afesbrand_frame_image:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / frame / image } {#1}
+      \hbox_set:Nn \l__afesbrand_image_box
+        {
+          \includegraphics {#2}
+        }
+      \fp_set:Nn \l__afesbrand_image_scale_fp
+        {
+          \fp_max:nn
+            {
+              \dim_ratio:nn { 3.5979cm } { \box_wd:N \l__afesbrand_image_box }
+            }
+            {
+              \dim_ratio:nn { 3.5875cm } { \box_ht:N \l__afesbrand_image_box }
+            }
+        }
+      \box_scale:Nnn \l__afesbrand_image_box
+        { \l__afesbrand_image_scale_fp }
+        { \l__afesbrand_image_scale_fp }
+      \box_set_trim:Nnnnn \l__afesbrand_image_box
+        { 0.5 \box_wd:N \l__afesbrand_image_box - 1.79895cm }
+        { 0.5 \box_ht:N \l__afesbrand_image_box - 1.79375cm }
+        { 0.5 \box_wd:N \l__afesbrand_image_box - 1.79895cm }
+        { 0.5 \box_ht:N \l__afesbrand_image_box - 1.79375cm }
+      \box_set_clipped:N \l__afesbrand_image_box
+      \hbox_set:Nn \l__afesbrand_frame_image_box
+        {
+          \begin { tikzpicture }
+            [
+              , x            = 1cm
+              , y            = 1cm
+              , inner~sep    = 0cm
+              , nonzero~rule = true
+              , outer~sep    = 0cm
+            ]
+            {
+              \str_if_eq:VnT \l__afesbrand_frame_image_padding_tl { anchored }
+                {
+                  \path [ fill = \l__afesbrand_frame_image_bgcolour_tl ]
+                  (-1.7779, 7.4934) rectangle (5.905, 0.0);
+                }
+              \str_if_eq:VnT \l__afesbrand_frame_image_padding_tl { centred }
+                {
+                  \path [ fill = \l__afesbrand_frame_image_bgcolour_tl ]
+                  (-1.7779, 7.4934) rectangle (5.905, -0.8889);
+                }
+              \str_if_eq:VnT \l__afesbrand_frame_image_padding_tl { none }
+                {
+                  \path [ fill = \l__afesbrand_frame_image_bgcolour_tl ] (0.0,
+                  5.7156) rectangle (4.9148, 0.0);
+                }
+              \begin { scope }
+                \node at ( 2.0636 , 3.6573 )
+                  { \box_use_drop:N \l__afesbrand_image_box } ;
+              \end { scope }
+              \path [ fill = \l__afesbrand_frame_image_colour_tl ] (0.0,
+              5.7156) -- (0.0, 1.5989) -- (2.3528, 1.5989) -- (2.3528, 2.128)
+              -- (0.5292, 2.128) -- (0.5292, 5.1864) -- (3.5979, 5.1864) --
+              (3.5979, 3.4419) -- (4.1271, 3.4419) -- (4.1271, 5.7156) --
+              cycle(3.5979, 3.017) -- (3.5979, 2.128) -- (2.7756, 2.128) --
+              (2.7756, 1.5989) -- (3.5979, 1.5989) -- (3.5979, 0.0) --
+              (4.1271, 0.0) -- (4.1271, 1.5989) -- (4.8619, 1.5989) --
+              (4.9148, 2.128) -- (4.1271, 2.128) -- (4.1271, 3.017) -- cycle;
+            }
+          \end { tikzpicture }
+        }
+      \__afesbrand_resize_use_box:VVN
+        \l__afesbrand_frame_image_width_dim
+        \l__afesbrand_frame_image_height_dim
+        \l__afesbrand_frame_image_box
+    \group_end:
+  }
+
+
+%%%
+%%% Grid System
+%%%
+
+\keys_define:nn { afesbrand / grid }
+  {
+    , body             .bool_set:N       = \l__afesbrand_grid_body_bool
+    , body             .default:n        = true
+    , body             .initial:n        = true
+    , body / color     .meta:n           = { colour = {#1} }
+    , body / colour    .tl_set:N         = \l__afesbrand_grid_body_colour_tl
+    , body / colour    .value_required:n = true
+    , body / colour    .initial:n        = neutral
+    , body / height    .dim_set:N        = \l__afesbrand_grid_body_height_dim
+    , body / height    .value_required:n = true
+    , head / color     .meta:n           = { colour = {#1} }
+    , head / colour    .tl_set:N         = \l__afesbrand_grid_head_colour_tl
+    , head / colour    .value_required:n = true
+    , head / colour    .initial:n        = hero
+    , head / height    .dim_set:N        = \l__afesbrand_grid_head_height_dim
+    , head / height    .value_required:n = true
+    , head / height    .initial:n        = 2cm
+    , head / width     .dim_set:N        = \l__afesbrand_grid_head_width_dim
+    , head / width     .value_required:n = true
+    , head / width     .initial:n        = \linewidth
+    , logo             .tl_set:N         = \l__afesbrand_grid_logo_tl
+    , logo             .value_required:n = true
+    , logo             .initial:n        = national
+    , sidebar          .bool_set:N       = \l__afesbrand_grid_sidebar_bool
+    , sidebar          .default:n        = true
+    , sidebar          .initial:n        = true
+    , sidebar / color  .meta:n           = { colour = {#1} }
+    , sidebar / colour .tl_set:N         = \l__afesbrand_grid_sidebar_colour_tl
+    , sidebar / colour .value_required:n = true
+    , sidebar / colour .initial:n        = accent
+    , url              .bool_set:N       = \l__afesbrand_grid_url_bool
+    , url              .default:n        = true
+    , url              .initial:n        = true
+    , url / color      .meta:n           = { colour = {#1} }
+    , url / colour     .tl_set:N         = \l__afesbrand_grid_url_colour_tl
+    , url / colour     .value_required:n = true
+    , url / colour     .initial:n        = \l__afesbrand_grid_body_colour_tl
+  }
+
+\box_new:N \l__afesbrand_grid_body_box
+\box_new:N \l__afesbrand_grid_url_box
+\dim_new:N \l__afesbrand_grid_body_text_width_dim
+\dim_new:N \l__afesbrand_grid_body_xshift_dim
+\dim_new:N \l__afesbrand_grid_sidebar_width_dim
+
+\cs_new_protected:Nn \__afesbrand_grid_system:nn
+  {
+    \group_begin:
+      \dim_set_eq:NN \l__afesbrand_grid_head_width_dim \linewidth
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / grid } {#1}
+      \hbox_set:Nn \l__afesbrand_grid_url_box
+        {
+          \__afesbrand_font_select:n
+            {
+              , family = livvic
+              , series = ub
+            }
+          \skip_horizontal:n { 1ex }
+          \textcolor
+            { \l__afesbrand_grid_url_colour_tl }
+            { afes.org.au }
+          \skip_horizontal:n { 1ex }
+        }
+      \box_set_ht:Nn \l__afesbrand_grid_url_box
+        { 1ex + \box_ht:N \l__afesbrand_grid_url_box }
+      \box_set_dp:Nn \l__afesbrand_grid_url_box
+        { 1ex + \box_dp:N \l__afesbrand_grid_url_box }
+      \box_resize_to_wd:Nn \l__afesbrand_grid_url_box
+        { \l__afesbrand_grid_head_height_dim }
+      \box_rotate:Nn \l__afesbrand_grid_url_box { 90 }
+      \dim_set:Nn \l__afesbrand_grid_sidebar_width_dim
+        { \box_wd:N \l__afesbrand_grid_url_box }
+      \bool_if:NTF \l__afesbrand_grid_sidebar_bool
+        {
+          \dim_set_eq:NN
+            \l__afesbrand_grid_body_xshift_dim
+            \l__afesbrand_grid_sidebar_width_dim
+          \dim_set:Nn
+            \l__afesbrand_grid_body_text_width_dim
+            {
+              \l__afesbrand_grid_head_width_dim -
+              3 \l__afesbrand_grid_sidebar_width_dim
+            }
+        }
+        {
+          \dim_set:Nn
+            \l__afesbrand_grid_body_text_width_dim
+            {
+              \l__afesbrand_grid_head_width_dim -
+              2 \l__afesbrand_grid_sidebar_width_dim
+            }
+        }
+      \dim_compare:nNnT
+        { \l__afesbrand_grid_body_height_dim }
+        >
+        { 2 \l__afesbrand_grid_sidebar_width_dim }
+        {
+          \vbox_set_to_ht:Nnn \l__afesbrand_grid_body_box
+            {
+              \l__afesbrand_grid_body_height_dim -
+              2 \l__afesbrand_grid_sidebar_width_dim
+            }
+            {
+              \dim_set_eq:NN \hsize \l__afesbrand_grid_body_text_width_dim
+              \raggedright
+              \mode_leave_vertical:
+              #2
+              \par
+              \vfil
+            }
+        }
+      \begin { tikzpicture }
+        [
+          , x            = 1cm
+          , y            = 1cm
+          , inner~sep    = 0cm
+          , nonzero~rule = true
+          , outer~sep    = 0cm
+        ]
+        \node
+          ( head )
+          [
+            , align      = right
+            , fill       = \l__afesbrand_grid_head_colour_tl
+            , text~width = \l__afesbrand_grid_head_width_dim
+          ]
+          {
+            \bool_if:NT \l__afesbrand_grid_url_bool
+              {
+                \box_use_drop:N \l__afesbrand_grid_url_box
+              }
+            \hfill
+            \__afesbrand_logo:nn
+              {
+                , colour  = \l__afesbrand_grid_body_colour_tl
+                , height  = \l__afesbrand_grid_head_height_dim
+                , padding = anchored
+                , variant = primarytagline
+                , #1
+              }
+              { \l__afesbrand_grid_logo_tl }
+          } ;
+        \node
+          ( body )
+          [
+            , align      = flush~left
+            , anchor     = north~west
+            , inner~sep  = \l__afesbrand_grid_sidebar_width_dim
+            , fill       = \l__afesbrand_grid_body_colour_tl
+            , text~width = \l__afesbrand_grid_body_text_width_dim
+            , xshift     = \l__afesbrand_grid_body_xshift_dim
+          ]
+          at ( head.south~west )
+          {
+            \box_if_empty:NTF \l__afesbrand_grid_body_box
+              {
+                \mode_leave_vertical:
+                #2
+                \par
+              }
+              { \box_use_drop:N \l__afesbrand_grid_body_box }
+          } ;
+        \path
+          [ fill = \l__afesbrand_grid_sidebar_colour_tl ]
+          ( head.south~west ) rectangle (body.south~west);
+      \end { tikzpicture }
+    \group_end:
+  }
+
+
+%%%
+%%% Hero Graphic
+%%%
+
+\keys_define:nn { afesbrand / hero }
+  {
+    , color         .meta:n           = { colour = {#1} }
+    , colour        .tl_set:N         = \l__afesbrand_hero_colour_tl
+    , colour        .value_required:n = true
+    , colour        .initial:n        = accent
+    , image / dx    .fp_set:N         = \l__afesbrand_hero_image_dx_fp
+    , image / dx    .value_required:n = true
+    , image / dy    .fp_set:N         = \l__afesbrand_hero_image_dy_fp
+    , image / dy    .value_required:n = true
+    , image / scale .fp_set:N         = \l__afesbrand_hero_image_scale_fp
+    , image / scale .value_required:n = true
+    , height        .dim_set:N        = \l__afesbrand_hero_height_dim
+    , height        .value_required:n = true
+    , width         .dim_set:N        = \l__afesbrand_hero_width_dim
+    , width         .value_required:n = true
+  }
+
+\box_new:N \l__afesbrand_hero_box
+\box_new:N \l__afesbrand_hero_image_box
+\dim_new:N \l__afesbrand_hero_image_dx_dim
+\dim_new:N \l__afesbrand_hero_image_dy_dim
+
+\cs_new_protected:Nn \__afesbrand_hero_graphic:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / hero } {#1}
+      \dim_set:Nn \l__afesbrand_hero_image_dx_dim
+        {
+          \fp_eval:n
+            { \l__afesbrand_hero_image_dx_fp / 100 * 5 }
+          cm
+        }
+      \dim_set:Nn \l__afesbrand_hero_image_dy_dim
+        {
+          \fp_eval:n
+            { \l__afesbrand_hero_image_dy_fp / 100 * 4.7592 }
+          cm
+        }
+      \hbox_set:Nn \l__afesbrand_hero_image_box
+        {
+          \includegraphics
+            [ keepaspectratio , width = 5cm , height = 4.7592cm ]
+            {#2}
+        }
+      \fp_compare:nNnT
+        { \l__afesbrand_image_scale_fp } > { \c_zero_fp }
+        {
+          \box_scale:Nnn \l__afesbrand_hero_image_box
+            { \l__afesbrand_hero_image_scale_fp / 100 }
+            { \l__afesbrand_hero_image_scale_fp / 100 }
+        }
+      \hbox_set:Nn \l__afesbrand_hero_box
+        {
+          \begin { tikzpicture }
+            [
+              , x            = 1cm
+              , y            = 1cm
+              , inner~sep    = 0cm
+              , nonzero~rule = true
+              , outer~sep    = 0cm
+            ]
+            \path [ fill = \l__afesbrand_hero_colour_tl ] (-2.5, 2.3796) --
+            (-2.5, -2.3796) -- (0.1109, -2.3796) -- (0.1109, -2.1916) --
+            (-2.3133, -2.1916) -- (-2.3133, 2.1929) -- (2.3116, 2.1929) --
+            (2.3116, -0.0726) -- (2.5, -0.0726) -- (2.5, 2.3796) --
+            cycle(-1.6471, 1.5686) -- (-1.6471, -1.5689) -- (0.1109, -1.5689)
+            -- (0.1109, -1.3822) -- (-1.4604, -1.3822) -- (-1.4604, 1.3819) --
+            (1.4587, 1.3819) -- (1.4587, -0.0726) -- (1.6471, -0.0726) --
+            (1.6471, 1.5686) -- cycle;
+            \node [ xshift = \l__afesbrand_hero_image_dx_dim ,
+            yshift = \l__afesbrand_hero_image_dy_dim ] at (0, 0)
+              { \box_use_drop:N \l__afesbrand_hero_image_box } ;
+            \path [ fill = \l__afesbrand_hero_colour_tl ] (-0.7683, 0.7122) --
+            (-0.7683, -0.7562) -- (0.1109, -0.7562) -- (0.1109, -0.5695) --
+            (-0.5816, -0.5695) -- (-0.5816, 0.5256) -- (0.552, 0.5256) --
+            (0.552, -0.0726) -- (0.7403, -0.0726) -- (0.7403, 0.7122) --
+            cycle(0.552, -0.2555) -- (0.552, -0.5695) -- (0.2624, -0.5695) --
+            (0.2624, -0.7562) -- (0.552, -0.7562) -- (0.552, -1.323) --
+            (0.7386, -1.323) -- (0.7386, -0.7562) -- (1.0019, -0.7562) --
+            (1.0193, -0.5695) -- (0.7386, -0.5695) -- (0.7386, -0.2555) --
+            cycle;
+          \end { tikzpicture }
+        }
+      \__afesbrand_resize_use_box:VVN
+        \l__afesbrand_hero_width_dim
+        \l__afesbrand_hero_height_dim
+        \l__afesbrand_hero_box
+    \group_end:
+  }
+
+
+%%%
+%%% Icons
+%%%
+
+\file_input:n { afesbrand_icons.def }
+
+\keys_define:nn { afesbrand / icon }
+  {
+    , bgcolor  .meta:n           = { bgcolour = {#1} }
+    , bgcolour .tl_set:N         = \l__afesbrand_icon_bgcolour_tl
+    , bgcolour .value_required:n = true
+    , bgcolour .initial:n        = neutral
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_icon_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = hero
+    , size     .dim_set:N        = \l__afesbrand_icon_size_dim
+    , size     .value_required:n = true
+  }
+
+\coffin_new:N \l__afesbrand_icon_coffin
+\dim_new:N    \l__afesbrand_icon_dy_dim
+\fp_new:N     \l__afesbrand_icon_scale_fp
+\tl_new:N     \l__afesbrand_icon_name_tl
+
+\cs_new_protected:Nn \__afesbrand_icon:nn
+  {
+    \group_begin:
+      \mode_if_vertical:T
+        { \mode_leave_vertical: }
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / icon } {#1}
+      \tl_set:Ne \l__afesbrand_icon_name_tl
+        {
+          \text_lowercase:n {#2}
+        }
+      \dim_compare:nNnT
+        { \l__afesbrand_icon_size_dim } = { \c_zero_dim }
+        {
+          \dim_set:Nn \l__afesbrand_icon_size_dim
+            { 1.2 \fontcharht \font `X }
+        }
+      \dim_set:Nn \l__afesbrand_icon_dy_dim
+        { 0.5 \fontcharht \font `X }
+      \hcoffin_set:Nn \l__afesbrand_icon_coffin
+        {
+          \tikz
+            [
+              x = 1cm , y = 1cm , nonzero~rule
+            ]
+            {
+              \use:c { __afesbrand_icon_ \l__afesbrand_icon_name_tl :nn }
+                { \l__afesbrand_icon_bgcolour_tl }
+                { \l__afesbrand_icon_colour_tl }
+            }
+        }
+      \fp_set:Nn \l__afesbrand_icon_scale_fp
+        {
+          \dim_ratio:nn
+            { \l__afesbrand_icon_size_dim }
+            { \coffin_ht:N \l__afesbrand_icon_coffin }
+        }
+      \coffin_scale:Nnn \l__afesbrand_icon_coffin
+        { \fp_use:N \l__afesbrand_icon_scale_fp }
+        { \fp_use:N \l__afesbrand_icon_scale_fp }
+      \coffin_typeset:Nnnnn \l__afesbrand_icon_coffin
+        { l } { vc } { 0pt } { \l__afesbrand_icon_dy_dim }
+    \group_end:
+  }
+
+\keys_define:nn { afesbrand / iconutility }
+  {
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_icon_utility_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = .
+  }
+
+\tl_new:N \l__afesbrand_font_phosphor_tl
+
+\fontspec_set_family:Nnn \l__afesbrand_font_phosphor_tl
+  { } { Phosphor-Fill.ttf }
+
+\hook_gput_code:nnn { begindocument / before } { afesbrand }
+  {
+    \cs_if_exist:NT \DeclareMicrotypeAlias
+      {
+        \DeclareMicrotypeAlias { Phosphor-Fill } { TU-empty }
+      }
+  }
+
+\coffin_new:N \l__afesbrand_icon_utility_coffin
+\dim_new:N    \l__afesbrand_icon_utility_dy_dim
+
+\cs_new_protected:Nn \__afesbrand_icon_utility:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / iconutility } {#1}
+      \dim_set:Nn \l__afesbrand_icon_utility_dy_dim
+        { 0.5 \fontcharht \font `X }
+      \hcoffin_set:Nn \l__afesbrand_icon_utility_coffin
+        {
+          \__afesbrand_font_select:n
+            { 
+              , #1
+              , family = phosphor
+              , series = m
+              , shape  = n
+            }
+          \color { \l__afesbrand_icon_utility_colour_tl }
+          #2-fill
+        }
+      \coffin_typeset:Nnnnn \l__afesbrand_icon_utility_coffin
+        { l } { vc } { 0pt } { \l__afesbrand_icon_utility_dy_dim }
+    \group_end:
+  }
+
+
+%%%
+%%% Illustrations
+%%%
+
+\keys_define:nn { afesbrand / illustration }
+  {
+    , bgcolor  .meta:n           = { bgcolour = {#1} }
+    , bgcolour .tl_set:N         = \l__afesbrand_illustration_bgcolour_tl
+    , bgcolour .value_required:n = true
+    , bgcolour .initial:n        = neutral
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_illustration_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = hero
+    , height   .dim_set:N        = \l__afesbrand_illustration_height_dim
+    , height   .value_required:n = true
+    , width    .dim_set:N        = \l__afesbrand_illustration_width_dim
+    , width    .value_required:n = true
+  }
+
+\box_new:N    \l__afesbrand_illustration_box
+\coffin_new:N \l__afesbrand_illustration_bg_coffin
+\coffin_new:N \l__afesbrand_illustration_fg_coffin
+
+\cs_new_protected:Nn \__afesbrand_illustration:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / illustration } {#1}
+      \hcoffin_set:Nn \l__afesbrand_illustration_bg_coffin
+        {
+          \color { \l__afesbrand_illustration_bgcolour_tl }
+          \includegraphics { afesbrand_illustration_#2_bg.pdf }
+        }
+      \hcoffin_set:Nn \l__afesbrand_illustration_fg_coffin
+        {
+          \color { \l__afesbrand_illustration_colour_tl }
+          \includegraphics { afesbrand_illustration_#2_fg.pdf }
+        }
+      \coffin_join:NnnNnnnn
+        \l__afesbrand_illustration_bg_coffin { hc } { vc }
+        \l__afesbrand_illustration_fg_coffin { hc } { vc }
+        { 0pt } { 0pt }
+      \hbox_set:Nn \l__afesbrand_illustration_box
+        {
+          \coffin_typeset:Nnnnn \l__afesbrand_illustration_bg_coffin
+            { l } { b } { 0pt } { 0pt }
+        }
+      \__afesbrand_resize_use_box:VVN
+        \l__afesbrand_illustration_width_dim
+        \l__afesbrand_illustration_height_dim
+        \l__afesbrand_illustration_box
+    \group_end:
+  }
+
+
+%%%
+%%% Social Media Post
+%%%
+
+\file_input:n { afesbrand_socials.def }
+
+\keys_define:nn { afesbrand / social }
+  {
+    , color  .meta:n           = { colour = {#1} }
+    , colour .tl_set:N         = \l__afesbrand_social_colour_tl
+    , colour .value_required:n = true
+    , colour .initial:n        = hero
+    , height .dim_set:N        = \l__afesbrand_social_height_dim
+    , height .value_required:n = true
+    , type   .tl_set:N         = \l__afesbrand_social_type_tl
+    , type   .value_required:n = true
+    , type   .initial:n        = square
+    , width  .dim_set:N        = \l__afesbrand_social_width_dim
+    , width  .value_required:n = true
+  }
+
+\cs_new_protected:Nn \__afesbrand_social_post_begin:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / social } {#1}
+      \dim_compare:nNnT
+        { \l__afesbrand_social_width_dim + \l__afesbrand_social_height_dim }
+        =
+        { \c_zero_dim }
+        {
+          \use:c { __afesbrand_social_#2_ \l__afesbrand_social_type_tl : }
+        }
+      \begin { tikzpicture } [ x = 1cm , y = 1cm ]
+        \path [ fill = \l__afesbrand_social_colour_tl ]
+          ( -0.5 \l__afesbrand_social_width_dim ,
+            -0.5 \l__afesbrand_social_height_dim )
+          rectangle
+          ( 0.5 \l__afesbrand_social_width_dim ,
+            0.5 \l__afesbrand_social_height_dim );
+        \clip
+          ( -0.5 \l__afesbrand_social_width_dim ,
+            -0.5 \l__afesbrand_social_height_dim )
+          rectangle
+          ( 0.5 \l__afesbrand_social_width_dim ,
+            0.5 \l__afesbrand_social_height_dim );
+  }
+
+\cs_new_protected:Nn \__afesbrand_social_post_end:
+  {
+      \end { tikzpicture }
+    \group_end:
+  }
+
+\cs_new_protected:Nn \__afesbrand_social_set_dimensions:nn
+  {
+    \dim_set:Nn \l__afesbrand_social_width_dim
+      {
+        \fp_eval:n { #1 / 300 * 2.54 } cm
+      }
+    \dim_set:Nn \l__afesbrand_social_height_dim
+      {
+        \fp_eval:n { #2 / 300 * 2.54 } cm
+      }
+  }
+
+
+%%%
+%%% Profile Picture
+%%%
+
+\keys_define:nn { afesbrand / profile }
+  {
+    , bgcolor  .meta:n           = { bgcolour = {#1} }
+    , bgcolour .tl_set:N         = \l__afesbrand_profile_bgcolour_tl
+    , bgcolour .value_required:n = true
+    , bgcolour .initial:n        = hero
+    , color    .meta:n           = { colour = {#1} }
+    , colour   .tl_set:N         = \l__afesbrand_profile_colour_tl
+    , colour   .value_required:n = true
+    , colour   .initial:n        = accent
+    , size     .dim_set:N        = \l__afesbrand_profile_size_dim
+    , size     .value_required:n = true
+  }
+
+\box_new:N \l__afesbrand_profile_box
+
+\cs_new_protected:Nn \__afesbrand_profile:n
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / profile } {#1}
+      \hbox_set:Nn \l__afesbrand_profile_box
+        {
+          \tikz
+            [
+              x = 1cm , y = 1cm , nonzero~rule
+            ]
+            {
+              \path [ fill = \l__afesbrand_profile_bgcolour_tl ] (0.0, 5.0)
+              rectangle (5.0, 0.0);
+              \path [ fill = \l__afesbrand_profile_colour_tl ] (1.347, 3.7801)
+              -- (1.347, 1.685) -- (2.59, 1.685) -- (2.59, 2.0621) -- (1.723,
+              2.0621) -- (1.723, 3.403) -- (3.1181, 3.403) -- (3.1181, 2.621)
+              -- (3.4941, 2.621) -- (3.4941, 3.7801) -- cycle(3.116, 2.42) --
+              (3.116, 2.0621) -- (2.7971, 2.0621) -- (2.7971, 1.685) --
+              (3.116, 1.685) -- (3.116, 0.99) -- (3.4921, 0.99) -- (3.4921,
+              1.685) -- (3.786, 1.685) -- (3.811, 2.0621) -- (3.4921, 2.0621)
+              -- (3.4921, 2.42) -- (3.116, 2.42) -- cycle;
+            }
+        }
+      \__afesbrand_resize_use_box:VVN
+        \l__afesbrand_profile_size_dim
+        \l__afesbrand_profile_size_dim
+        \l__afesbrand_profile_box
+    \group_end:
+  }
+
+
+%%%
+%%% Wave Effect
+%%%
+
+\keys_define:nn { afesbrand / wave }
+  {
+    , bend        .tl_set:N         = \l__afesbrand_wave_bend_tl
+    , bend        .value_required:n = true
+    , bend        .initial:n        = 5
+    , color       .meta:n           = { colour = {#1} }
+    , colour      .tl_set:N         = \l__afesbrand_wave_colour_tl
+    , colour      .value_required:n = true
+    , colour      .initial:n        = .
+    , simple      .tl_set:N         = \l__afesbrand_wave_simple_tl
+    , simple      .default:n        = true
+    , simple      .initial:n        = false
+    , style       .choice:
+    , style / a   .code:n           = {
+                                        \keys_set_known:nn
+                                          { afesbrand / font }
+                                          {
+                                            , family      = poetsenone
+                                            , letterspace = -5.02
+                                            , linespace   = 0.8
+                                            , series      = m
+                                            , wordspace   = 1
+                                          }
+                                        \keys_set_known:nn
+                                          { afesbrand / wave }
+                                          {
+                                            , bend = 3.5
+                                            , lowercase
+                                          }
+                                      }
+    , style / b   .code:n           = {
+                                        \keys_set_known:nn
+                                          { afesbrand / font }
+                                          {
+                                            , family      = poetsenone
+                                            , letterspace = -5.02
+                                            , linespace   = 0.8
+                                            , series      = m
+                                            , wordspace   = 1
+                                          }
+                                        \keys_set_known:nn
+                                          { afesbrand / wave }
+                                          {
+                                            , bend = 3.5
+                                            , uppercase
+                                          }
+                                      }
+    , style / c   .code:n           = {
+                                        \keys_set_known:nn
+                                          { afesbrand / font }
+                                          {
+                                            , family      = livvic
+                                            , letterspace = 0
+                                            , linespace   = 0.8
+                                            , series      = ub
+                                            , wordspace   = 1
+                                          }
+                                        \keys_set_known:nn
+                                          { afesbrand / wave }
+                                          {
+                                            , bend = 3.5
+                                            , uppercase
+                                          }
+                                      }
+    , uppercase   .bool_set:N       = \l__afesbrand_wave_uppercase_bool
+    , uppercase   .default:n        = true
+    , uppercase   .initial:n        = false
+    , width       .tl_set:N         = \l__afesbrand_wave_width_tl
+    , width       .value_required:n = true
+    , width       .initial:n        = 4em
+  }
+
+\box_new:N  \l__afesbrand_wave_box
+\dim_new:N  \g__afesbrand_wave_upper_left_dim
+\dim_new:N  \g__afesbrand_wave_lower_right_dim
+\skip_new:N \g__afesbrand_wave_baseline_skip
+\tl_new:N   \l__afesbrand_wave_text_tl
+
+\cs_new_protected:Nn \__afesbrand_wave_effect:nn
+  {
+    \group_begin:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / wave } {#1}
+      \mode_if_vertical:T
+        { \mode_leave_vertical: }
+      \__afesbrand_font_select:n {#1}
+      \skip_gset_eq:NN \g__afesbrand_wave_baseline_skip \baselineskip
+      \vbox_set:Nn \l__afesbrand_wave_box
+        {
+          \tl_if_empty:NF \l__afesbrand_wave_width_tl
+            {
+              \dim_set:Nn \hsize { \l__afesbrand_wave_width_tl }
+            }
+          \raggedright
+          \bool_if:NTF \l__afesbrand_wave_uppercase_bool
+            { \text_uppercase:n {#2} }
+            {#2}
+          \para_end:
+          \__afesbrand_get_text_width:
+        }
+      \dim_gset:Nn \g__afesbrand_wave_upper_left_dim
+        {
+          \g__afesbrand_text_width_dim -
+          \seq_item:Nn \g__afesbrand_text_line_lengths_seq { -1 }
+        }
+      \dim_gset:Nn \g__afesbrand_wave_lower_right_dim
+        {
+          \g__afesbrand_text_width_dim -
+          \seq_item:Nn \g__afesbrand_text_line_lengths_seq { 1 }
+        }
+      \tl_set:Nn \l__afesbrand_wave_text_tl
+        {
+          \vbox:n
+            {
+              \hsize \g__afesbrand_text_width_dim
+              \centering
+              \bool_if:NTF \l__afesbrand_wave_uppercase_bool
+                { \text_uppercase:n {#2} }
+                {#2}
+              \para_end:
+            }
+        }
+      \afesbrand@render@wave
+        { \l__afesbrand_wave_bend_tl }
+        { \l__afesbrand_wave_simple_tl }
+        { \l__afesbrand_wave_colour_tl }
+        { \l__afesbrand_wave_text_tl }
+    \group_end:
+  }
+
+
+%%%
+%%% Utility functions
+%%%
+
+\box_new:N \l__afesbrand_text_line_box
+\box_new:N \l__afesbrand_text_snap_box
+\dim_new:N  \g__afesbrand_text_width_dim
+\seq_new:N  \g__afesbrand_text_line_lengths_seq
+
+% Paragraph dissection algorithm from Victor Eijkhout, *TeX by Topic*, p. 71
+\cs_new_protected:Nn \__afesbrand_get_text_width:
+  {
+    \dim_gzero:N \g__afesbrand_text_width_dim
+    \seq_gclear:N \g__afesbrand_text_line_lengths_seq
+    \__afesbrand_get_text_width_loop:
+  }
+
+\cs_new_protected:Nn \__afesbrand_get_text_width_loop:
+  {
+    \box_set_to_last:N \l__afesbrand_text_line_box
+    \if_box_empty:N \l__afesbrand_text_line_box
+    \else:
+      \int_do_while:nNnn { \lastnodetype } = { 11 }
+        { \unskip }
+      \unpenalty
+      { \__afesbrand_get_text_width_loop: }
+      \hbox_set:Nn \l__afesbrand_text_snap_box
+        { \hbox_unpack:N \l__afesbrand_text_line_box }
+      \seq_gpush:Ne \g__afesbrand_text_line_lengths_seq
+        {
+          \dim_eval:n { \box_wd:N \l__afesbrand_text_snap_box }
+        }
+      \dim_compare:nNnT
+        { \box_wd:N \l__afesbrand_text_snap_box }
+        >
+        { \g__afesbrand_text_width_dim }
+        {
+          \dim_gset:Nn \g__afesbrand_text_width_dim
+            { \box_wd:N \l__afesbrand_text_snap_box }
+        }
+    \fi:
+  }
+
+\cs_new_protected:Nn \__afesbrand_resize_use_box:nnN
+  {
+    \dim_set:Nn \l_tmpa_dim {#1}
+    \dim_set:Nn \l_tmpb_dim {#2}
+    \dim_compare:nNnT
+      { \l_tmpa_dim + \l_tmpb_dim } > { \c_zero_dim }
+      {
+        \dim_compare:nNnT
+          { \l_tmpa_dim } = { \c_zero_dim }
+          { \dim_set_eq:NN \l_tmpa_dim \c_max_dim }
+        \dim_compare:nNnT
+          { \l_tmpb_dim } = { \c_zero_dim }
+          { \dim_set_eq:NN \l_tmpb_dim \c_max_dim }
+        \box_autosize_to_wd_and_ht:Nnn #3
+          { \l_tmpa_dim }
+          { \l_tmpb_dim }
+      }
+    \mode_if_vertical:T
+      { \mode_leave_vertical: }
+    \box_use_drop:N #3
+  }
+
+\cs_generate_variant:Nn \__afesbrand_resize_use_box:nnN { VVN }
+
+\ExplSyntaxOff
+
+% Text transformation code from https://tex.stackexchange.com/a/749869/87678
+\newcommand{\afesbrand@render@wave}[4]{%
+  \def\afesbrandwavebend{#1}%
+  \def\afesbrandwavesimple{#2}%
+  \@ifundefinedcolor{#3}
+    {\def\afesbrandwavecolourspec{#3}}
+    {\extractcolorspecs{#3}\afesbrandwavecolourmodel\afesbrandwavecolourspec}%
+  \def\afesbrandwavetext{#4}%
+  \begin{mplibcode}
+    numeric wd, ht, bend;
+    boolean simplewave;
+
+    def wave (expr p) =
+      (
+        xpart p ,
+        ypart p -
+        0.01 * bend * ht *
+        sind(xpart p / wd * 360)
+        if not simplewave:
+          * sind(ypart p / ht * 180)
+        fi
+      )
+    enddef;
+
+    beginfig(1)
+      picture pic;
+      pic := mpliboutlinetext ("\afesbrandwavetext");
+
+      bend := \afesbrandwavebend;
+      simplewave := \afesbrandwavesimple;
+      wd := xpart lrcorner pic - xpart llcorner pic;
+      ht := ypart ulcorner pic - ypart llcorner pic;
+
+      path p;
+      for i=1 upto mpliboutlinenum:
+        k := 0;
+        for item within mpliboutlinepic[i]:
+          p := pathpart item;
+          fill
+          for j=0 upto length p:
+            wave(point j of p) ..
+            controls wave(postcontrol j of p) and wave(precontrol (j+1) of p) ..
+          endfor
+          cycle
+          if incr(k) < length mpliboutlinepic[i]:
+            withpostscript "collect"
+          fi
+          withcolor (\afesbrandwavecolourspec);
+        endfor
+      endfor
+
+    endfig;
+  \end{mplibcode}}
+
+\ExplSyntaxOn
+
+\cs_new_protected:Nn \__afesbrand_set_options:n
+  {
+    \keys_set:nn { afesbrand } {#1}
+  }
+
+\cs_new_protected:Nn \__afesbrand_uni_meet_jesus:
+  {
+    \group_begin:
+      \__afesbrand_font_select:n
+        {
+          , family      = livvic
+          , letterspace = 0
+          , linespace   = 0.884
+          , series      = ub
+          , shape       = n
+          , wordspace   = 1
+        }
+      \hbox_set:Nn \l_tmpa_box { JESUS }
+      \mode_leave_vertical:
+      \vbox:n
+        {
+          \hsize \box_wd:N \l_tmpa_box
+          \hbox:n
+            {
+              UNI
+              \__afesbrand_font_select:n { relsize = 0.765 }
+              \raisebox { 0.295ex } { , }
+            }
+          \hbox:n { MEET }
+          \hbox:n { JESUS }
+          \par
+        }
+    \group_end:
+  }
+
+
+%%%
+%%% LaTeX interface
+%%%
+
+\NewDocumentCommand { \AFESBrandFontBody } { }
+  {
+    \__afesbrand_font_body:
+  }
+
+\NewDocumentCommand { \AFESBrandFontHeadOne } { }
+  {
+    \__afesbrand_font_head_one:
+  }
+
+\NewDocumentCommand { \AFESBrandFontHeadTwo } { }
+  {
+    \__afesbrand_font_head_two:
+  }
+
+\NewDocumentCommand { \AFESBrandFontHeadThree } { }
+  {
+    \__afesbrand_font_head_three:
+  }
+
+\NewDocumentCommand { \AFESBrandFontSelect } { m }
+  {
+    \__afesbrand_font_select:n {#1}
+  }
+
+\NewDocumentCommand { \AFESBrandFrameDevice } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_frame_device:nn { }  {#2} }
+      { \__afesbrand_frame_device:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandFrameImage } { ov }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_frame_image:nn { }  {#2} }
+      { \__afesbrand_frame_image:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandGridSystem } { o+m }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_grid_system:nn { }  {#2} }
+      { \__afesbrand_grid_system:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandHeroGraphic } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_hero_graphic:nn { }  {#2} }
+      { \__afesbrand_hero_graphic:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandIcon } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_icon:nn { }  {#2} }
+      { \__afesbrand_icon:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandIconUtility } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_icon_utility:nn { }  {#2} }
+      { \__afesbrand_icon_utility:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandIllustration } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_illustration:nn { }  {#2} }
+      { \__afesbrand_illustration:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandLogo } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_logo:nn { }  {#2} }
+      { \__afesbrand_logo:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandMark } { m }
+  {
+    \__afesbrand_mark:n {#1}
+  }
+
+\NewDocumentCommand { \AFESBrandProfile } { o }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_profile:n { }  }
+      { \__afesbrand_profile:n {#1} }
+  }
+
+\NewDocumentCommand { \AFESBrandSetColours } { m }
+  {
+    \__afesbrand_set_colours:n {#1}
+  }
+
+\NewDocumentCommand { \AFESBrandSetOptions } { m }
+  {
+    \__afesbrand_set_options:n {#1}
+  }
+
+\NewDocumentCommand { \AFESBrandUniMeetJesus } { }
+  {
+    \__afesbrand_uni_meet_jesus:
+  }
+
+\NewDocumentCommand { \AFESBrandWaveEffect } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_wave_effect:nn { }  {#2} }
+      { \__afesbrand_wave_effect:nn {#1} {#2} }
+  }
+
+\NewDocumentEnvironment { AFESBrandSocialPost } { om }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_social_post_begin:nn { }  {#2} }
+      { \__afesbrand_social_post_begin:nn {#1} {#2} }
+  }
+  {
+    \__afesbrand_social_post_end:
+  }
+
+%%
+%%
+%% End of file `afesbrand.sty'.

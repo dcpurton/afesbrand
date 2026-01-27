@@ -1,0 +1,13 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\START
+\showoutput
+\AFESBrandGridSystem[body/colour=hero,
+  head/colour=white]{\AFESBrandFontHeadOne\color{accent}COMMS\\
+  \textcolor{white}{TITLE GOES}\\ HERE}
+\end{document}

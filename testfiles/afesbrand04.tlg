@@ -1,0 +1,109 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999, direction TLT
+.....\kern-72.26999
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 pop
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 454.51395fil, direction TLT
+...\write-{}
+...\pdfcolorstack 0 push {0 g 0 G}
+...\glue(\topskip) 0.0
+...\hbox(26.625+0.0)x345.0, glue set 241.80748fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/ub/n/37.5 M
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\kern0.3975 (font)
+....\TU/Livvic(1)/ub/n/37.5 T
+....\penalty 10000
+....\glue 0.0 plus 1.0fil
+....\penalty -10000
+....\glue(\rightskip) 0.0
+...\penalty 150
+...\glue(\baselineskip) 7.40625
+...\hbox(27.0+0.45)x345.0, glue set 44.48833fil, direction TLT
+....\TU/Livvic(1)/ub/n/37.5 S
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\glue(\spaceskip) 9.07956 plus 4.72418 minus 3.15575
+....\TU/Livvic(1)/ub/n/37.5 T
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 H
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\glue(\spaceskip) 9.07956 plus 4.72418 minus 3.15575
+....\TU/Livvic(1)/ub/n/37.5 B
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 I
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 G
+....\discretionary (penalty 50)
+.....< \kern-0.3525 (font)
+.....< \TU/Livvic(1)/ub/n/37.5 -
+.....= \kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 G
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 R
+....\penalty 10000
+....\glue 0.0 plus 1.0fil
+....\penalty -10000
+....\glue(\rightskip) 0.0
+...\penalty 150
+...\glue(\baselineskip) 6.95625
+...\hbox(27.0+0.45)x345.0, glue set 181.85245fil, direction TLT
+....\TU/Livvic(1)/ub/n/37.5 P
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 I
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 C
+....\kern2.01001 (font)
+....\TU/Livvic(1)/ub/n/37.5 T
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 U
+....\kern-0.3525 (font)
+....\TU/Livvic(1)/ub/n/37.5 R
+....\kern-0.05249 (font)
+....\TU/Livvic(1)/ub/n/37.5 E
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -0.45
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 push {0 g 0 G}
+...\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 pop
+.\kern0.0
+(afesbrand04.aux)

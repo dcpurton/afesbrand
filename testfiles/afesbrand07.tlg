@@ -1,0 +1,448 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999, direction TLT
+.....\kern-72.26999
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 pop
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x301.59938, glue set 484.94821fil, direction TLT
+...\write-{}
+...\pdfcolorstack 0 push {0 g 0 G}
+...\glue(\topskip) 2.5
+...\hbox(7.5+2.13)x301.59938, glue set 14.41948fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/l/n/10 W
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 f
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 i
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 s
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 ’
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 j
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 s
+....\kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 b
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 r
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 d
+....\TU/Livvic(1)/l/n/10 e
+....\discretionary (penalty 50)
+.....< \kern0.05 (font)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 g
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 e
+....\kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 ,
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 b
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 d
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 s
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 c
+....\kern-0.2 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\kern-0.22 (font)
+....\TU/Livvic(1)/l/n/10 v
+....\discretionary (penalty 50)
+.....< \kern-0.15 (font)
+.....< \TU/Livvic(1)/l/n/10 -
+.....= \kern-0.15 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 r
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 g
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 s
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 m
+....\TU/Livvic(1)/l/n/10 e
+....\discretionary (penalty 50)
+.....< \kern0.05 (font)
+.....< \TU/Livvic(1)/l/n/10 -
+.....= \kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 t
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 g
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\penalty 150
+...\glue(\baselineskip) 4.12
+...\hbox(7.5+2.1)x301.59938, glue set 11.50948fil, direction TLT
+....\TU/Livvic(1)/l/n/10 b
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 g
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 g
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 r
+....\kern0.17 (font)
+....\TU/Livvic(1)/l/n/10 ?
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 Y
+....\kern-0.65 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 r
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 p
+....\TU/Livvic(1)/l/n/10 l
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 s
+....\TU/Livvic(1)/l/n/10 ,
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 r
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 f
+....\kern-0.2 (font)
+....\TU/Livvic(1)/l/n/10 u
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 t
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 –
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 t
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 ’
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 o
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 m
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 t
+....\kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 b
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 d
+....\TU/Livvic(1)/l/n/10 e
+....\discretionary (penalty 50)
+.....< \kern0.05 (font)
+.....< \TU/Livvic(1)/l/n/10 -
+.....= \kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 t
+....\kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 c
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 d
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue(\baselineskip) 4.15
+...\hbox(7.5+2.1)x301.59938, glue set 18.38945fil, direction TLT
+....\TU/Livvic(1)/l/n/10 f
+....\kern-0.17 (font)
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 m
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 t
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 w
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 o
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 m
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 d
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 .
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 J
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 n
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 g
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 n
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 A
+....\TU/Livvic(1)/l/n/10 F
+....\TU/Livvic(1)/l/n/10 E
+....\TU/Livvic(1)/l/n/10 S
+....\glue(\spaceskip) 2.23 plus 1.11388 minus 0.74406
+....\TU/Livvic(1)/l/n/10 g
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 p
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 s
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 l
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 k
+....\kern-0.15 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 󰀉
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 d
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 g
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue(\baselineskip) 4.15
+...\hbox(7.5+2.1)x301.59938, glue set 1.59947fil, direction TLT
+....\TU/Livvic(1)/l/n/10 s
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 l
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 d
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 g
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 d
+....\TU/Livvic(1)/l/n/10 .
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 W
+....\kern-0.47 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 ’
+....\TU/Livvic(1)/l/n/10 l
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 l
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 l
+....\TU/Livvic(1)/l/n/10 p
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 l
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 f
+....\kern0.1 (font)
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 r
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 y
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 s
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 p
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 f
+....\kern-0.17 (font)
+....\TU/Livvic(1)/l/n/10 r
+....\kern-0.32 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 m
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 ’
+....\kern-0.25 (font)
+....\TU/Livvic(1)/l/n/10 s
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 d
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 l
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 y
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 s
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+.....= \kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 t
+....\TU/Livvic(1)/l/n/10 l
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 t
+....\kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\penalty 150
+...\glue(\baselineskip) 4.25
+...\hbox(7.4+2.1)x301.59938, glue set 48.15971fil, direction TLT
+....\TU/Livvic(1)/l/n/10 s
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 J
+....\TU/Livvic(1)/l/n/10 e
+....\discretionary (penalty 50)
+.....< \kern0.05 (font)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 s
+....\TU/Livvic(1)/l/n/10 u
+....\TU/Livvic(1)/l/n/10 s
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 –
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 t
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 o
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 e
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 w
+....\TU/Livvic(1)/l/n/10 h
+....\TU/Livvic(1)/l/n/10 o
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 g
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 v
+....\kern-0.15 (font)
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 s
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 m
+....\TU/Livvic(1)/l/n/10 e
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 n
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/l/n/10 -
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 n
+....\TU/Livvic(1)/l/n/10 g
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 t
+....\kern-0.1 (font)
+....\TU/Livvic(1)/l/n/10 o
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 i
+....\TU/Livvic(1)/l/n/10 t
+....\glue(\spaceskip) 2.23 plus 1.115 minus 0.74333
+....\TU/Livvic(1)/l/n/10 a
+....\TU/Livvic(1)/l/n/10 l
+....\kern-0.05 (font)
+....\TU/Livvic(1)/l/n/10 l
+....\kern0.2 (font)
+....\TU/Livvic(1)/l/n/10 .
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue -2.1
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 push {0 g 0 G}
+...\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 pop
+.\kern0.0
+(afesbrand07.aux)

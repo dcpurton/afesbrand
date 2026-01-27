@@ -1,0 +1,18 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\raggedright
+\AFESBrandFontBody
+\hsize 10.6cm
+\START
+\showoutput
+What if uni isn't just about your degree, but discovering something bigger?
+Your plans, your future – they're not meant to be detached from the one who
+made you. Joining an AFES group is like finding solid ground. We'll help you
+lift your eyes up from uni's daily hustle to see Jesus – the one who gives
+meaning to it all.
+\end{document}

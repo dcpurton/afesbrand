@@ -1,0 +1,85 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999, direction TLT
+.....\kern-72.26999
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 pop
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 537.69006fil, direction TLT
+...\write-{}
+...\pdfcolorstack 0 push {0 g 0 G}
+...\glue(\topskip) 0.0
+...\hbox(12.2525+0.1625)x345.0, glue set 218.77159fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/PoetsenOne(1)/m/n/16.25 A
+....\glue(\spaceskip) 1.42958 plus 0.84814 minus 0.56656
+....\TU/PoetsenOne(1)/m/n/16.25 l
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 i
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 t
+....\discretionary (penalty 50)
+.....< \kern-1.17812 (font)
+.....< \TU/PoetsenOne(1)/m/n/16.25 -
+.....= \kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 t
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 l
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 e
+....\glue(\spaceskip) 1.85208 plus 0.92604 minus 0.61736
+....\TU/PoetsenOne(1)/m/n/16.25 b
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 i
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 t
+....\glue(\spaceskip) 1.85208 plus 0.92604 minus 0.61736
+....\TU/PoetsenOne(1)/m/n/16.25 a
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 b
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 o
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 u
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 t
+....\glue(\spaceskip) 1.85208 plus 0.92604 minus 0.61736
+....\TU/PoetsenOne(1)/m/n/16.25 u
+....\kern-0.82062 (font)
+....\TU/PoetsenOne(1)/m/n/16.25 s
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -0.1625
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 push {0 g 0 G}
+...\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 pop
+.\kern0.0
+(afesbrand05.aux)

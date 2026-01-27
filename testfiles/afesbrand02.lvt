@@ -1,0 +1,10 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\START
+\showoutput
+\AFESBrandLogo[bgcolour=neutral, height=2cm, padding=anchored]{national}
+\end{document}

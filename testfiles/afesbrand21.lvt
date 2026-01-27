@@ -1,0 +1,17 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\START
+\showoutput
+\begin{AFESBrandSocialPost}[type=portrait]{instagram}
+  \node{\AFESBrandWaveEffect[colour=white, size=30, style=b, bend=5,
+    linespace=0.935, width=4em]{You're not just here to pass exams}};
+  \node[xshift=2.25cm, yshift=-1.45cm]{%
+    \AFESBrandIllustration[bgcolour=white, colour=tangerineorange,
+    width=1.262cm]{lighthouse}};
+\end{AFESBrandSocialPost}
+\end{document}

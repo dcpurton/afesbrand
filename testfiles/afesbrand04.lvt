@@ -1,0 +1,13 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\AFESBrandFontHeadOne
+\START
+\showoutput
+MEET \\
+SEE THE BIGGER \\
+PICTURE
+\end{document}

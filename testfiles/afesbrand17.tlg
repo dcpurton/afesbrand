@@ -1,0 +1,151 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999, direction TLT
+.....\kern-72.26999
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 pop
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 507.94574fil, direction TLT
+...\write-{}
+...\pdfcolorstack 0 push {0 g 0 G}
+...\glue(\topskip) 2.8
+...\hbox(7.2+0.12)x345.0, glue set 150.18fil, direction TLT
+....\glue(\leftskip) 0.0 plus 1.0fil
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/ub/n/10 T
+....\TU/Livvic(1)/ub/n/10 H
+....\TU/Livvic(1)/ub/n/10 E
+....\TU/Livvic(1)/ub/n/10 R
+....\kern0.08 (font)
+....\TU/Livvic(1)/ub/n/10 E
+....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
+....\TU/Livvic(1)/ub/n/10 I
+....\TU/Livvic(1)/ub/n/10 S
+....\penalty 10000
+....\glue(\parfillskip) 0.0
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue 0.0 plus -1.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 0.68001
+...\hbox(7.2+0.11)x345.0, glue set 147.425fil, direction TLT
+....\glue(\leftskip) 0.0 plus 1.0fil
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/ub/n/10 O
+....\TU/Livvic(1)/ub/n/10 N
+....\TU/Livvic(1)/ub/n/10 E
+....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
+....\TU/Livvic(1)/ub/n/10 W
+....\TU/Livvic(1)/ub/n/10 H
+....\TU/Livvic(1)/ub/n/10 O
+....\penalty 10000
+....\glue(\parfillskip) 0.0
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue 0.0 plus -1.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 0.69
+...\hbox(7.2+0.11)x345.0, glue set 157.52fil, direction TLT
+....\glue(\leftskip) 0.0 plus 1.0fil
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/ub/n/10 G
+....\TU/Livvic(1)/ub/n/10 I
+....\TU/Livvic(1)/ub/n/10 V
+....\TU/Livvic(1)/ub/n/10 E
+....\TU/Livvic(1)/ub/n/10 S
+....\penalty 10000
+....\glue(\parfillskip) 0.0
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue 0.0 plus -1.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 0.69
+...\hbox(7.2+0.11)x345.0, glue set 147.95502fil, direction TLT
+....\glue(\leftskip) 0.0 plus 1.0fil
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/ub/n/10 M
+....\TU/Livvic(1)/ub/n/10 E
+....\kern0.14 (font)
+....\TU/Livvic(1)/ub/n/10 A
+....\TU/Livvic(1)/ub/n/10 N
+....\discretionary (penalty 50)
+.....< \TU/Livvic(1)/ub/n/10 -
+....\TU/Livvic(1)/ub/n/10 I
+....\TU/Livvic(1)/ub/n/10 N
+....\TU/Livvic(1)/ub/n/10 G
+....\penalty 10000
+....\glue(\parfillskip) 0.0
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue 0.0 plus -1.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 0.69
+...\hbox(7.2+0.11)x345.0, glue set 149.31fil, direction TLT
+....\glue(\leftskip) 0.0 plus 1.0fil
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\TU/Livvic(1)/ub/n/10 T
+....\kern-0.25 (font)
+....\TU/Livvic(1)/ub/n/10 O
+....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
+....\TU/Livvic(1)/ub/n/10 I
+....\TU/Livvic(1)/ub/n/10 T
+....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
+....\TU/Livvic(1)/ub/n/10 A
+....\TU/Livvic(1)/ub/n/10 L
+....\TU/Livvic(1)/ub/n/10 L
+....\penalty 10000
+....\glue(\parfillskip) 0.0
+....\glue(\rightskip) 0.0 plus 1.0fil
+...\glue -0.11
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 push {0 g 0 G}
+...\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 pop
+.\kern0.0
+(afesbrand17.aux)

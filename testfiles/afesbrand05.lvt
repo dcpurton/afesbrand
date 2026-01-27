@@ -1,0 +1,11 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\AFESBrandFontHeadTwo
+\START
+\showoutput
+A little bit about us
+\end{document}

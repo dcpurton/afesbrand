@@ -1,0 +1,282 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999, direction TLT
+.....\kern-72.26999
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 pop
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 493.04163fil, direction TLT
+...\write-{}
+...\pdfcolorstack 0 push {0 g 0 G}
+...\glue(\topskip) 0.0
+...\hbox(56.9057+0.0)x345.0, glue set 266.16235fil, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(56.9057+0.0)x78.83766, direction TLT
+.....\hbox(56.9057+0.0)x78.83766, direction TLT
+......\kern0.0
+......\hbox(56.9057+0.0)x78.83766, direction TLT
+.......\pdfsave
+.......\pdfsetmatrix{0.44745 0 0 0.44745}
+.......\hbox(127.17816+0.0)x0.0, glue set - 176.19374fil, direction TLT
+........\hbox(127.17816+0.0)x176.19374, direction TLT
+.........\hbox(127.17816+0.0)x176.19374, direction TLT
+..........\glue 0.0
+..........\hbox(0.0+0.0)x0.0, shifted 15.08556, direction TLT
+...........\pdfliteral origin{q }
+...........\pdfliteral origin{0 G }
+...........\pdfliteral origin{0 g }
+...........\pdfliteral origin{0.3985 w }
+...........\hbox(0.0+0.0)x0.0, direction TLT
+............\pdfliteral origin{q }
+............\glue(\spaceskip) 0.0
+............\pdfliteral origin{q }
+............\pdfliteral origin{0.90196 0.90196 0.87451 rg }
+............\pdfliteral origin{0.0 141.73404 m }
+............\pdfliteral origin{0.0 141.73404 m }
+............\pdfliteral origin{0.0 15.02939 l }
+............\pdfliteral origin{175.53773 15.02939 l }
+............\pdfliteral origin{175.53773 141.73404 l }
+............\pdfliteral origin{h }
+............\pdfliteral origin{175.53773 15.02939 m }
+............\pdfliteral origin{f }
+............\glue(\spaceskip) 0.0
+............\pdfliteral origin{Q }
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\glue(\spaceskip) 0.0
+............\pdfliteral origin{q }
+............\pdfliteral origin{0.20392 0.38039 0.23137 rg }
+............\pdfliteral origin{113.41273 66.3712 m }
+............\pdfliteral origin{112.5282 66.3712 111.63545 66.47328 110.72841 66.67744 c }
+............\pdfliteral origin{109.82397 66.88159 108.97923 67.22157 108.19678 67.6952 c }
+............\pdfliteral origin{107.41734 68.17145 106.75426 68.82327 106.21272 69.64812 c }
+............\pdfliteral origin{105.66858 70.476 105.30568 71.51064 105.12401 72.75763 c }
+............\pdfliteral origin{111.20464 72.75763 l }
+............\pdfliteral origin{111.29504 72.46307 111.45984 72.20226 111.69772 71.97517 c }
+............\pdfliteral origin{111.93303 71.74852 112.22803 71.5729 112.57925 71.4479 c }
+............\pdfliteral origin{112.9309 71.32335 113.31065 71.26105 113.71596 71.26105 c }
+............\pdfliteral origin{113.988 71.26105 114.23198 71.28354 114.44737 71.32896 c }
+............\pdfliteral origin{114.66278 71.37437 114.85007 71.4479 115.0088 71.54999 c }
+............\pdfliteral origin{115.16756 71.65207 115.28648 71.77145 115.36565 71.90727 c }
+............\pdfliteral origin{115.4422 72.0435 115.48503 72.19101 115.48503 72.34975 c }
+............\pdfliteral origin{115.48503 72.66722 115.36002 72.89647 115.11089 73.04398 c }
+............\pdfliteral origin{114.86131 73.19147 114.5209 73.3048 114.09009 73.38438 c }
+............\pdfliteral origin{113.66231 73.46353 113.17442 73.56 112.63028 73.67331 c }
+............\pdfliteral origin{111.79117 73.85455 110.89279 74.08727 109.93169 74.37056 c }
+............\pdfliteral origin{108.96799 74.65431 108.1574 75.00856 107.50255 75.43938 c }
+............\pdfliteral origin{107.16214 75.66602 106.8732 75.9212 106.63487 76.20453 c }
+............\pdfliteral origin{106.39699 76.48828 106.20709 76.7971 106.0596 77.13751 c }
+............\pdfliteral origin{105.9121 77.47748 105.8044 77.82913 105.73648 78.19203 c }
+............\pdfliteral origin{105.66858 78.55191 105.63441 78.9373 105.63441 79.34563 c }
+............\pdfliteral origin{105.63441 80.38588 105.86668 81.2648 106.33167 81.97891 c }
+............\pdfliteral origin{106.79361 82.69044 107.39484 83.2631 108.12885 83.69392 c }
+............\pdfliteral origin{108.8659 84.12213 109.6821 84.434 110.57529 84.62646 c }
+............\pdfliteral origin{111.47108 84.81938 112.34697 84.91585 113.20859 84.91585 c }
+............\pdfliteral origin{114.47592 84.91585 115.65762 84.71169 116.75755 84.30338 c }
+............\pdfliteral origin{117.85448 83.89809 118.7732 83.24019 119.5072 82.33618 c }
+............\pdfliteral origin{120.24425 81.42917 120.70361 80.23016 120.88483 78.73315 c }
+............\pdfliteral origin{115.07672 78.73315 l }
+............\pdfliteral origin{115.0313 79.14146 114.81027 79.45894 114.4132 79.68561 c }
+............\pdfliteral origin{114.01656 79.91267 113.53732 80.026 112.9707 80.026 c }
+............\pdfliteral origin{112.7436 80.026 112.53383 80.00308 112.34135 79.95766 c }
+............\pdfliteral origin{112.14844 79.91267 111.97845 79.85558 111.83398 79.78767 c }
+............\pdfliteral origin{111.68346 79.71976 111.57317 79.62892 111.49356 79.51561 c }
+............\pdfliteral origin{111.41443 79.40228 111.37463 79.27771 111.37463 79.14146 c }
+............\pdfliteral origin{111.37463 79.05063 111.40274 78.94855 111.45984 78.83522 c }
+............\pdfliteral origin{111.5165 78.72191 111.62419 78.61722 111.78294 78.51514 c }
+............\pdfliteral origin{111.93864 78.41307 112.15407 78.31662 112.42613 78.22578 c }
+............\pdfliteral origin{113.17442 78.04454 113.88033 77.8858 114.54945 77.74956 c }
+............\pdfliteral origin{115.21858 77.61374 115.89034 77.47748 116.57071 77.34125 c }
+............\pdfliteral origin{117.319 77.20543 118.05301 76.97272 118.77881 76.64702 c }
+............\pdfliteral origin{119.50157 76.31828 120.10844 75.82475 120.5959 75.1673 c }
+............\pdfliteral origin{121.08337 74.51245 121.3243 73.59416 121.3243 72.41766 c }
+............\pdfliteral origin{121.3243 71.26105 121.08899 70.29434 120.61278 69.51187 c }
+............\pdfliteral origin{120.13655 68.73244 119.5072 68.11433 118.72778 67.66104 c }
+............\pdfliteral origin{117.94531 67.21034 117.09235 66.88159 116.16238 66.67744 c }
+............\pdfliteral origin{115.23546 66.47328 114.31718 66.3712 113.41273 66.3712 c }
+............\pdfliteral origin{h }
+............\pdfliteral origin{97.29205 66.26912 m }
+............\pdfliteral origin{95.29892 66.26912 93.56703 66.6264 92.09294 67.34053 c }
+............\pdfliteral origin{90.62189 68.05206 89.48518 69.07544 88.68022 70.41327 c }
+............\pdfliteral origin{87.87785 71.74852 87.4756 73.32166 87.4756 75.13313 c }
+............\pdfliteral origin{87.4756 76.96709 87.87785 78.5744 88.68022 79.95766 c }
+............\pdfliteral origin{89.48518 81.33832 90.57646 82.41275 91.95712 83.18353 c }
+............\pdfliteral origin{93.34038 83.95172 94.87979 84.33754 96.57751 84.33754 c }
+............\pdfliteral origin{98.66103 84.33754 100.32501 83.88684 101.56943 82.97981 c }
+............\pdfliteral origin{102.81383 82.07536 103.66983 80.8223 104.13481 79.22667 c }
+............\pdfliteral origin{104.5998 77.63062 104.68456 75.79102 104.39 73.70749 c }
+............\pdfliteral origin{93.92735 73.70749 l }
+............\pdfliteral origin{94.08609 73.14044 94.49397 72.64993 95.15186 72.23036 c }
+............\pdfliteral origin{95.80672 71.8108 96.69083 71.60103 97.79942 71.60103 c }
+............\pdfliteral origin{98.43439 71.60103 99.0408 71.70872 99.61652 71.92413 c }
+............\pdfliteral origin{100.19482 72.13997 100.66498 72.44016 101.0279 72.82597 c }
+............\pdfliteral origin{104.3221 68.98764 l }
+............\pdfliteral origin{103.68712 68.23935 102.81123 67.59875 101.68837 67.06847 c }
+............\pdfliteral origin{100.56895 66.53557 99.10309 66.26912 97.29205 66.26912 c }
+............\pdfliteral origin{h }
+............\pdfliteral origin{96.84956 79.88976 m }
+............\pdfliteral origin{96.1467 79.88976 95.5459 79.69684 95.04977 79.31145 c }
+............\pdfliteral origin{94.55063 78.92607 94.21065 78.38193 94.02899 77.68164 c }
+............\pdfliteral origin{99.15974 77.68164 l }
+............\pdfliteral origin{99.09184 79.15271 98.32108 79.88976 96.84956 79.88976 c }
+............\pdfliteral origin{h }
+............\pdfliteral origin{76.5791 66.56975 m }
+............\pdfliteral origin{76.5791 78.45546 l }
+............\pdfliteral origin{74.0306 78.45546 l }
+............\pdfliteral origin{74.0306 83.82455 l }
+............\pdfliteral origin{76.5791 83.82455 l }
+............\pdfliteral origin{76.5791 85.2502 l }
+............\pdfliteral origin{76.5791 86.65335 76.817 87.79567 77.29019 88.68022 c }
+............\pdfliteral origin{77.76643 89.56174 78.49783 90.20795 79.48145 90.61627 c }
+............\pdfliteral origin{80.46806 91.02458 81.69559 91.22874 83.16666 91.22874 c }
+............\pdfliteral origin{86.73251 91.22874 l }
+............\pdfliteral origin{86.19962 85.89381 l }
+............\pdfliteral origin{83.94911 85.89381 l }
+............\pdfliteral origin{83.63164 85.89381 83.37082 85.84839 83.16666 85.75755 c }
+............\pdfliteral origin{82.96251 85.66673 82.815 85.5279 82.7272 85.3354 c }
+............\pdfliteral origin{82.63377 85.14249 82.59138 84.91022 82.59138 84.63773 c }
+............\pdfliteral origin{82.59138 83.82455 l }
+............\pdfliteral origin{86.73251 83.82455 l }
+............\pdfliteral origin{86.73251 78.45546 l }
+............\pdfliteral origin{82.59138 78.45546 l }
+............\pdfliteral origin{82.59138 66.56975 l }
+............\pdfliteral origin{76.5791 66.56975 l }
+............\pdfliteral origin{h }
+............\pdfliteral origin{72.30432 83.96599 m }
+............\pdfliteral origin{72.30432 66.64328 l }
+............\pdfliteral origin{66.02258 66.64328 l }
+............\pdfliteral origin{66.19257 69.12387 l }
+............\pdfliteral origin{65.03596 67.22157 63.25867 66.26912 60.85765 66.26912 c }
+............\pdfliteral origin{58.57298 66.26912 56.75027 67.01743 55.3895 68.5114 c }
+............\pdfliteral origin{54.03175 70.00539 53.35138 72.05475 53.35138 74.65993 c }
+............\pdfliteral origin{53.35138 76.60721 53.76532 78.30537 54.5932 79.75394 c }
+............\pdfliteral origin{55.41805 81.20207 56.51237 82.32755 57.8701 83.13248 c }
+............\pdfliteral origin{59.22784 83.93484 60.69069 84.33754 62.25258 84.33754 c }
+............\pdfliteral origin{63.45157 84.33754 64.47496 84.12776 65.32533 83.7108 c }
+............\pdfliteral origin{66.1757 83.29123 66.8362 82.7073 67.31241 81.96204 c }
+............\pdfliteral origin{67.82237 83.96599 l }
+............\pdfliteral origin{72.30432 83.96599 l }
+............\pdfliteral origin{h }
+............\pdfliteral origin{63.23618 78.90314 m }
+............\pdfliteral origin{62.19592 78.90314 61.36804 78.51514 60.75557 77.73268 c }
+............\pdfliteral origin{60.14612 76.95021 59.83989 75.99474 59.83989 74.86107 c }
+............\pdfliteral origin{59.83989 73.84329 60.07822 73.06084 60.55444 72.51974 c }
+............\pdfliteral origin{61.02763 71.97517 61.67429 71.70311 62.49048 71.70311 c }
+............\pdfliteral origin{63.4174 71.70311 64.22539 72.08893 64.91702 72.85971 c }
+............\pdfliteral origin{65.60864 73.6279 65.95467 74.63701 65.95467 75.88142 c }
+............\pdfliteral origin{65.95467 76.80835 65.71072 77.5454 65.22327 78.08995 c }
+............\pdfliteral origin{64.73578 78.63107 64.0753 78.90314 63.23618 78.90314 c }
+............\pdfliteral origin{h }
+............\pdfliteral origin{136.52974 66.04248 m }
+............\pdfliteral origin{145.47592 66.04248 l }
+............\pdfliteral origin{145.47592 15.02939 l }
+............\pdfliteral origin{136.52974 15.02939 l }
+............\pdfliteral origin{h }
+............\pdfliteral origin{157.90015 42.06647 m }
+............\pdfliteral origin{122.62537 42.06647 l }
+............\pdfliteral origin{122.62537 51.01309 l }
+............\pdfliteral origin{158.79591 51.01309 l }
+............\pdfliteral origin{h }
+............\pdfliteral origin{145.47592 73.22824 m }
+............\pdfliteral origin{136.52974 73.22824 l }
+............\pdfliteral origin{136.52974 102.72603 l }
+............\pdfliteral origin{39.008 102.72603 l }
+............\pdfliteral origin{39.008 51.01309 l }
+............\pdfliteral origin{115.47638 51.01309 l }
+............\pdfliteral origin{115.47638 42.06647 l }
+............\pdfliteral origin{30.06181 42.06647 l }
+............\pdfliteral origin{30.06181 111.67221 l }
+............\pdfliteral origin{145.47592 111.67221 l }
+............\pdfliteral origin{h }
+............\pdfliteral origin{f }
+............\glue(\spaceskip) 0.0
+............\pdfliteral origin{Q }
+............\glue(\spaceskip) 0.0
+............\pdfliteral origin{Q }
+............\glue 0.0 plus 1.0fil minus 1.0fil
+...........\pdfliteral origin{n }
+...........\pdfliteral origin{Q }
+...........\glue 0.0 plus 1.0fil minus 1.0fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+.......\pdfrestore
+......\glue 0.0 plus 1.0fil minus 1.0fil
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 push {0 g 0 G}
+...\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 pop
+.\kern0.0
+(afesbrand02.aux)

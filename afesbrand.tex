@@ -1,0 +1,994 @@
+\RequirePackage{pdfmanagement}
+\documentclass[a4paper]{l3doc}
+
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[font=small, skip=6pt]{caption}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{afesbrand}
+\usetikzlibrary{matrix}
+
+\setlist[description]{font=\ttfamily}
+
+\lstdefinelanguage{expl3}{
+  alsoletter={:<>},
+  morekeywords={
+    \cs_new_protected:Nn, \str_set:Ne, \str_if_eq:VnT,
+    \__afesbrand_logo_<name>_<variant>:nnn, \path, \l_tmpa_str,
+    \AFESBrandFontHeadOne, \AFESBrandFontHeadTwo, \AFESBrandFontHeadThree,
+    \AFESBrandFontBody, \AFESBrandIcon, \AFESBrandHeroGraphic, \AFESBrandMark,
+    \AFESBrandUniMeetJesus, \AFESBrandWaveEffect, \AFESBrandFrameDevice,
+    \AFESBrandGridSystem, \AFESBrandIllustration, \AFESBrandFontSelect,
+    \centering, \color, \huge, \colorbox, \textcolor, \raggedright, \quad,
+    \node, \begin, \end
+  },
+  sensitive=true,
+  morecomment=[l]\%
+}
+
+\lstset{
+  language=expl3,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{royalblue},
+  commentstyle=\itshape\color{black!70},
+  columns=fullflexible,
+  keepspaces=true,
+  upquote=true,
+  belowskip=-\medskipamount
+}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\title{The \pkg{afesbrand} Package}
+\author{David Purton\thanks{Email: \url{david.purton@afes.org.au}}}
+\date{2026/1/29 v1.0a}
+
+\maketitle
+
+\begin{abstract}
+  The \pkg{afesbrand} package provides a set of macros for producing
+  components of the AFES brand guidelines.
+\end{abstract}
+
+\tableofcontents
+
+\clearpage
+
+\section{Style Usage}
+
+Include the package |\usepackage{afesbrand}|.
+
+\begin{function}{\AFESBrandSetOptions}
+  \begin{syntax}
+    \marg{options}
+  \end{syntax}
+  Set package global \meta{options}. Options set using
+  \cs{AFESBrandSetOptions} need a prefix outlined below in each section.
+\end{function}
+
+\section{Brand Basics}
+
+\subsection{Logos}
+
+\begin{function}{\AFESBrandLogo}
+  \begin{syntax}
+    \oarg{options}\marg{logo}
+  \end{syntax}
+  Print a logo.
+\end{function}
+
+The following values of \meta{logo} are supported:
+
+\begin{description}
+  \item[brandmark] Prints the tag line logo.
+  \item[focus] Prints the FOCUS logo.
+  \item[national] Prints the national logo.
+  \item[tagline] Prints the tag line logo.
+\end{description}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bgcolour] Set the background colour of the logo. Default: |none|
+  \item[colour] Set the colour of the logo.
+  \item[height] Set the height of the logo (including any |padding|). If both
+    |height| and |width| are specified the logo will be scaled to fit within
+    these dimensions.
+  \item[padding] Set the padding around the logo. The following values are
+    supported:
+    \begin{description}
+      \item[anchored] The logo is horizontally centred with padding equal to
+        twice the height of the top of the cross and with no padding on the
+        bottom.
+
+        \AFESBrandLogo[bgcolour=neutral, height=1.3cm, padding=anchored]{national}
+
+      \item[centred] The logo is centred with padding equal to twice the
+        height of the top of the cross. This is the default.
+
+        \AFESBrandLogo[bgcolour=neutral, height=1.5cm, padding=centred]{national}
+
+      \item[none] The logo is printed without padding.
+
+        \AFESBrandLogo[bgcolour=neutral, height=1cm, padding=none]{national}
+    \end{description}
+  \item[variant] Print a logo variant. See below for defined values of
+    |variant| for each supported \meta{logo}.
+  \item[width] Set the width of the logo (including any |padding|). If both
+    |height| and |width| are specified the logo will be scaled to fit within
+    these dimensions.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|logo/|.
+
+The defined combinations of \meta{logo} and \meta{variant} are shown in Table
+\ref{logos}.
+
+\begin{table}
+  \centering
+  \caption{Defined \meta{logo} and \meta{variant} combinations}
+  \label{logos}
+  \AFESBrandSetOptions{logo/height=1cm, logo/padding=none}
+  \begin{tblr}{stretch=0, colspec={lQ[h,c]Q[h,c]Q[h,c]Q[h,c]}}
+    \toprule
+    \meta{variant}/\meta{logo} & \texttt{brandmark} & \texttt{focus} &
+    \texttt{national} & \texttt{tagline} \\
+    \midrule
+    \texttt{primary} & \AFESBrandLogo{brandmark} & \AFESBrandLogo{focus} &
+    \AFESBrandLogo{national} & \AFESBrandLogo{tagline} \\
+    \texttt{primarytagline} & &
+    \AFESBrandLogo[variant=primarytagline]{focus} &
+    \AFESBrandLogo[variant=primarytagline]{national} & \\
+    \texttt{secondary} & & & & \AFESBrandLogo[variant=secondary,
+    height=0.75cm]{tagline} \\
+    \texttt{vertical} & & \AFESBrandLogo[variant=vertical, height=0pt,
+    width=0.85cm]{focus} & \AFESBrandLogo[variant=vertical, height=0pt,
+    width=0.85cm]{national} & \\
+    \texttt{verticaltagline} & & \AFESBrandLogo[variant=verticaltagline,
+    height=0pt, width=0.85cm]{focus} &
+    \AFESBrandLogo[variant=verticaltagline, height=0pt,
+    width=0.85cm]{national} & \\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
+\subsubsection{Adding New Logos}
+
+New logos can be added by adding an Expl3 function of the format shown in the
+template in Listing \ref{newlogos}. |<name>| and |<variant>| correspond to
+the main argument and |variant| option of the \cs{AFESBrandLogo} function. You
+can define as many or few variants as you need, but at least |variant=primary|
+must be defined. The \cs{path} macros are \pkg{tikz} paths. If no unit us
+specified for coordinates it is assumed to be |cm|.
+
+\begin{lstlisting}[float, caption={Template for adding new logos}, label=newlogos]
+\cs_new_protected:Nn \__afesbrand_logo_<name>_<variant>:nnn
+  {
+    \str_set:Ne \l_tmpa_str {#1}
+    % Paths assume a default unit of cm
+    \str_if_eq:VnT \l_tmpa_str { anchored }
+      {
+        % path for the anchored bounding box
+        \path[fill=#2] ...;
+      }
+    \str_if_eq:VnT \l_tmpa_str { centred }
+      {
+        % path for centred bounding box
+        \path[fill=#2] ...;
+      }
+    \str_if_eq:VnT \l_tmpa_str { none }
+      {
+        % path for the unpadded bounding box
+        \path[fill=#2] ...;
+      }
+    % path for logo
+    \path[fill=#3] ...;
+  }
+\end{lstlisting}
+
+\subsection{Colour Palette}
+
+The AFES brand colours are defined using the \pkg{xcolor} package. They are
+defined in both RGB and CMYK so if you load \pkg{xcolor} with the |cmyk|
+option \emph{before} loading \pkg{afesbrand}, they will be defined in CMYK.
+See Figure \ref{palette}.
+
+\begin{figure}
+  \centering
+  \catcode`\|=12
+  \begin{tikzpicture}
+    \matrix
+      [matrix of nodes, outer sep=0pt, inner sep=0pt,
+          nodes={font=\ttfamily, minimum size=3cm, align=center, text
+                 width=3cm, anchor=center}]
+        {
+          |[fill=dustyblue]| dustyblue \#9AD9E9 &
+          |[fill=slatenavy, text=white]| slatenavy \#242C37 &
+          |[fill=lemonyellow]| lemonyellow \#FAF5B2 &
+          |[fill=naturalgrey]| naturalgrey \#E6E6DF \\
+          |[fill=huntergreen, text=white]| huntergreen \#34613B &
+          |[fill=royalblue, text=white]| royalblue \#006CC5 &
+          |[fill=sunnyyellow]| sunnyyellow \#EFD954 &
+          |[fill=tangerineorange, text=white]| tangerineorange \#FF6622 \\
+          |[fill=sagegreen]| sagegreen \#6BB07D &
+          |[fill=digitalpink]| digitalpink \#FFBAFF &
+          |[fill=mustardyellow]| mustardyellow \#E8AD21 &
+          |[fill=lightorange]| lightorange \#FFC88D \\
+        };
+  \end{tikzpicture}
+  \caption{AFES colour palette}\label{palette}
+\end{figure}
+
+\begin{function}{\AFESBrandSetColours}
+  \begin{syntax}
+    \marg{options}
+  \end{syntax}
+  Set the default \emph{neutral}, \emph{hero} and \emph{accent} colours.
+\end{function}
+
+The following \meta{options} are supported and shown in Figure
+\ref{defaultcolours}.
+
+\begin{description}
+  \item[neutral] Set the \emph{neutral} colour. Default: |naturalgrey|
+  \item[hero] Set the \emph{hero} colour. Default: |huntergreen|
+  \item[accent] Set the \emph{accent} colour. Default: |dustyblue|
+\end{description}
+
+\begin{figure}
+  \centering
+  \catcode`\|=12
+  \begin{tikzpicture}
+    \matrix
+      [matrix of nodes, outer sep=0pt, inner sep=0pt,
+          nodes={font=\ttfamily, minimum size=3cm, anchor=center}]
+        {
+          |[fill=neutral]| neutral &
+          |[fill=hero, text=white]| hero &
+          |[fill=accent]| accent \\
+        };
+  \end{tikzpicture}
+  \caption{Default \texttt{neutral}, \texttt{hero} and \texttt{accent}
+  colours}\label{defaultcolours}
+\end{figure}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|colour/|.
+
+\subsection{Typography}
+
+\begin{function}{\AFESBrandFontSelect}
+  \begin{syntax}
+    \marg{options}
+  \end{syntax}
+  Select a font with the following supported \meta{options}:
+\end{function}
+
+\begin{description}
+  \item[family] Either |livvic| or |poetsenone|
+  \item[series] A supported NFSS font series.
+
+    For |poetsenone| only |m| is available
+    ({\AFESBrandFontSelect{family=poetsenone}Poetsen One}).  The NFSS series
+    and corresponding weights for the |livvic| family are shown in Table
+    \ref{livvic}.
+
+    \begin{table}
+      \centering
+      \caption{NFSS series and weights for \texttt{livvic} font family}
+      \label{livvic}
+      \begin{tabular}{ll}
+        \toprule
+        \textbf{NFSS Series} & \textbf{Font Weight} \\
+        \midrule
+        |ul| & {\AFESBrandFontSelect{family=livvic,series=ul}Livvic Thin} \\
+        |el| & {\AFESBrandFontSelect{family=livvic,series=el}Livvic ExtraLight} \\
+        |l| & {\AFESBrandFontSelect{family=livvic,series=l}Livvic Light} \\
+        |sl| & {\AFESBrandFontSelect{family=livvic,series=sl}Livvic Regular} \\
+        |m| & {\AFESBrandFontSelect{family=livvic,series=m}Livvic Medium} \\
+        |sb| & {\AFESBrandFontSelect{family=livvic,series=sb}Livvic SemiBold} \\
+        |b| & {\AFESBrandFontSelect{family=livvic,series=b}Livvic Bold} \\
+        |ub| & {\AFESBrandFontSelect{family=livvic,series=ub}Livvic Black} \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+
+  \item[shape] A supported font shape. For |poetsenone| only |n| is available.
+    For |livvic|, |n| and |it| are available. Unfortunately |livvic| does not
+    support the |sc| shape.
+  \item[letterspace] The letter spacing which is passed to \pkg{fontspec}.
+    See the \pkg{fontspec} manual for details.
+
+    This defaults to |0| for |livvic| and |-5| for |poetsenone|.
+  \item[linespace] The line spacing. This is a numeric argument which when
+    multiplied by the font |size| will give the \cs{baselineskip}. So for a
+    10pt font, |linespace=1.2| will give a \cs{baselineskip} of 12pt.
+  \item[relsize] A numeric value which specifies the font |size| as a multiple
+    of the current font size. This takes precedence over the |size| option.
+  \item[size] The size of the font. This can either be a numeric value
+    indicating the point size or a standard \LaTeX{} font size macro
+    (\cs{footnotesize}, \cs{small}, \cs{normalsize}, \cs{large}, etc.).
+  \item[wordspace] A multiplier for the standard word spacing.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|font/|.
+
+\textbf{Note:} You will need to download and install the fonts from:
+\begin{itemize}
+  \item \url{https://fonts.google.com/specimen/Livvic} and
+  \item \url{https://fonts.google.com/specimen/Poetsen+One}
+\end{itemize}
+
+\begin{function}{\AFESBrandFontHeadOne}
+  Select the style specified level 1 heading font.
+\end{function}
+
+\begin{lstlisting}
+\AFESBrandFontHeadOne\textcolor{hero}{%
+  MEET \AFESBrandIcon[bgcolour=sunnyyellow, colour=slatenavy]{cross}
+  JESUS\\ SEE THE BIGGER\\ PICTURE
+  \AFESBrandIcon[bgcolour=tangerineorange, colour=slatenavy]{sun}}
+\end{lstlisting}
+
+{\AFESBrandFontHeadOne \textcolor{hero}{MEET
+ \AFESBrandIcon[bgcolour=sunnyyellow, colour=slatenavy]{cross} JESUS\\ SEE THE
+ BIGGER\\ PICTURE \AFESBrandIcon[bgcolour=tangerineorange,
+  colour=slatenavy]{sun}}\par}
+
+\begin{function}{\AFESBrandFontHeadTwo}
+  Select the style specified level 2 heading font.
+\end{function}
+ 
+\begin{lstlisting}
+\AFESBrandFontHeadTwo A little bit about us
+\end{lstlisting}
+
+{\AFESBrandFontHeadTwo A little bit about us\par}
+
+\begin{function}{\AFESBrandFontHeadThree}
+  Select the style specified level 3 heading font.
+\end{function}
+
+\begin{lstlisting}
+\AFESBrandFontHeadThree\textcolor{tangerineorange}{ABOUT US}
+\end{lstlisting}
+
+\medskip
+
+{\AFESBrandFontHeadThree \textcolor{tangerineorange}{ABOUT US}\par}
+
+\begin{function}{\AFESBrandFontBody}
+  Select the style specified body font.
+\end{function}
+
+\begin{lstlisting}
+\AFESBrandFontBody\raggedright What if uni...
+\end{lstlisting}
+
+{\AFESBrandFontBody\raggedright What if uni isn't just about your degree, but
+ discovering something bigger? Your plans, your future – they're not meant to
+ be detached from the one who made you. Joining an AFES group is like finding
+ solid ground. We'll help you lift your eyes up from uni's daily hustle to see
+ Jesus – the one who gives meaning to it all.\par}
+
+\begin{function}{\AFESBrandUniMeetJesus}
+  Print the AFES tag line with the raised comma.
+\end{function}
+
+\begin{lstlisting}
+\textcolor{hero}{\AFESBrandUniMeetJesus}
+\end{lstlisting}
+
+\medskip
+
+{\centering\textcolor{hero}{\AFESBrandUniMeetJesus}\par}
+
+\section{Graphic Elements}
+
+\subsection{Brand Icons}
+
+\begin{function}{\AFESBrandIcon}
+  \begin{syntax}
+    \oarg{options}\marg{icon}
+  \end{syntax}
+  Print a one of the standard AFES icons using the specified \meta{options}.
+\end{function}
+
+See Table \ref{brandicons} for supported values of \meta{icon}.
+
+\begin{table}
+  \centering
+  \caption{Supported brand icons}\label{brandicons}
+  \AFESBrandSetOptions{icon/size=5mm}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{>{\ttfamily}ll>{\ttfamily}ll}
+    \toprule
+    arrow & \AFESBrandIcon{arrow} & heart & \AFESBrandIcon{heart} \\
+    book & \AFESBrandIcon{book} & lens & \AFESBrandIcon{lens} \\
+    cross & \AFESBrandIcon{cross} & question & \AFESBrandIcon{question} \\
+    globe & \AFESBrandIcon{globe} & smile & \AFESBrandIcon{smile} \\
+    hand & \AFESBrandIcon{hand} & sun & \AFESBrandIcon{sun} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bgcolour] The background colour. Default: |neutral|
+  \item[colour] The icon colour. Default: |hero|
+  \item[size] The size of the icon as a dimension expression. If not
+    specified, the icon will be sized to the current text size.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|icon/|.
+
+\subsection{Utility Icons}
+
+\begin{function}{\AFESBrandIconUtility}
+  \begin{syntax}
+    \oarg{options}\marg{icon}
+  \end{syntax}
+  Print a utility icon using the specified \meta{options}.
+\end{function}
+
+Icons are taken from the Phospor icon family. You'll need to download and
+install |Phosphor-Fill.ttf| from \url{https://phosphoricons.com/}.
+
+Look up icons and names from the website and pass the name to
+\cs{AFESBrandIconUtility}. See Table \ref{utilityicons} for some example
+utility icons.
+
+\begin{table}
+  \centering
+  \caption{Example utility icons}\label{utilityicons}
+  \begin{tabular}{>{\ttfamily}ll>{\ttfamily}ll>{\ttfamily}ll>{\ttfamily}ll}
+    \toprule
+     church & \AFESBrandIconUtility{church} &
+     acorn & \AFESBrandIconUtility{acorn} &
+     heart & \AFESBrandIconUtility{heart} &
+     balloon & \AFESBrandIconUtility{balloon} \\
+     cactus & \AFESBrandIconUtility{cactus} &
+     butterfly & \AFESBrandIconUtility{butterfly} &
+     crown & \AFESBrandIconUtility{crown} &
+     bus & \AFESBrandIconUtility{bus} \\
+     heart & \AFESBrandIconUtility{heart} &
+     city & \AFESBrandIconUtility{city} &
+     island & \AFESBrandIconUtility{island} &
+     books & \AFESBrandIconUtility{books} \\
+     \bottomrule
+  \end{tabular}
+\end{table}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[colour] The icon colour. Default: \emph{Current colour}
+  \item[relsize] A numeric value which specifies the font |size| as a multiple
+    of the current font size. This takes precedence over the |size| option.
+  \item[size] The size of the font. This can either be a numeric value
+    indicating the point size or a standard \LaTeX{} font size macro
+    (\cs{footnotesize}, \cs{small}, \cs{normalsize}, \cs{large}, etc.).
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|iconutility/|.
+
+\subsection{Illustrations}
+
+\begin{function}{\AFESBrandIllustration}
+  \begin{syntax}
+    \oarg{options}\marg{illustration}
+  \end{syntax}
+  Print an illustration using the specified \meta{options}.
+\end{function}
+
+Table \ref{illustrations} shows values for \meta{illustration} defined by
+default.
+
+\begin{table}
+  \centering
+  \caption{Supported illustrations}\label{illustrations}
+  \AFESBrandSetOptions{illustration/height=1.3cm}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{>{\ttfamily}ll>{\ttfamily}ll}
+    \toprule
+    croissant & \raisebox{-0.5\height}{\AFESBrandIllustration{croissant}} &
+    lamb & \raisebox{-0.5\height}{\AFESBrandIllustration{lamb}} \\
+    lighthouse & \raisebox{-0.5\height}{\AFESBrandIllustration{lighthouse}} &
+    magnifyingglass & \raisebox{-0.5\height}{\AFESBrandIllustration{magnifyingglass}} \\
+    mountain & \raisebox{-0.5\height}{\AFESBrandIllustration{mountain}} &
+    shakkas & \raisebox{-0.5\height}{\AFESBrandIllustration{shakkas}} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bgcolour] The background colour. Default: |neutral|
+  \item[colour] The foreground colour. Default: |hero|
+  \item[height] The height as a dimension expression.
+  \item[width] The width as a dimension expression.
+\end{description}
+
+If both |height| and |width| are specified the logo will be scaled to fit
+within these dimensions.
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|illustration/|.
+
+\subsubsection{Adding New Illustrations}
+
+Adding new illustrations is a bit of a pain. The are implemented as two PDFs
+with colour commands removed so that the colour can be set by \LaTeX{}.
+
+The background PDF must be named |afesbrand_illustration_<name>_bg.pdf|. The
+foreground PDF must be named |afesbrand_illustration_<name>_fg.pdf|. Then
+|<name>| can be passed to \cs{AFESBrandIllustration} to include the
+illustration.
+
+I suggest creating the two PDFs as black and white illustrations in Inkscape
+as a single path which is filled with RGB black but not stroked. See Figure
+\ref{newillustrations}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\linewidth]{croissant_bg_inkscape.png}\quad
+  \includegraphics[width=0.45\linewidth]{croissant_fg_inkscape.png}
+  \caption{Creating new illustrations in Inkscape}\label{newillustrations}
+\end{figure}
+
+Make sure the two documents use the same bounding box so that they will
+overlay correctly.
+
+Once you've created the two PDF files you can edit the two files to replace 
+|0 0 0 rg| with spaces (the file size and offsets must remain exactly the
+same) in a text editor or use the supplied shell script
+|illustration_remove_colour.sh| to remove the colour commands:
+
+\begin{verbatim}
+  $ ./illustration_remove_colour.sh
+  Usage: illustration_remove_colour.sh <name>
+
+  The current directory should contain the background and foreground
+  PDFs named 'afesbrand_illustration_<name>_bg.pdf' and
+  'afesbrand_illustration_<name>_fg.pdf' respectively.
+
+  These two PDFs should be single colour RGB black illustrations
+  only containing filled (not stroked) paths.
+\end{verbatim}
+
+\subsection{Hero Graphic}
+
+\begin{function}{\AFESBrandHeroGraphic}
+  \begin{syntax}
+    \oarg{options}\marg{image}
+  \end{syntax}
+  Insert \meta{image} using the AFES branding hero graphic with specified
+  \meta{options}. The image is initially sized to fit the width and height of
+  the graphic, but can be scaled and given an offset. See Figure
+  \ref{herographic} for example usage.
+\end{function}
+
+\begin{figure}
+  \begin{lstlisting}
+\colorbox{hero}{\AFESBrandHeroGraphic{herbert.png}}
+  \end{lstlisting}
+
+  \centering\setlength{\fboxsep}{5mm}%
+  \colorbox{hero}{\AFESBrandHeroGraphic[width=3cm]{herbert.png}}
+  \caption{Example Hero Graphic}\label{herographic}
+\end{figure}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[colour] The colour of the hero graphic. Default: |accent|
+  \item[image/dx] $x$-offset of the image from the centre of the frame as a
+    percentage of the width of the frame.
+  \item[image/dy] $y$-offset of the image from the centre of the frame as a
+    percentage of the hight of the frame.
+  \item[image/scale] Scale factor of the image as a percentage. This is
+    applied after the image has been resized to fit the width and height of
+    the frame.
+  \item[height] Height of the graphic (including the image) as a dimension
+    expression.
+  \item[width] Width of the graphic (including the image) as a dimension
+    expression.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|hero/|.
+
+\subsection{Brand Mark}
+
+\begin{function}{\AFESBrandMark}
+  \begin{syntax}
+    \marg{options}
+  \end{syntax}
+  Print the AFES Brand Mark with the specified \meta{options}.
+\end{function}
+
+See Figure \ref{brandmark} for example usage.
+
+\begin{figure}
+  \begin{lstlisting}
+\AFESBrandMark{height=2.5cm, padding=none, left=UNI, top=MEET,
+  right=JESUS}\quad
+\AFESBrandMark{height=2.5cm, padding=none, centre=UNI, bottom=MEET\\
+  JESUS}\quad
+\AFESBrandMark{height=2.5cm, padding=none, bottom=\AFESBrandUniMeetJesus}
+  \end{lstlisting}
+
+  \centering
+  \AFESBrandMark{height=2.5cm, padding=none, left=UNI, top=MEET,
+    right=JESUS}\quad
+  \AFESBrandMark{height=2.5cm, padding=none, center=UNI, bottom=MEET\\
+    JESUS}\quad
+  \AFESBrandMark{height=2.5cm, padding=none, bottom=\AFESBrandUniMeetJesus}
+  \caption{Example brand mark usage}\label{brandmark}
+\end{figure}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bgcolour] Set the background colour of the brand mark. Default: |none|
+  \item[bottom] Text at the bottom of the brand mark.
+  \item[centre] Text in the centre of the brand mark.
+  \item[colour] Set the colour of the brand mark. Default: |hero|
+  \item[height] Set the height of the brand mark (including any bottom text
+    and |padding|). If both |height| and |width| are specified the logo will
+    be scaled to fit within these dimensions.
+  \item[left] Text on the left of the brand mark.
+  \item[padding] Set the padding around the brand mark. The following values
+    are supported:
+    \begin{description}
+      \item[anchored] The brand mark is horizontally centred with padding
+        equal to twice the height of the top of the cross and with no padding
+        on the bottom.
+      \item[centred] The brand mark is centred with padding equal to twice the
+        height of the top of the cross. This is the default.
+      \item[none] The brand mark is printed without padding.
+    \end{description}
+  \item[right] Text on the right of the brand mark.
+  \item[top] Text on the top of the brand mark.
+  \item[width] Set the width of the brand mark (including any bottom text and
+    |padding|). If both |height| and |width| are specified the logo will be
+    scaled to fit within these dimensions.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|mark/|.
+
+\subsection{Wave Effect}
+
+\begin{function}{\AFESBrandWaveEffect}
+  \begin{syntax}
+    \oarg{options}\marg{text}
+  \end{syntax}
+  Print \meta{text} using the AFES brand wave effect with the specified
+  \meta{options}.
+\end{function}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bend] The percentage of the \meta{text} height to apply as a bend at
+    its vertical centre. Default: |5|
+  \item[colour] The colour of the \meta{text}. Default: \emph{Current colour}.
+  \item[simple] Create simple wave rather than the default complex wave which
+    is horizontal on the top and bottom of \meta{text}. See Figure
+    \ref{simplewave}.
+
+    \begin{figure}
+      \begin{lstlisting}
+\AFESBrandWaveEffect[simple, style=a, size=\huge, bend=4, width=4em,
+  colour=royalblue]{semester one 2025 events}
+      \end{lstlisting}
+
+      \centering
+      \AFESBrandWaveEffect[simple, style=a, size=\huge, bend=4, width=4em,
+        colour=royalblue]{semester one 2025 events}
+      \caption{Simple wave example}\label{simplewave}
+    \end{figure}
+
+  \item[style] Select one of the three specified wave styles, |a|, |b| and
+    |c|. See Figure \ref{standwaves}. Note that for these styles |bend| is set
+    to |3.5| to match the style guide.
+
+    \begin{figure}
+      \begin{lstlisting}
+\AFESBrandWaveEffect[style=a, colour=tangerineorange,
+  size=\huge]{There is one who gives meaning to it all}\quad
+\AFESBrandWaveEffect[style=b, colour=royalblue, width=5em,
+  size=\huge]{There is one who gives meaning to it all}\quad
+\AFESBrandWaveEffect[style=c, colour=huntergreen, width=5em,
+  size=\huge]{There is one who gives meaning to it all}
+    \end{lstlisting}
+
+      \centering
+      \AFESBrandWaveEffect[style=a, colour=tangerineorange,
+        size=\huge]{There is one who gives meaning to it all}\quad
+      \AFESBrandWaveEffect[style=b, colour=royalblue, width=5em,
+        size=\huge]{There is one who gives meaning to it all}\quad
+      \AFESBrandWaveEffect[style=c, colour=huntergreen, width=5em,
+        size=\huge]{There is one who gives meaning to it all}
+      \caption{Standard wave examples}\label{standwaves}
+    \end{figure}
+
+  \item[uppercase] Transform \meta{text} to uppercase.
+  \item[width] Set the width of the box that \meta{text} is set in.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|wave/|.
+
+The options supported by \cs{AFESBrandFontSelect} can also be used with or
+without the |font/| prefix to style the font of the wave.
+
+\subsection{Frame Device}
+
+\begin{function}{\AFESBrandFrameDevice}
+  \begin{syntax}
+    \oarg{options}\marg{text}
+  \end{syntax}
+  Print the AFES brand frame device with the specified \meta{options}.
+\end{function}
+
+See Figure \ref{framedevice}.
+
+\begin{figure}
+  \begin{lstlisting}
+\colorbox{tangerineorange}{%
+  \AFESBrandFrameDevice[action=JOIN A BIBLE STUDY, colour=lightorange,
+    size=\huge, wave/colour=white, style=a]{Make friends, meet Jesus.}}
+  \end{lstlisting}
+
+  {\centering\setlength{\fboxsep}{5mm}%
+     \colorbox{tangerineorange}{%
+       \AFESBrandFrameDevice[action=JOIN A BIBLE STUDY, colour=lightorange,
+         size=\huge, wave/colour=white, style=a]{%
+           Make friends, meet Jesus.}}\par}
+  \caption{Example AFES brand frame device}\label{framedevice}
+\end{figure}
+
+\begin{description}
+  \item[action] An alias for |action/text|.
+  \item[action/text] The call to action text.
+  \item[action/width] The width of the box that the call to action text is set
+    in. Default: |3.5em|
+  \item[colour] The colour of the frame. Default: |accent|
+  \item[ldx] A dimension expression specifying the $x$ offset of the lower
+    frame from it's default position. Default: |0pt|
+  \item[ldy] A dimension expression specifying the $y$ offset of the lower
+    frame from it's default position. Default: |0pt|
+  \item[udx] A dimension expression specifying the $x$ offset of the upper
+    frame from it's default position. Default: |0pt|
+  \item[udy] A dimension expression specifying the $y$ offset of the upper
+    frame from it's default position. Default: |0pt|
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|frame/|.
+
+The options supported by \cs{AFESBrandWaveEffect} and \cs{AFESBrandFontSelect}
+can also be used to style the wave without or without the |wave/| and |font/|
+prefixes. Note that where options clash (such as |colour|) then you need to
+specify |wave/colour|.
+
+\begin{function}{\AFESBrandFrameImage}
+  \begin{syntax}
+    \oarg{options}\marg{image}
+  \end{syntax}
+  Print the AFES brand frame device around \meta{image} with the specified
+  \meta{options}.
+\end{function}
+
+{\centering\AFESBrandFrameImage[width=3cm]{mallsballs.jpg}\par}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bgcolour] Set the background colour of the image frame. Default:
+    |hero|
+  \item[colour] Set the colour of the image frame. Default: |accent|
+  \item[height] Set the height of the image frame (including any |padding|).
+    If both |height| and |width| are specified the image frame will be scaled
+    to fit within these dimensions.
+  \item[padding] Set the padding around the image frame. The following values
+    are supported:
+    \begin{description}
+      \item[anchored] The image frame is horizontally centred with padding
+        equal to twice the height of the top of the cross and with no padding
+        on the bottom.
+      \item[centred] The image frame is centred with padding equal to twice
+        the height of the top of the cross. This is the default.
+      \item[none] The image frame is printed without padding.
+    \end{description}
+  \item[width] Set the width of the image frame (including any |padding|).  If
+    both |height| and |width| are specified the image frame will be scaled to
+    fit within these dimensions.
+\end{description}
+
+\section{National Applications}
+
+\subsection{Grid System}
+
+\begin{function}{\AFESBrandGridSystem}
+  \begin{syntax}
+    \oarg{options}\marg{text}
+  \end{syntax}
+  Print and AFES brand grid system with the specified \meta{options}
+  containing \meta{text} in the body area.
+
+  See Figure \ref{gridsystem}.
+\end{function}
+
+\begin{figure}
+  \begin{lstlisting}
+\colorbox{neutral}{\AFESBrandGridSystem[body/colour=hero,
+  head/colour=white]{\AFESBrandFontHeadOne\color{accent}COMMS\\
+  \textcolor{white}{TITLE GOES}\\ HERE}}
+  \end{lstlisting}
+  
+  \setlength{\fboxsep}{5mm}%
+  \colorbox{neutral}{\AFESBrandGridSystem[body/colour=hero,
+    head/colour=white, head/width=\dimexpr\linewidth-1cm]{%
+    \AFESBrandFontHeadOne\color{accent}COMMS\\
+    \textcolor{white}{TITLE GOES}\\ HERE}}
+  \caption{Example AFES brand grid system}\label{gridsystem}
+\end{figure}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[body] A \meta{boolean} value specifying whether to include the body
+    (and sidebar) or not. Default: |true|
+  \item[body/colour] The colour of the body. Default: |neutral|
+\item[body/height] The height of the body. Default: \emph{Natural height of
+  content}
+  \item[head/colour] The colour of the header. Default: |hero|
+  \item[head/height] The height of the header. Default: |2cm|
+  \item[head/width] The width of the header. Default: |\linewidth|
+  \item[logo] The \meta{logo} to use. This must be a valid logo name which is
+    passed to \cs{AFESBrandLogo}. Default: |national|
+
+    Other values to control the logo can be passed using the |logo/| prefix
+    and it's supported options. The defaults are:
+
+    \begin{tabular}{@{}>{\ttfamily}l@{}>{\ttfamily}l@{}}
+      logo/colour & = body/colour \\
+      logo/height & = head/height \\
+      logo/padding~ & = anchored \\
+      logo/variant~ & = primarytagline \\
+    \end{tabular}
+      
+  \item[sidebar] A \meta{boolean} value specifying whether to include the
+    sidebar or note. Default: |true|
+  \item[sidebar/colour] The colour of the sidebar. Default: |accent|
+  \item[url] A \meta{boolean} value specifying whether to include the AFES URL
+    in the header. Default: |true|
+  \item[url/colour] The colour of the AFES URL. Default: |body/colour|
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|grid/|.
+
+\section{Local Applications}
+
+\subsection{Profile Picture}
+
+\begin{function}{\AFESBrandProfile}
+  \begin{syntax}
+    \oarg{options}
+  \end{syntax}
+  Print a profile picture for use on social media. This uses the brand mark
+  with appropriate padding.
+\end{function}
+
+\AFESBrandProfile[size=1.5cm]
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[bgcolour] Set the background colour of the profile picture. Default:
+    |hero|
+  \item[colour] Set the colour of the profile picture. Default: |accent|
+  \item[size] Set the size of the profile picture.
+\end{description}
+
+\subsection{Social Media Banners and Posts}
+
+\begin{function}{AFESBrandSocialPost}
+  \begin{syntax}
+    \oarg{options}\marg{platform}
+  \end{syntax}
+  Environment to create a social media post for \meta{platform} with specified
+  \meta{options}.
+\end{function}
+
+Posts are created to size correctly when converted to a bitmap image at
+300dpi. Content is wrapped in a |tikzpicture|, so the post should be
+constructed with |tikz| \cs{node} and \cs{path} macros. The content is
+clipped to the post size and the origin is at the centre of the background.
+
+The best way to create a social post is to use the |standalone| class which
+sizes the document to its content. Then convert the resulting PDF to a
+bitmap at 300dpi. E.g., with GhostScript:
+
+\begin{lstlisting}
+/usr/bin/gs -dSAFER -dNOPAUSE -dBATCH -sOutputFile=post.png \
+  -sDEVICE=png16m -r300 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 \
+  post.pdf
+\end{lstlisting}
+
+\medskip
+
+See Figure \ref{instagram} for an example Instagram post.
+
+\begin{figure}
+  \begin{lstlisting}
+\begin{AFESBrandSocialPost}[type=portrait]{instagram}
+  \node{\AFESBrandWaveEffect[colour=white, size=30, style=b, bend=5,
+    linespace=0.935, width=4em]{You're not just here to pass exams}};
+  \node[xshift=2.25cm, yshift=-1.45cm]{%
+    \AFESBrandIllustration[bgcolour=white, colour=tangerineorange,
+    width=1.262cm]{lighthouse}};
+\end{AFESBrandSocialPost}
+  \end{lstlisting}
+  \centering
+  \begin{AFESBrandSocialPost}[type=portrait]{instagram}
+    \node{\AFESBrandWaveEffect[colour=white, size=30, style=b, bend=5,
+      linespace=0.935, width=4em]{You're not just here to pass exams}};
+    \node[xshift=2.25cm, yshift=-1.45cm]{%
+      \AFESBrandIllustration[bgcolour=white, colour=tangerineorange,
+      width=1.262cm]{lighthouse}};
+  \end{AFESBrandSocialPost}
+  \caption{Example Instagram post}\label{instagram}
+\end{figure}
+
+The following values of \meta{platform} are defined:
+
+\begin{description}
+  \item[facebook] Create a Facebook post.
+
+    The |type| option supports |banner|, |eventcover|, |groupcover|,
+    |landscape|, |portrait| and |square|.
+
+  \item[instagram] Create an Instagram post.
+
+    The |type| option supports |landscape|, |portrait| and |square|.
+
+  \item[trybooking] Create a Trybooking banner.
+
+    Only |banner| is supported for the |type| option.
+\end{description}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[colour] The background colour of the social post. Default: |hero|
+  \item[height] A custom height as a dimension expression. If |height| and
+    |width| are set, these are used instead of the defined values for
+    \meta{platform} and |type|.
+  \item[type] The type of post. See above for defined values for each
+    \meta{platform}. Default: |square|
+  \item[width] A custom width as a dimension expression. If |height| and
+    |width| are set, these are used instead of the defined values for
+    \meta{platform} and |type|.
+\end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|social/|.
+\end{document}

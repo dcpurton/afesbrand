@@ -1,0 +1,13 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\START
+\showoutput
+\colorbox{tangerineorange}{%
+  \AFESBrandFrameDevice[action=JOIN A BIBLE STUDY, colour=lightorange,
+    size=\huge, wave/colour=white, style=a]{Make friends, meet Jesus.}}
+\end{document}

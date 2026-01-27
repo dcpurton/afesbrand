@@ -1,0 +1,14 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\centering
+\AFESBrandFontSelect{family=livvic, letterspace=0, linespace=0.8, series=ub,
+  wordspace=1}
+\START
+\showoutput
+THERE IS\\ ONE WHO\\ GIVES\\ MEANING\\ TO IT ALL
+\end{document}

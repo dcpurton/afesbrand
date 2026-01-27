@@ -1,0 +1,12 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\START
+\showoutput
+\AFESBrandWaveEffect[style=a]{%
+  There is one who gives meaning to it all}
+\end{document}

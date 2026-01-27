@@ -1,0 +1,11 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\frenchspacing
+\START
+\showoutput
+\AFESBrandMark{padding=none, bottom=\AFESBrandUniMeetJesus}
+\end{document}
