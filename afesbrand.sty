@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/1/29}{1.0b}
+\ProvidesExplPackage{afesbrand}{2026/1/30}{1.0c}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -1318,8 +1318,8 @@
                                         \keys_set_known:nn
                                           { afesbrand / wave }
                                           {
-                                            , bend = 3.5
-                                            , lowercase
+                                            , bend      = 3.5
+                                            , uppercase = false
                                           }
                                       }
     , style / b   .code:n           = {
@@ -1335,8 +1335,8 @@
                                         \keys_set_known:nn
                                           { afesbrand / wave }
                                           {
-                                            , bend = 3.5
-                                            , uppercase
+                                            , bend      = 3.5
+                                            , uppercase = true
                                           }
                                       }
     , style / c   .code:n           = {
@@ -1352,8 +1352,8 @@
                                         \keys_set_known:nn
                                           { afesbrand / wave }
                                           {
-                                            , bend = 3.5
-                                            , uppercase
+                                            , bend      = 3.5
+                                            , uppercase = true
                                           }
                                       }
     , uppercase   .bool_set:N       = \l__afesbrand_wave_uppercase_bool
