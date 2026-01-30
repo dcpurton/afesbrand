@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/1/30}{1.0c}
+\ProvidesExplPackage{afesbrand}{2026/1/30}{1.0d}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -948,7 +948,7 @@
             {#2}
         }
       \fp_compare:nNnT
-        { \l__afesbrand_image_scale_fp } > { \c_zero_fp }
+        { \l__afesbrand_hero_image_scale_fp } > { \c_zero_fp }
         {
           \box_scale:Nnn \l__afesbrand_hero_image_box
             { \l__afesbrand_hero_image_scale_fp / 100 }
