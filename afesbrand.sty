@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/1/30}{1.0d}
+\ProvidesExplPackage{afesbrand}{2026/02/02}{1.0e}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -417,7 +417,10 @@
               ]
               at ( 0.0 , 1.9554 )
               {
-                \text_uppercase:n { \l__afesbrand_mark_left_tl }
+                \hbox:n
+                  {
+                    \text_uppercase:n { \l__afesbrand_mark_left_tl }
+                  }
               } ;
             \node
               [
@@ -428,7 +431,10 @@
               ]
               at ( 0.0 , 7.8449 )
               {
-                \text_uppercase:n { \l__afesbrand_mark_top_tl }
+                \hbox:n
+                  {
+                    \text_uppercase:n { \l__afesbrand_mark_top_tl }
+                  }
               } ;
             \node
               [
@@ -440,7 +446,10 @@
               ]
               at ( 6.039 , 7.8449 )
               {
-                \text_uppercase:n { \l__afesbrand_mark_right_tl }
+                \hbox:n
+                  {
+                    \text_uppercase:n { \l__afesbrand_mark_right_tl }
+                  }
               } ;
             \node
               [
