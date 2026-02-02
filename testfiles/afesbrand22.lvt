@@ -1,0 +1,26 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\START
+\showoutput
+\AFESBrandEmailSignature{}
+
+\bigskip
+
+\AFESBrandSetColours{hero=tangerineorange}
+
+\AFESBrandEmailSignature{
+  logo   = focus ,
+  name   = David Purton ,
+  role   = FOCUS Staff Team Leader ,
+  campus = Adelaide University ,
+  phone  = 0413 626 862 ,
+  web    = www.focusadelaide.org.au ,
+  abn    = ,
+  acn    = ,
+  postal = ,
+}
+\end{document}

@@ -21,6 +21,10 @@
 \RequirePackage { tikz }
 \RequirePackage { luamplib }
 
+\ExplSyntaxOff
+\usetikzlibrary{positioning}
+\ExplSyntaxOn
+
 
 %%%
 %%% Colours
@@ -1433,6 +1437,246 @@
 
 
 %%%
+%%% Email Signature Block
+%%%
+
+\keys_define:nn { afesbrand / email }
+  {
+    , abn    .tl_set:N         = \l__afesbrand_email_abn_tl
+    , abn    .value_required:n = true
+    , abn    .initial:n        = 91 ~ 509 ~ 626 ~ 599
+    , acn    .tl_set:N         = \l__afesbrand_email_acn_tl
+    , acn    .value_required:n = true
+    , acn    .initial:n        = 145 ~ 358 ~ 185
+    , campus .tl_set:N         = \l__afesbrand_email_campus_tl
+    , campus .value_required:n = true
+    , campus .initial:n        = Your ~ Campus
+    , logo   .tl_set:N         = \l__afesbrand_email_logo_tl
+    , logo   .value_required:n = true
+    , logo   .initial:n        = national
+    , name   .tl_set:N         = \l__afesbrand_email_name_tl
+    , name   .value_required:n = true
+    , name   .initial:n        = Your ~ Name
+    , phone  .tl_set:N         = \l__afesbrand_email_phone_tl
+    , phone  .value_required:n = true
+    , phone  .initial:n        = (02) ~ 9697 ~ 0313
+    , postal .tl_set:N         = \l__afesbrand_email_postal_tl
+    , postal .value_required:n = true
+    , postal .initial:n        = PO ~ Box ~ 684 \break
+                                 Kingsford ~ NSW ~ 2032
+    , role   .tl_set:N         = \l__afesbrand_email_role_tl
+    , role   .value_required:n = true
+    , role   .initial:n        = Your ~ Role
+    , web    .tl_set:N         = \l__afesbrand_email_web_tl
+    , web    .value_required:n = true
+    , web    .initial:n        = www.afes.org.au
+  }
+
+\box_new:N \l__afesbrand_email_box
+\dim_new:N \l__afesbrand_email_label_width_dim
+\dim_new:N \l__afesbrand_email_postal_width_dim
+
+\cs_new_protected:Nn \__afesbrand_email_signature:n
+  {
+    \group_begin:
+      \__afesbrand_font_body:
+      \keys_set_known:nn { afesbrand } {#1}
+      \keys_set_known:nn { afesbrand / email } {#1}
+      \begin { tikzpicture }
+        [
+          , node~distance = 1ex
+          , inner~sep     = 0pt
+          , outer~sep     = 0pt
+        ]
+        \node ( logo )
+          {
+            \__afesbrand_logo:nn
+              {
+                , height  = 13ex
+                , padding = none
+                , variant = primarytagline
+              }
+              { \l__afesbrand_email_logo_tl }
+          };
+        \node ( name )
+          [
+            , font   = \__afesbrand_font_select:n
+                         {
+                           , series = ub
+                           , size = 12
+                         }
+            , text   = hero
+            , right  = of ~ logo.north ~ east
+            , anchor = north ~ west
+            , xshift = 1em
+          ]
+          {
+            \l__afesbrand_email_name_tl
+          };
+        \node ( role )
+          [
+            , font   = \__afesbrand_font_select:n
+                         {
+                           , family = poetsenone
+                           , series = m
+                           , size   = 9
+                         }
+            , below  = of ~ name.south ~ west
+            , anchor = north ~ west
+          ]
+          {
+            \l__afesbrand_email_role_tl
+            \tl_if_empty:NF \l__afesbrand_email_campus_tl
+              { , \enspace \l__afesbrand_email_campus_tl }
+          };
+        \node ( address )
+          [
+            , align  = left
+            , font   = \__afesbrand_font_select:n { size = 8 }
+            , below  = of ~ role.south ~ west
+            , anchor = north ~ west
+            , yshift = -2ex
+          ]
+          {
+            \vbox_set:Nn \l__afesbrand_email_box
+              {
+                \raggedright
+                \tl_if_empty:NF \l__afesbrand_email_phone_tl
+                  {
+                    \hbox:n { P: }
+                  }
+                \tl_if_empty:NTF \l__afesbrand_email_postal_tl
+                  {
+                    \tl_if_empty:NF \l__afesbrand_email_web_tl
+                      { \hbox:n { W: } }
+                  }
+                  {
+                    \hbox:n { A: }
+                  }
+                \par
+                \__afesbrand_get_text_width:
+              }
+            \dim_set:Nn \l__afesbrand_email_label_width_dim
+              { \g__afesbrand_text_width_dim + 0.5em }
+            \vbox:n
+              {
+                \tl_if_empty:NF \l__afesbrand_email_phone_tl
+                  {
+                    \hbox:n
+                      {
+                        \hbox_to_wd:nn
+                          { \l__afesbrand_email_label_width_dim }
+                          { P: }
+                        \l__afesbrand_email_phone_tl
+                      }
+                  }
+                \tl_if_empty:NTF \l__afesbrand_email_postal_tl
+                  {
+                    \tl_if_empty:NF \l__afesbrand_email_web_tl
+                      {
+                        \hbox:n
+                          {
+                            \hbox_to_wd:nn
+                              { \l__afesbrand_email_label_width_dim }
+                              { W: }
+                            \l__afesbrand_email_web_tl
+                          }
+                      }
+                  }
+                  {
+                    \vbox_set:Nn \l__afesbrand_email_box
+                      {
+                        \raggedright
+                        \l__afesbrand_email_postal_tl
+                        \par
+                        \__afesbrand_get_text_width:
+                      }
+                    \hbox:n
+                      {
+                        \hbox_to_wd:nn
+                          { \l__afesbrand_email_label_width_dim }
+                          { A: }
+                        \vbox_top:n
+                          {
+                            \dim_set_eq:NN \hsize \g__afesbrand_text_width_dim
+                            \raggedright
+                            \l__afesbrand_email_postal_tl
+                          }
+                      }
+                  }
+              }
+          };
+        \tl_if_empty:NT \l__afesbrand_email_postal_tl
+          { \tl_clear:N \l__afesbrand_email_web_tl }
+        \node ( company )
+          [
+            , align  = left
+            , font   = \__afesbrand_font_select:n { size = 8 }
+            , right  = of ~ address.north ~ east
+            , anchor = north ~ west
+            , xshift = 2em
+          ]
+          {
+            \vbox_set:Nn \l__afesbrand_email_box
+              {
+                \raggedright
+                \tl_if_empty:NF \l__afesbrand_email_web_tl
+                  {
+                    \hbox:n { W: }
+                  }
+                \tl_if_empty:NF \l__afesbrand_email_abn_tl
+                  {
+                    \hbox:n { ABN: }
+                  }
+                \tl_if_empty:NF \l__afesbrand_email_acn_tl
+                  {
+                    \hbox:n { ACN: }
+                  }
+                \par
+                \__afesbrand_get_text_width:
+              }
+            \dim_set:Nn \l__afesbrand_email_label_width_dim
+              { \g__afesbrand_text_width_dim + 0.5em }
+            \vbox:n
+              {
+                \tl_if_empty:NF \l__afesbrand_email_web_tl
+                  {
+                    \hbox:n
+                      {
+                        \hbox_to_wd:nn
+                          { \l__afesbrand_email_label_width_dim }
+                          { W: }
+                        \l__afesbrand_email_web_tl
+                      }
+                  }
+                \tl_if_empty:NF \l__afesbrand_email_abn_tl
+                  {
+                    \hbox:n
+                      {
+                        \hbox_to_wd:nn
+                          { \l__afesbrand_email_label_width_dim }
+                          { ABN: }
+                        \l__afesbrand_email_abn_tl
+                      }
+                  }
+                \tl_if_empty:NF \l__afesbrand_email_acn_tl
+                  {
+                    \hbox:n
+                      {
+                        \hbox_to_wd:nn
+                          { \l__afesbrand_email_label_width_dim }
+                          { ACN: }
+                        \l__afesbrand_email_acn_tl
+                      }
+                  }
+              }
+          };
+      \end { tikzpicture }
+    \group_end:
+  }
+
+
+%%%
 %%% Utility functions
 %%%
 
@@ -1596,6 +1840,11 @@
 %%%
 %%% LaTeX interface
 %%%
+
+\NewDocumentCommand { \AFESBrandEmailSignature } { m }
+  {
+    \__afesbrand_email_signature:n {#1}
+  }
 
 \NewDocumentCommand { \AFESBrandFontBody } { }
   {
