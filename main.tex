@@ -1,0 +1,61 @@
+% TeX Program = lualatex
+
+% AFES Unified Branding Factory for LaTeX
+%
+% (c) 2026 David Purton <david.purton@afes.org.au>
+
+\documentclass{standalone}
+
+\usepackage{afesbrand}
+
+% Set your local colours
+%
+%   hero    = huntergreen | royalblue   | sunnyyellow   | tangerineorange
+%   neutral = dustyblue   | slatenavy   | lemonyellow   | naturalgrey
+%   accent  = sagegreen   | digitalpink | mustardyellow | lightorange
+
+\AFESBrandSetColours{
+  , hero    = huntergreen
+  , neutral = naturalgrey
+  , accent  = dustyblue
+}
+
+% Optionally set a page colour by uncommenting the following line (default is
+% transparent)
+
+% \pagecolor{white}
+
+\begin{document}
+
+% Set text in one of the three standard AFES wave styles
+%
+%   style = a | b | c
+%
+% Other common adjustments include adjusting the maximum width of the text
+% block and the bend percentage. You can insert manual line breaks with \\ (a
+% double backslash).
+%
+% See the documentation in afesbrand.pdf in the file list to the left of the
+% screen for full options to customise the wave style (and instructions for
+% producing other brand elements).
+
+\AFESBrandWaveEffect[
+  , style  = a
+  , colour = hero
+  , size   = 42
+  , width  = 4em
+  , bend   = 3.5
+]{%
+  There is one who gives meaning to it all
+}
+
+% The output can be downloaded as a PDF by clicking on the down arrow next to
+% the 'Recompile' button up the top of the right hand panel.
+%
+% A PNG and an SVG is also available:
+%   - Click on the 'Logs and output files' button next to the 'Recompile'
+%     button.
+%   - Click on 'Other logs and files' at the bottom right of the screen.
+%   - Download 'AFESBrandFactory.png' or 'AFESBrandFactory.svg'
+
+\end{document}
