@@ -152,6 +152,7 @@ Completed box being shipped out [1]
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 push {1 g 1 G}
+.................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 pop
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0 plus 1.0fil
@@ -199,6 +200,7 @@ Completed box being shipped out [1]
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 push {1 g 1 G}
+.................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 pop
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0 plus 1.0fil
@@ -247,6 +249,7 @@ Completed box being shipped out [1]
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 push {1 g 1 G}
+.................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 pop
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0

@@ -1,19 +1,13 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-Package fontspec Info: 
-(fontspec)             Could not resolve font "PoetsenOne/BI" (it probably doesn't exist).
-Package fontspec Info: 
-(fontspec)             Could not resolve font "PoetsenOne/B" (it probably doesn't exist).
-Package fontspec Info: 
-(fontspec)             Could not resolve font "PoetsenOne/I" (it probably doesn't exist).
 Inserting `luaotfload.letterspace' in `pre_linebreak_filter'.
 Inserting `luaotfload.letterspace' in `hpack_filter'.
 Package fontspec Info: 
-(fontspec)             Font family 'PoetsenOne(1)' created for font 'PoetsenOne' with options [LetterSpace=-5,Ligatures=TeX,WordSpace=0.765,LetterSpace=-5.02].
+(fontspec)             Font family 'PoetsenOne-Regular.ttf(1)' created for font 'PoetsenOne-Regular.ttf' with options [LetterSpace=-5,Ligatures=TeX,WordSpace=0.765,LetterSpace=-5.02].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:PoetsenOne:mode=node;script=latn;language=dflt;letterspace=-5;letterspace=-5.02;+tlig;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[PoetsenOne-Regular.ttf]:mode=node;script=latn;language=dflt;letterspace=-5;letterspace=-5.02;+tlig;"
 Module luamplib Info: flushing figure 1 on input line ...
 Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0, direction TLT

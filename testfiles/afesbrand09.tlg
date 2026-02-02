@@ -152,9 +152,10 @@ Completed box being shipped out [1]
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 push {1 g 1 G}
-.................\TU/Livvic(1)/ub/n/23.4 U
-.................\TU/Livvic(1)/ub/n/23.4 N
-.................\TU/Livvic(1)/ub/n/23.4 I
+.................\hbox(16.614+0.2574)x43.5006, direction TLT
+..................\TU/Livvic(1)/ub/n/23.4 U
+..................\TU/Livvic(1)/ub/n/23.4 N
+..................\TU/Livvic(1)/ub/n/23.4 I
 .................\pdfcolorstack 0 pop
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0 plus 1.0fil
@@ -202,11 +203,12 @@ Completed box being shipped out [1]
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 push {1 g 1 G}
-.................\TU/Livvic(1)/ub/n/23.4 M
-.................\TU/Livvic(1)/ub/n/23.4 E
-.................\TU/Livvic(1)/ub/n/23.4 E
-.................\kern0.468 (font)
-.................\TU/Livvic(1)/ub/n/23.4 T
+.................\hbox(16.614+0.0)x65.05197, direction TLT
+..................\TU/Livvic(1)/ub/n/23.4 M
+..................\TU/Livvic(1)/ub/n/23.4 E
+..................\TU/Livvic(1)/ub/n/23.4 E
+..................\kern0.468 (font)
+..................\TU/Livvic(1)/ub/n/23.4 T
 .................\pdfcolorstack 0 pop
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0 plus 1.0fil
@@ -255,13 +257,14 @@ Completed box being shipped out [1]
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\hbox(0.0+0.0)x0.0, direction TLT
 .................\pdfcolorstack 0 push {1 g 1 G}
-.................\TU/Livvic(1)/ub/n/23.4 J
-.................\TU/Livvic(1)/ub/n/23.4 E
-.................\discretionary (penalty 50)
-..................< \TU/Livvic(1)/ub/n/23.4 -
-.................\TU/Livvic(1)/ub/n/23.4 S
-.................\TU/Livvic(1)/ub/n/23.4 U
-.................\TU/Livvic(1)/ub/n/23.4 S
+.................\hbox(16.84799+0.2574)x72.96117, direction TLT
+..................\TU/Livvic(1)/ub/n/23.4 J
+..................\TU/Livvic(1)/ub/n/23.4 E
+..................\discretionary (penalty 50)
+...................< \TU/Livvic(1)/ub/n/23.4 -
+..................\TU/Livvic(1)/ub/n/23.4 S
+..................\TU/Livvic(1)/ub/n/23.4 U
+..................\TU/Livvic(1)/ub/n/23.4 S
 .................\pdfcolorstack 0 pop
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0
