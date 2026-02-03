@@ -24,8 +24,8 @@
     \AFESBrandFontBody, \AFESBrandIcon, \AFESBrandHeroGraphic, \AFESBrandMark,
     \AFESBrandUniMeetJesus, \AFESBrandWaveEffect, \AFESBrandFrameDevice,
     \AFESBrandGridSystem, \AFESBrandIllustration, \AFESBrandFontSelect,
-    \centering, \color, \huge, \colorbox, \textcolor, \raggedright, \quad,
-    \node, \begin, \end
+    \AFESBrandEmailSignature, \AFESBrandSetColours, \centering, \color, \huge,
+    \colorbox, \textcolor, \raggedright, \quad, \node, \begin, \end
   },
   sensitive=true,
   morecomment=[l]\%
@@ -48,7 +48,7 @@
 
 \title{The \pkg{afesbrand} Package}
 \author{David Purton\thanks{Email: \url{david.purton@afes.org.au}}}
-\date{2026/02/02 v1.0e}
+\date{2026/02/03 v1.1}
 
 \maketitle
 
@@ -57,7 +57,10 @@
   components of the AFES brand guidelines.
 \end{abstract}
 
+\begingroup
+\renewcommand\baselinestretch{0.9}\selectfont
 \tableofcontents
+\endgroup
 
 \clearpage
 
@@ -886,6 +889,85 @@ The following \meta{options} are supported:
 These options can also be set using \cs{AFESBrandSetOptions} and the prefix
 |grid/|.
 
+\subsection{Email Signature}
+
+\begin{function}{\AFESBrandEmailSignature}
+  \begin{syntax}
+    \marg{options}
+  \end{syntax}
+  Create an AFES branded email signature block with the specified
+  \meta{options}.
+\end{function}
+
+If \meta{options} is left empty, then a national style template block is
+created. See Figure \ref{nationalemail}. A simplified local style is shown in
+Figure \ref{localemail}.
+
+\begin{figure}
+  \begin{lstlisting}
+\AFESBrandEmailSignature{}
+  \end{lstlisting}
+  \centering
+  \AFESBrandEmailSignature{}
+  \caption{National email signature template.}\label{nationalemail}
+\end{figure}
+
+\begin{figure}
+  \begin{lstlisting}
+\AFESBrandSetColours{hero = tangerineorange}
+\AFESBrandEmailSignature{
+  logo   = focus ,
+  name   = David Purton ,
+  role   = FOCUS Staff Team Leader ,
+  campus = Adelaide University ,
+  phone  = 0413 626 862 ,
+  web    = www.focusadelaide.org.au ,
+  postal = ,
+  abn    = ,
+  acn    =
+}
+  \end{lstlisting}
+  \centering
+  \AFESBrandSetColours{hero = tangerineorange}
+  \AFESBrandEmailSignature{
+    logo   = focus ,
+    name   = David Purton ,
+    role   = FOCUS Staff Team Leader ,
+    campus = Adelaide University ,
+    phone  = 0413 626 862 ,
+    web    = www.focusadelaide.org.au ,
+    postal = ,
+    abn    = ,
+    acn    =
+  }
+  \caption{Local email signature example.}\label{localemail}
+\end{figure}
+
+The following \meta{options} are supported:
+
+\begin{description}
+  \item[abn] Set the ABN. Default: |91 509 626 599|
+  \item[acn] Set the ACN. Default: |145 358 185|
+  \item[campus] Set your campus. Default: |Your Campus|
+  \item[logo] Set the main logo name. Default: |national|
+
+    By default the |primarytagline| variant will be selected. Complete control
+    of the logo is available by passing supported logo options with the
+    |logo/| prefix.
+
+  \item[name] Set your name. Default: |Your Name|
+  \item[phone] Set your phone number. Default: |(02) 9697 0313|
+  \item[postal] Set your postal address. Default: |PO Box 684\break Kingsford NSW 2032|
+  \item[role] Set your role. Default: |Your Role|
+  \item[web] Set the web site URL. Default: |www.afes.org.au|
+\end{description}
+
+Any of these can be left out of the signature block by setting them to an
+empty token list, e.g., |campus=|.
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|email/|.
+
 \section{Local Applications}
 
 \subsection{Profile Picture}
@@ -908,6 +990,9 @@ The following \meta{options} are supported:
   \item[colour] Set the colour of the profile picture. Default: |accent|
   \item[size] Set the size of the profile picture.
 \end{description}
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|profile/|.
 
 \subsection{Social Media Banners and Posts}
 
@@ -992,4 +1077,5 @@ The following \meta{options} are supported:
 
 These options can also be set using \cs{AFESBrandSetOptions} and the prefix
 |social/|.
+
 \end{document}
