@@ -29,49 +29,6 @@ Package fontspec Info:
 (fontspec)              This font family consists of the following NFSS series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[PoetsenOne-Regular.ttf]:mode=node;script=latn;language=dflt;letterspace=-5;letterspace=0;+tlig;"
-Underfull \hbox (badness 10000) detected at line 9
-\TU/Livvic(1)/l/n/8 P:
-\hbox(5.68+0.064)x10.56, direction TLT
-.\TU/Livvic(1)/l/n/8 P
-.\TU/Livvic(1)/l/n/8 :
-Underfull \hbox (badness 10000) detected at line 9
-\TU/Livvic(1)/l/n/8 A:
-\hbox(5.68+0.064)x10.56, direction TLT
-.\TU/Livvic(1)/l/n/8 A
-.\kern-0.024 (font)
-.\TU/Livvic(1)/l/n/8 :
-Underfull \hbox (badness 10000) detected at line 9
-\TU/Livvic(1)/l/n/8 W:
-\hbox(5.68+0.064)x21.224, direction TLT
-.\TU/Livvic(1)/l/n/8 W
-.\kern-0.12 (font)
-.\TU/Livvic(1)/l/n/8 :
-Underfull \hbox (badness 10000) detected at line 9
-\TU/Livvic(1)/l/n/8 ABN:
-\hbox(5.68+0.064)x21.224, direction TLT
-.\TU/Livvic(1)/l/n/8 A
-.\TU/Livvic(1)/l/n/8 B
-.\TU/Livvic(1)/l/n/8 N
-.\TU/Livvic(1)/l/n/8 :
-Underfull \hbox (badness 10000) detected at line 9
-\TU/Livvic(1)/l/n/8 ACN:
-\hbox(5.76+0.064)x21.224, direction TLT
-.\TU/Livvic(1)/l/n/8 A
-.\kern-0.16 (font)
-.\TU/Livvic(1)/l/n/8 C
-.\TU/Livvic(1)/l/n/8 N
-.\TU/Livvic(1)/l/n/8 :
-Underfull \hbox (badness 10000) detected at line 25
-\TU/Livvic(1)/l/n/8 P:
-\hbox(5.68+0.064)x12.45601, direction TLT
-.\TU/Livvic(1)/l/n/8 P
-.\TU/Livvic(1)/l/n/8 :
-Underfull \hbox (badness 10000) detected at line 25
-\TU/Livvic(1)/l/n/8 W:
-\hbox(5.68+0.064)x12.45601, direction TLT
-.\TU/Livvic(1)/l/n/8 W
-.\kern-0.12 (font)
-.\TU/Livvic(1)/l/n/8 :
 Overfull \hbox (31.14925pt too wide) in paragraph at lines ...
 [][] 
 \hbox(64.35037+0.0)x345.0, direction TLT
@@ -710,9 +667,10 @@ Overfull \hbox (31.14925pt too wide) in paragraph at lines ...
 ...........\hbox(16.76+1.68)x104.19205, direction TLT
 ............\vbox(16.76+1.68)x104.19205, direction TLT
 .............\hbox(5.76+0.064)x64.02403, direction TLT
-..............\hbox(5.68+0.064)x12.45601, direction TLT
+..............\hbox(5.68+0.064)x12.45601, glue set 6.504fill, direction TLT
 ...............\TU/Livvic(1)/l/n/8 P
 ...............\TU/Livvic(1)/l/n/8 :
+...............\glue 0.0 plus 1.0fill
 ..............\TU/Livvic(1)/l/n/8 0
 ..............\TU/Livvic(1)/l/n/8 4
 ..............\TU/Livvic(1)/l/n/8 1
@@ -727,10 +685,11 @@ Overfull \hbox (31.14925pt too wide) in paragraph at lines ...
 ..............\TU/Livvic(1)/l/n/8 2
 .............\glue(\baselineskip) 4.936
 .............\hbox(6.0+1.68)x104.19205, direction TLT
-..............\hbox(5.68+0.064)x12.45601, direction TLT
+..............\hbox(5.68+0.064)x12.45601, glue set 4.0fill, direction TLT
 ...............\TU/Livvic(1)/l/n/8 W
 ...............\kern-0.12 (font)
 ...............\TU/Livvic(1)/l/n/8 :
+...............\glue 0.0 plus 1.0fill
 ..............\TU/Livvic(1)/l/n/8 w
 ..............\kern-0.096 (font)
 ..............\TU/Livvic(1)/l/n/8 w
@@ -1444,9 +1403,10 @@ Completed box being shipped out [1]
 ..............\hbox(16.976+12.68)x83.208, direction TLT
 ...............\vbox(16.976+12.68)x83.208, direction TLT
 ................\hbox(5.976+1.664)x66.57602, direction TLT
-.................\hbox(5.68+0.064)x10.56, direction TLT
+.................\hbox(5.68+0.064)x10.56, glue set 4.60799fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 P
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\TU/Livvic(1)/l/n/8 (
 .................\TU/Livvic(1)/l/n/8 0
 .................\TU/Livvic(1)/l/n/8 2
@@ -1463,10 +1423,11 @@ Completed box being shipped out [1]
 .................\TU/Livvic(1)/l/n/8 3
 ................\glue(\baselineskip) 3.576
 ................\hbox(5.76+12.68)x83.208, direction TLT
-.................\hbox(5.68+0.064)x10.56, direction TLT
+.................\hbox(5.68+0.064)x10.56, glue set 4.0fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 A
 ..................\kern-0.024 (font)
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\vbox(5.76+12.68)x72.648, direction TLT
 ..................\hbox(5.76+0.064)x72.648, glue set 30.94398fil, direction TLT
 ...................\localpar
@@ -1544,10 +1505,11 @@ Completed box being shipped out [1]
 ..............\hbox(28.0+0.064)x79.37602, direction TLT
 ...............\vbox(28.0+0.064)x79.37602, direction TLT
 ................\hbox(6.0+1.68)x78.63205, direction TLT
-.................\hbox(5.68+0.064)x21.224, direction TLT
+.................\hbox(5.68+0.064)x21.224, glue set 12.76799fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 W
 ..................\kern-0.12 (font)
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\TU/Livvic(1)/l/n/8 w
 .................\kern-0.096 (font)
 .................\TU/Livvic(1)/l/n/8 w
@@ -1573,11 +1535,12 @@ Completed box being shipped out [1]
 .................\TU/Livvic(1)/l/n/8 u
 ................\glue(\baselineskip) 3.56001
 ................\hbox(5.76+0.064)x79.37602, direction TLT
-.................\hbox(5.68+0.064)x21.224, direction TLT
+.................\hbox(5.68+0.064)x21.224, glue set 4.15201fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 A
 ..................\TU/Livvic(1)/l/n/8 B
 ..................\TU/Livvic(1)/l/n/8 N
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\TU/Livvic(1)/l/n/8 9
 .................\TU/Livvic(1)/l/n/8 1
 .................\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
@@ -1594,12 +1557,13 @@ Completed box being shipped out [1]
 .................\TU/Livvic(1)/l/n/8 9
 ................\glue(\baselineskip) 5.17601
 ................\hbox(5.76+0.064)x67.99202, direction TLT
-.................\hbox(5.76+0.064)x21.224, direction TLT
+.................\hbox(5.76+0.064)x21.224, glue set 4.0fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 A
 ..................\kern-0.16 (font)
 ..................\TU/Livvic(1)/l/n/8 C
 ..................\TU/Livvic(1)/l/n/8 N
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\TU/Livvic(1)/l/n/8 1
 .................\TU/Livvic(1)/l/n/8 4
 .................\TU/Livvic(1)/l/n/8 5
@@ -2269,9 +2233,10 @@ Completed box being shipped out [1]
 ..............\hbox(16.76+1.68)x104.19205, direction TLT
 ...............\vbox(16.76+1.68)x104.19205, direction TLT
 ................\hbox(5.76+0.064)x64.02403, direction TLT
-.................\hbox(5.68+0.064)x12.45601, direction TLT
+.................\hbox(5.68+0.064)x12.45601, glue set 6.504fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 P
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\TU/Livvic(1)/l/n/8 0
 .................\TU/Livvic(1)/l/n/8 4
 .................\TU/Livvic(1)/l/n/8 1
@@ -2286,10 +2251,11 @@ Completed box being shipped out [1]
 .................\TU/Livvic(1)/l/n/8 2
 ................\glue(\baselineskip) 4.936
 ................\hbox(6.0+1.68)x104.19205, direction TLT
-.................\hbox(5.68+0.064)x12.45601, direction TLT
+.................\hbox(5.68+0.064)x12.45601, glue set 4.0fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 W
 ..................\kern-0.12 (font)
 ..................\TU/Livvic(1)/l/n/8 :
+..................\glue 0.0 plus 1.0fill
 .................\TU/Livvic(1)/l/n/8 w
 .................\kern-0.096 (font)
 .................\TU/Livvic(1)/l/n/8 w

@@ -1942,11 +1942,13 @@
 \NewDocumentCommand { \AFESBrandSetColours } { m }
   {
     \__afesbrand_set_colours:n {#1}
+    \ignorespaces
   }
 
 \NewDocumentCommand { \AFESBrandSetOptions } { m }
   {
     \__afesbrand_set_options:n {#1}
+    \ignorespaces
   }
 
 \NewDocumentCommand { \AFESBrandUniMeetJesus } { }
@@ -1966,6 +1968,7 @@
     \tl_if_novalue:nTF {#1}
       { \__afesbrand_social_post_begin:nn { }  {#2} }
       { \__afesbrand_social_post_begin:nn {#1} {#2} }
+    \ignorespaces
   }
   {
     \__afesbrand_social_post_end:
