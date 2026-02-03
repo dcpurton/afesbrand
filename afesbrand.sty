@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/02/02}{1.0e}
+\ProvidesExplPackage{afesbrand}{2026/02/03}{1.1}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -1566,7 +1566,7 @@
                       {
                         \hbox_to_wd:nn
                           { \l__afesbrand_email_label_width_dim }
-                          { P: }
+                          { P: \hfill }
                         \l__afesbrand_email_phone_tl
                       }
                   }
@@ -1578,7 +1578,7 @@
                           {
                             \hbox_to_wd:nn
                               { \l__afesbrand_email_label_width_dim }
-                              { W: }
+                              { W: \hfill }
                             \l__afesbrand_email_web_tl
                           }
                       }
@@ -1595,7 +1595,7 @@
                       {
                         \hbox_to_wd:nn
                           { \l__afesbrand_email_label_width_dim }
-                          { A: }
+                          { A: \hfill }
                         \vbox_top:n
                           {
                             \dim_set_eq:NN \hsize \g__afesbrand_text_width_dim
@@ -1645,7 +1645,7 @@
                       {
                         \hbox_to_wd:nn
                           { \l__afesbrand_email_label_width_dim }
-                          { W: }
+                          { W: \hfill }
                         \l__afesbrand_email_web_tl
                       }
                   }
@@ -1655,7 +1655,7 @@
                       {
                         \hbox_to_wd:nn
                           { \l__afesbrand_email_label_width_dim }
-                          { ABN: }
+                          { ABN: \hfill }
                         \l__afesbrand_email_abn_tl
                       }
                   }
@@ -1665,7 +1665,7 @@
                       {
                         \hbox_to_wd:nn
                           { \l__afesbrand_email_label_width_dim }
-                          { ACN: }
+                          { ACN: \hfill }
                         \l__afesbrand_email_acn_tl
                       }
                   }
