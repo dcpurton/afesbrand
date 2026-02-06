@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/02/03}{1.1}
+\ProvidesExplPackage{afesbrand}{2026/02/03}{1.1a}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -882,29 +882,32 @@
               }
               { \l__afesbrand_grid_logo_tl }
           } ;
-        \node
-          ( body )
-          [
-            , align      = flush~left
-            , anchor     = north~west
-            , inner~sep  = \l__afesbrand_grid_sidebar_width_dim
-            , fill       = \l__afesbrand_grid_body_colour_tl
-            , text~width = \l__afesbrand_grid_body_text_width_dim
-            , xshift     = \l__afesbrand_grid_body_xshift_dim
-          ]
-          at ( head.south~west )
+        \bool_if:NT \l__afesbrand_grid_body_bool
           {
-            \box_if_empty:NTF \l__afesbrand_grid_body_box
+            \node
+              ( body )
+              [
+                , align      = flush~left
+                , anchor     = north~west
+                , inner~sep  = \l__afesbrand_grid_sidebar_width_dim
+                , fill       = \l__afesbrand_grid_body_colour_tl
+                , text~width = \l__afesbrand_grid_body_text_width_dim
+                , xshift     = \l__afesbrand_grid_body_xshift_dim
+              ]
+              at ( head.south~west )
               {
-                \mode_leave_vertical:
-                #2
-                \par
-              }
-              { \box_use_drop:N \l__afesbrand_grid_body_box }
-          } ;
-        \path
-          [ fill = \l__afesbrand_grid_sidebar_colour_tl ]
-          ( head.south~west ) rectangle (body.south~west);
+                \box_if_empty:NTF \l__afesbrand_grid_body_box
+                  {
+                    \mode_leave_vertical:
+                    #2
+                    \par
+                  }
+                  { \box_use_drop:N \l__afesbrand_grid_body_box }
+              } ;
+            \path
+              [ fill = \l__afesbrand_grid_sidebar_colour_tl ]
+              ( head.south~west ) rectangle (body.south~west);
+          }
       \end { tikzpicture }
     \group_end:
   }
