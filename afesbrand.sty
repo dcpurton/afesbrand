@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/02/03}{1.1a}
+\ProvidesExplPackage{afesbrand}{2026/02/03}{1.1b}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -212,9 +212,12 @@
     \fontseries { \l__afesbrand_font_series_tl }
     \fontshape { \l__afesbrand_font_shape_tl }
     \addfontfeatures { LetterSpace = \l__afesbrand_font_letterspace_tl }
-    \dim_set:Nn \l_tmpa_dim { \fontdimen 2 \font }
-    \fontdimen 2 \font = \dim_eval:n
-      { \l__afesbrand_font_wordspace_tl \l_tmpa_dim }
+    \skip_set:Nn \spaceskip
+      {
+        \l__afesbrand_font_wordspace_tl \fontdimen 2 \font
+        plus \l__afesbrand_font_wordspace_tl \fontdimen 3 \font
+        minus \l__afesbrand_font_wordspace_tl \fontdimen 4 \font
+      }
     \skip_set_eq:NN \baselineskip \l__afesbrand_font_baseline_skip
     \fp_compare:nNnT
       { \l__afesbrand_font_linespace_tl } < { 0.9 }
