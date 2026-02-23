@@ -197,6 +197,17 @@ specified for coordinates it is assumed to be |cm|.
   }
 \end{lstlisting}
 
+Save your new logos in a file called |afesbrand_logos_<affiliate>.def| and
+they can then be loaded use the |\AFESBrandLogoLoad| function.
+
+\begin{function}{\AFESBrandLogoLoad}
+  \begin{syntax}
+    \marg{affiliate}
+  \end{syntax}
+  Load a set of logos from a file called |afesbrand_logos_<affiliate>.def|.
+\end{function}
+
+
 \subsection{Colour Palette}
 
 The AFES brand colours are defined using the \pkg{xcolor} package. They are

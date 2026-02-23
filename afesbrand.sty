@@ -341,6 +341,11 @@
     \group_end:
   }
 
+\cs_new_protected:Nn \__afesbrand_logo_load:n
+  {
+    \file_input:n { afesbrand_logos_#1.def }
+  }
+
 
 %%%
 %%% Brand Mark
@@ -1931,6 +1936,19 @@
     \tl_if_novalue:nTF {#1}
       { \__afesbrand_logo:nn { }  {#2} }
       { \__afesbrand_logo:nn {#1} {#2} }
+  }
+
+\NewDocumentCommand { \AFESBrandLogoLoad } { m }
+  {
+    \bool_if:NTF \l__kernel_expl_bool
+      {
+        \__afesbrand_logo_load:n {#1}
+      }
+      {
+        \ExplSyntaxOn
+        \__afesbrand_logo_load:n {#1}
+        \ExplSyntaxOff
+      }
   }
 
 \NewDocumentCommand { \AFESBrandMark } { m }
