@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/02/23}{1.2}
+\ProvidesExplPackage{afesbrand}{2026/02/24}{1.2a}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -284,6 +284,15 @@
 %%% Logos
 %%%
 
+\msg_new:nnnn { afesbrand } { logo-variant-not-found }
+  { Falling~back~to~primary~logo~variant~for~logo~#1.}
+  { Could~not~find~a~definition~for~logo~#1~with~variant~#2.\\
+    Falling~back~to~primary~logo~variant~for~logo~#1.}
+\msg_new:nnnn { afesbrand } { logo-not-found }
+  { Logo~#1~with~variant~#2~not~found.}
+  { Could~not~find~a~definition~for~logo~#1~with~variant~#2.\\
+    Check~for~typos~and~whether~the~logo~set~has~been~loaded.}
+
 \file_input:n { afesbrand_logos.def }
 \file_input:n { afesbrand_logos_focus.def }
 
@@ -320,6 +329,21 @@
     \group_begin:
       \keys_set_known:nn { afesbrand } {#1}
       \keys_set_known:nn { afesbrand / logo } {#1}
+      \cs_if_exist:cF
+        { __afesbrand_logo_#2_ \l__afesbrand_logo_variant_tl :nnn }
+        {
+          \cs_if_exist:cTF
+            { __afesbrand_logo_#2_primary:nnn }
+            {
+              \msg_warning:nnee { afesbrand } { logo-variant-not-found }
+                {#2} { \l__afesbrand_logo_variant_tl }
+              \tl_set:Nn \l__afesbrand_logo_variant_tl { primary }
+            }
+            {
+              \msg_error:nnee { afesbrand } { logo-not-found }
+                {#2} { \l__afesbrand_logo_variant_tl }
+            }
+        }
       \hbox_set:Nn \l__afesbrand_logo_box
         {
           \tikz
