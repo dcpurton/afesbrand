@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/02/03}{1.1b}
+\ProvidesExplPackage{afesbrand}{2026/02/23}{1.2}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -1462,6 +1462,8 @@
     , campus .tl_set:N         = \l__afesbrand_email_campus_tl
     , campus .value_required:n = true
     , campus .initial:n        = Your ~ Campus
+    , days   .tl_set:N         = \l__afesbrand_email_days_tl
+    , days   .value_required:n = true
     , logo   .tl_set:N         = \l__afesbrand_email_logo_tl
     , logo   .value_required:n = true
     , logo   .initial:n        = national
@@ -1540,16 +1542,37 @@
             \tl_if_empty:NF \l__afesbrand_email_campus_tl
               { , \enspace \l__afesbrand_email_campus_tl }
           };
+        \group_begin:
+          \__afesbrand_font_select:n { size = 8 }
+          \skip_gset_eq:NN \g_tmpa_skip \baselineskip
+        \group_end:
+        \tl_if_empty:NTF \l__afesbrand_email_days_tl
+          {
+            \tl_set:Nn \l_tmpa_tl { role }
+            \tl_set:Nn \l_tmpb_tl { -2ex }
+          }
+          {
+            \node ( days )
+              [
+                , font   = \__afesbrand_font_select:n { size = 8 }
+                , below  = \skip_use:N \g_tmpa_skip ~ of ~ role.base ~ west
+                , anchor = base ~ west
+                , yshift = -2ex
+              ]
+              { Work ~ days: \enspace \l__afesbrand_email_days_tl };
+            \tl_set:Nn \l_tmpa_tl { days }
+            \tl_set:Nn \l_tmpb_tl { 0pt }
+          }
         \node ( address )
           [
             , align  = left
             , font   = \__afesbrand_font_select:n { size = 8 }
-            , below  = of ~ role.south ~ west
-            , anchor = north ~ west
-            , yshift = -2ex
+            , below  = \skip_use:N \g_tmpa_skip ~ of ~ \l_tmpa_tl .base ~ west
+            , anchor = base ~ west
+            , yshift = \l_tmpb_tl
           ]
           {
-            \vbox_set:Nn \l__afesbrand_email_box
+            \vbox_set_top:Nn \l__afesbrand_email_box
               {
                 \raggedright
                 \tl_if_empty:NF \l__afesbrand_email_phone_tl
@@ -1569,7 +1592,7 @@
               }
             \dim_set:Nn \l__afesbrand_email_label_width_dim
               { \g__afesbrand_text_width_dim + 0.5em }
-            \vbox:n
+            \vbox_top:n
               {
                 \tl_if_empty:NF \l__afesbrand_email_phone_tl
                   {
@@ -1595,7 +1618,7 @@
                       }
                   }
                   {
-                    \vbox_set:Nn \l__afesbrand_email_box
+                    \vbox_set_top:Nn \l__afesbrand_email_box
                       {
                         \raggedright
                         \l__afesbrand_email_postal_tl

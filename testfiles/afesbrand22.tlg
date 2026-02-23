@@ -31,16 +31,16 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[PoetsenOne-Regular.ttf]:mode=node;script=latn;language=dflt;letterspace=-5;letterspace=0;+tlig;"
 Overfull \hbox (31.14925pt too wide) in paragraph at lines ...
 [][] 
-\hbox(64.35037+0.0)x345.0, direction TLT
+\hbox(65.65196+0.0)x345.0, direction TLT
 .\localpar
 ..\localinterlinepenalty=0
 ..\localbrokenpenalty=0
 ..\localleftbox=null
 ..\localrightbox=null
 .\hbox(0.0+0.0)x0.0, direction TLT
-.\hbox(64.35037+0.0)x376.14925, direction TLT
+.\hbox(65.65196+0.0)x376.14925, direction TLT
 ..\glue 85.6186
-..\hbox(0.0+0.0)x0.0, shifted -32.17519, direction TLT
+..\hbox(0.0+0.0)x0.0, shifted -33.47678, direction TLT
 ...\pdfliteral origin{q }
 ...\pdfliteral origin{0 G }
 ...\pdfliteral origin{0 g }
@@ -651,21 +651,93 @@ Overfull \hbox (31.14925pt too wide) in paragraph at lines ...
 ......\glue(\spaceskip) 0.0
 ......\glue(\spaceskip) 0.0
 ......\glue(\spaceskip) 0.0
+......\pdfliteral origin{q }
+......\hbox(0.0+0.0)x0.0, direction TLT
+.......\glue 100.5686
+.......\hbox(0.0+0.0)x0.0, shifted 9.79678, direction TLT
+........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
+........\pdfliteral origin{q }
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\hbox(5.92+1.68)x166.18396, direction TLT
+..........\pdfliteral origin{0 G }
+..........\pdfliteral origin{0 g }
+..........\hbox(5.92+1.68)x166.18396, direction TLT
+...........\TU/Livvic(1)/l/n/8 W
+...........\kern-0.376 (font)
+...........\TU/Livvic(1)/l/n/8 o
+...........\TU/Livvic(1)/l/n/8 r
+...........\TU/Livvic(1)/l/n/8 k
+...........\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
+...........\TU/Livvic(1)/l/n/8 d
+...........\TU/Livvic(1)/l/n/8 a
+...........\TU/Livvic(1)/l/n/8 y
+...........\TU/Livvic(1)/l/n/8 s
+...........\TU/Livvic(1)/l/n/8 :
+...........\kern4.0
+...........\TU/Livvic(1)/l/n/8 T
+...........\kern-0.48 (font)
+...........\TU/Livvic(1)/l/n/8 u
+...........\TU/Livvic(1)/l/n/8 e
+...........\TU/Livvic(1)/l/n/8 s
+...........\TU/Livvic(1)/l/n/8 d
+...........\TU/Livvic(1)/l/n/8 a
+...........\TU/Livvic(1)/l/n/8 y
+...........\TU/Livvic(1)/l/n/8 ,
+...........\glue(\spaceskip) 1.784 plus 1.11499 minus 0.47572
+...........\TU/Livvic(1)/l/n/8 W
+...........\kern-0.376 (font)
+...........\TU/Livvic(1)/l/n/8 e
+...........\TU/Livvic(1)/l/n/8 d
+...........\TU/Livvic(1)/l/n/8 n
+...........\TU/Livvic(1)/l/n/8 e
+...........\TU/Livvic(1)/l/n/8 s
+...........\discretionary (penalty 50)
+............< \TU/Livvic(1)/l/n/8 -
+...........\TU/Livvic(1)/l/n/8 d
+...........\TU/Livvic(1)/l/n/8 a
+...........\TU/Livvic(1)/l/n/8 y
+...........\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
+...........\TU/Livvic(1)/l/n/8 a
+...........\TU/Livvic(1)/l/n/8 n
+...........\TU/Livvic(1)/l/n/8 d
+...........\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
+...........\TU/Livvic(1)/l/n/8 T
+...........\TU/Livvic(1)/l/n/8 h
+...........\TU/Livvic(1)/l/n/8 u
+...........\TU/Livvic(1)/l/n/8 r
+...........\kern-0.144 (font)
+...........\TU/Livvic(1)/l/n/8 s
+...........\discretionary (penalty 50)
+............< \TU/Livvic(1)/l/n/8 -
+...........\TU/Livvic(1)/l/n/8 d
+...........\TU/Livvic(1)/l/n/8 a
+...........\TU/Livvic(1)/l/n/8 y
+..........\glue(\spaceskip) 0.0
+........\pdfliteral origin{Q }
+........\glue(\spaceskip) 0.0
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+......\pdfliteral origin{Q }
+......\glue(\spaceskip) 0.0
+......\pdfliteral origin{Q }
+....\hbox(0.0+0.0)x0.0, direction TLT
+.....\hbox(0.0+0.0)x0.0, direction TLT
+......\pdfliteral origin{q }
+......\glue(\spaceskip) 0.0
 ......\glue(\spaceskip) 0.0
 ......\glue(\spaceskip) 0.0
 ......\pdfliteral origin{q }
 ......\hbox(0.0+0.0)x0.0, direction TLT
 .......\glue 100.5686
-.......\hbox(0.0+0.0)x0.0, shifted 22.26176, direction TLT
+.......\hbox(0.0+0.0)x0.0, shifted 20.79678, direction TLT
 ........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ........\pdfliteral origin{q }
 ........\hbox(0.0+0.0)x0.0, direction TLT
-.........\hbox(16.76+1.68)x104.19205, direction TLT
+.........\hbox(5.76+12.68)x104.19205, direction TLT
 ..........\pdfliteral origin{0 G }
 ..........\pdfliteral origin{0 g }
-..........\hbox(16.76+1.68)x104.19205, direction TLT
-...........\hbox(16.76+1.68)x104.19205, direction TLT
-............\vbox(16.76+1.68)x104.19205, direction TLT
+..........\hbox(5.76+12.68)x104.19205, direction TLT
+...........\hbox(5.76+12.68)x104.19205, direction TLT
+............\vbox(5.76+12.68)x104.19205, direction TLT
 .............\hbox(5.76+0.064)x64.02403, direction TLT
 ..............\hbox(5.68+0.064)x12.45601, glue set 6.504fill, direction TLT
 ...............\TU/Livvic(1)/l/n/8 P
@@ -750,7 +822,7 @@ Overfull \hbox (31.14925pt too wide) in paragraph at lines ...
 ......\pdfliteral origin{q }
 ......\hbox(0.0+0.0)x0.0, direction TLT
 .......\glue 230.21065
-.......\hbox(0.0+0.0)x0.0, shifted 6.00179, direction TLT
+.......\hbox(0.0+0.0)x0.0, shifted 15.5368, direction TLT
 ........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ........\pdfliteral origin{q }
 ........\hbox(0.0+0.0)x0.0, direction TLT
@@ -799,20 +871,20 @@ Completed box being shipped out [1]
 ....\pdfcolorstack 0 pop
 ..\glue 25.0
 ..\glue(\lineskip) 0.0
-..\vbox(550.0+0.0)x345.0, glue set 406.17328fil, direction TLT
+..\vbox(550.0+0.0)x345.0, glue set 406.46262fil, direction TLT
 ...\write-{}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue(\topskip) 0.0
-...\hbox(66.43295+0.0)x345.0, glue set 16.28464fil, direction TLT
+...\hbox(64.842+0.0)x345.0, glue set 16.28464fil, direction TLT
 ....\localpar
 .....\localinterlinepenalty=0
 .....\localbrokenpenalty=0
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\hbox(66.43295+0.0)x328.71536, direction TLT
+....\hbox(64.842+0.0)x328.71536, direction TLT
 .....\glue 63.11569
-.....\hbox(0.0+0.0)x0.0, shifted -34.2579, direction TLT
+.....\hbox(0.0+0.0)x0.0, shifted -32.66695, direction TLT
 ......\pdfliteral origin{q }
 ......\pdfliteral origin{0 G }
 ......\pdfliteral origin{0 g }
@@ -1387,21 +1459,19 @@ Completed box being shipped out [1]
 .........\glue(\spaceskip) 0.0
 .........\glue(\spaceskip) 0.0
 .........\glue(\spaceskip) 0.0
-.........\glue(\spaceskip) 0.0
-.........\glue(\spaceskip) 0.0
 .........\pdfliteral origin{q }
 .........\hbox(0.0+0.0)x0.0, direction TLT
 ..........\glue 78.06569
-..........\hbox(0.0+0.0)x0.0, shifted 21.57791, direction TLT
+..........\hbox(0.0+0.0)x0.0, shifted 8.98695, direction TLT
 ...........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral origin{q }
 ...........\hbox(0.0+0.0)x0.0, direction TLT
-............\hbox(16.976+12.68)x83.208, direction TLT
+............\hbox(5.976+23.68)x83.208, direction TLT
 .............\pdfliteral origin{0 G }
 .............\pdfliteral origin{0 g }
-.............\hbox(16.976+12.68)x83.208, direction TLT
-..............\hbox(16.976+12.68)x83.208, direction TLT
-...............\vbox(16.976+12.68)x83.208, direction TLT
+.............\hbox(5.976+23.68)x83.208, direction TLT
+..............\hbox(5.976+23.68)x83.208, direction TLT
+...............\vbox(5.976+23.68)x83.208, direction TLT
 ................\hbox(5.976+1.664)x66.57602, direction TLT
 .................\hbox(5.68+0.064)x10.56, glue set 4.60799fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 P
@@ -1494,7 +1564,7 @@ Completed box being shipped out [1]
 .........\pdfliteral origin{q }
 .........\hbox(0.0+0.0)x0.0, direction TLT
 ..........\glue 186.22366
-..........\hbox(0.0+0.0)x0.0, shifted 32.60193, direction TLT
+..........\hbox(0.0+0.0)x0.0, shifted 31.01097, direction TLT
 ...........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral origin{q }
 ...........\hbox(0.0+0.0)x0.0, direction TLT
@@ -1597,16 +1667,16 @@ Completed box being shipped out [1]
 ...\glue(\parskip) 0.0 plus 1.0
 ...\glue(\parskip) 0.0
 ...\glue(\lineskip) 1.0
-...\hbox(64.35037+0.0)x345.0, direction TLT
+...\hbox(65.65196+0.0)x345.0, direction TLT
 ....\localpar
 .....\localinterlinepenalty=0
 .....\localbrokenpenalty=0
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\hbox(64.35037+0.0)x376.14925, direction TLT
+....\hbox(65.65196+0.0)x376.14925, direction TLT
 .....\glue 85.6186
-.....\hbox(0.0+0.0)x0.0, shifted -32.17519, direction TLT
+.....\hbox(0.0+0.0)x0.0, shifted -33.47678, direction TLT
 ......\pdfliteral origin{q }
 ......\pdfliteral origin{0 G }
 ......\pdfliteral origin{0 g }
@@ -2217,21 +2287,93 @@ Completed box being shipped out [1]
 .........\glue(\spaceskip) 0.0
 .........\glue(\spaceskip) 0.0
 .........\glue(\spaceskip) 0.0
+.........\pdfliteral origin{q }
+.........\hbox(0.0+0.0)x0.0, direction TLT
+..........\glue 100.5686
+..........\hbox(0.0+0.0)x0.0, shifted 9.79678, direction TLT
+...........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
+...........\pdfliteral origin{q }
+...........\hbox(0.0+0.0)x0.0, direction TLT
+............\hbox(5.92+1.68)x166.18396, direction TLT
+.............\pdfliteral origin{0 G }
+.............\pdfliteral origin{0 g }
+.............\hbox(5.92+1.68)x166.18396, direction TLT
+..............\TU/Livvic(1)/l/n/8 W
+..............\kern-0.376 (font)
+..............\TU/Livvic(1)/l/n/8 o
+..............\TU/Livvic(1)/l/n/8 r
+..............\TU/Livvic(1)/l/n/8 k
+..............\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
+..............\TU/Livvic(1)/l/n/8 d
+..............\TU/Livvic(1)/l/n/8 a
+..............\TU/Livvic(1)/l/n/8 y
+..............\TU/Livvic(1)/l/n/8 s
+..............\TU/Livvic(1)/l/n/8 :
+..............\kern4.0
+..............\TU/Livvic(1)/l/n/8 T
+..............\kern-0.48 (font)
+..............\TU/Livvic(1)/l/n/8 u
+..............\TU/Livvic(1)/l/n/8 e
+..............\TU/Livvic(1)/l/n/8 s
+..............\TU/Livvic(1)/l/n/8 d
+..............\TU/Livvic(1)/l/n/8 a
+..............\TU/Livvic(1)/l/n/8 y
+..............\TU/Livvic(1)/l/n/8 ,
+..............\glue(\spaceskip) 1.784 plus 1.11499 minus 0.47572
+..............\TU/Livvic(1)/l/n/8 W
+..............\kern-0.376 (font)
+..............\TU/Livvic(1)/l/n/8 e
+..............\TU/Livvic(1)/l/n/8 d
+..............\TU/Livvic(1)/l/n/8 n
+..............\TU/Livvic(1)/l/n/8 e
+..............\TU/Livvic(1)/l/n/8 s
+..............\discretionary (penalty 50)
+...............< \TU/Livvic(1)/l/n/8 -
+..............\TU/Livvic(1)/l/n/8 d
+..............\TU/Livvic(1)/l/n/8 a
+..............\TU/Livvic(1)/l/n/8 y
+..............\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
+..............\TU/Livvic(1)/l/n/8 a
+..............\TU/Livvic(1)/l/n/8 n
+..............\TU/Livvic(1)/l/n/8 d
+..............\glue(\spaceskip) 1.784 plus 0.892 minus 0.59467
+..............\TU/Livvic(1)/l/n/8 T
+..............\TU/Livvic(1)/l/n/8 h
+..............\TU/Livvic(1)/l/n/8 u
+..............\TU/Livvic(1)/l/n/8 r
+..............\kern-0.144 (font)
+..............\TU/Livvic(1)/l/n/8 s
+..............\discretionary (penalty 50)
+...............< \TU/Livvic(1)/l/n/8 -
+..............\TU/Livvic(1)/l/n/8 d
+..............\TU/Livvic(1)/l/n/8 a
+..............\TU/Livvic(1)/l/n/8 y
+.............\glue(\spaceskip) 0.0
+...........\pdfliteral origin{Q }
+...........\glue(\spaceskip) 0.0
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\pdfliteral origin{Q }
+.........\glue(\spaceskip) 0.0
+.........\pdfliteral origin{Q }
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\pdfliteral origin{q }
+.........\glue(\spaceskip) 0.0
 .........\glue(\spaceskip) 0.0
 .........\glue(\spaceskip) 0.0
 .........\pdfliteral origin{q }
 .........\hbox(0.0+0.0)x0.0, direction TLT
 ..........\glue 100.5686
-..........\hbox(0.0+0.0)x0.0, shifted 22.26176, direction TLT
+..........\hbox(0.0+0.0)x0.0, shifted 20.79678, direction TLT
 ...........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral origin{q }
 ...........\hbox(0.0+0.0)x0.0, direction TLT
-............\hbox(16.76+1.68)x104.19205, direction TLT
+............\hbox(5.76+12.68)x104.19205, direction TLT
 .............\pdfliteral origin{0 G }
 .............\pdfliteral origin{0 g }
-.............\hbox(16.76+1.68)x104.19205, direction TLT
-..............\hbox(16.76+1.68)x104.19205, direction TLT
-...............\vbox(16.76+1.68)x104.19205, direction TLT
+.............\hbox(5.76+12.68)x104.19205, direction TLT
+..............\hbox(5.76+12.68)x104.19205, direction TLT
+...............\vbox(5.76+12.68)x104.19205, direction TLT
 ................\hbox(5.76+0.064)x64.02403, direction TLT
 .................\hbox(5.68+0.064)x12.45601, glue set 6.504fill, direction TLT
 ..................\TU/Livvic(1)/l/n/8 P
@@ -2316,7 +2458,7 @@ Completed box being shipped out [1]
 .........\pdfliteral origin{q }
 .........\hbox(0.0+0.0)x0.0, direction TLT
 ..........\glue 230.21065
-..........\hbox(0.0+0.0)x0.0, shifted 6.00179, direction TLT
+..........\hbox(0.0+0.0)x0.0, shifted 15.5368, direction TLT
 ...........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
 ...........\pdfliteral origin{q }
 ...........\hbox(0.0+0.0)x0.0, direction TLT
