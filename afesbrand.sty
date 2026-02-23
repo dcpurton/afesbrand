@@ -1527,6 +1527,15 @@
           {
             \l__afesbrand_email_name_tl
           };
+        \group_begin:
+          \__afesbrand_font_select:n
+            {
+              , family = poetsenone
+              , series = m
+              , size   = 9
+            }
+          \skip_gset_eq:NN \g_tmpa_skip \baselineskip
+        \group_end:
         \node ( role )
           [
             , font   = \__afesbrand_font_select:n
@@ -1535,8 +1544,8 @@
                            , series = m
                            , size   = 9
                          }
-            , below  = of ~ name.south ~ west
-            , anchor = north ~ west
+            , below  = \skip_use:N \g_tmpa_skip ~ of ~ name.base ~ west
+            , anchor = base ~ west
           ]
           {
             \l__afesbrand_email_role_tl
