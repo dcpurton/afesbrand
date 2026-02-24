@@ -13,6 +13,7 @@
 \AFESBrandSetColours{hero=tangerineorange}
 
 \AFESBrandEmailSignature{
+  local ,
   logo   = focus ,
   name   = David Purton ,
   role   = FOCUS Staff Team Leader ,
@@ -20,8 +21,5 @@
   days   = {Tuesday, Wednesday and Thursday} ,
   phone  = 0413 626 862 ,
   web    = www.focusadelaide.org.au ,
-  abn    = ,
-  acn    = ,
-  postal = ,
 }
 \end{document}

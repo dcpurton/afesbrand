@@ -48,7 +48,7 @@
 
 \title{The \pkg{afesbrand} Package}
 \author{David Purton\thanks{Email: \url{david.purton@afes.org.au}}}
-\date{2026/02/24 v1.2a}
+\date{2026/02/25 v1.2a}
 
 \maketitle
 
@@ -919,7 +919,7 @@ Figure \ref{localemail}.
 \AFESBrandEmailSignature{}
   \end{lstlisting}
   \centering
-  \AFESBrandEmailSignature{}
+  \AFESBrandEmailSignature{width=100mm, height=0mm}
   \caption{National email signature template.}\label{nationalemail}
 \end{figure}
 
@@ -927,21 +927,20 @@ Figure \ref{localemail}.
   \begin{lstlisting}
 \AFESBrandSetColours{hero = tangerineorange}
 \AFESBrandEmailSignature{
+  local ,
   logo   = focus ,
   name   = David Purton ,
   role   = FOCUS Staff Team Leader ,
   campus = Adelaide University ,
   days   = {Tuesday, Wednesday and Thursday} ,
   phone  = 0413 626 862 ,
-  web    = www.focusadelaide.org.au ,
-  postal = ,
-  abn    = ,
-  acn    =
+  web    = www.focusadelaide.org.au
 }
   \end{lstlisting}
   \centering
   \AFESBrandSetColours{hero = tangerineorange}
   \AFESBrandEmailSignature{
+    local ,
     logo   = focus ,
     name   = David Purton ,
     role   = FOCUS Staff Team Leader ,
@@ -949,9 +948,8 @@ Figure \ref{localemail}.
     days   = {Tuesday, Wednesday and Thursday} ,
     phone  = 0413 626 862 ,
     web    = www.focusadelaide.org.au ,
-    postal = ,
-    abn    = ,
-    acn    =
+    width  = 100mm ,
+    height = 0mm
   }
   \caption{Local email signature example.}\label{localemail}
 \end{figure}
@@ -967,6 +965,17 @@ The following \meta{options} are supported:
     Example: |days = {Tuesday, Wednesday and Thursday}|. Don't forget to
     protect any commas with braces.
 
+  \item[height] Set the height of the signature block. Default: |10.583mm|
+
+    The signature block will be resized to this height or less. The value of
+    |10.583mm| translates to |125px| at 300dpi for easy conversion to bitmap.
+    If a value of |0pt| is given, the natural height based off the |width|
+    option will be used. (If both |width| and |height| are |0pt|, the
+    signature block is sized based off a |13ex| high logo.)
+
+  \item[local] Clear the default national options (|abn|, |acn|, |phone|,
+    |postal| and |web|). This should be placed as the first option. Local
+    values for |phone|, |web|, etc.\ can then be added.
   \item[logo] Set the main logo name. Default: |national|
 
     By default the |primarytagline| variant will be selected. Complete control
@@ -978,13 +987,32 @@ The following \meta{options} are supported:
   \item[postal] Set your postal address. Default: |PO Box 684\break Kingsford NSW 2032|
   \item[role] Set your role. Default: |Your Role|
   \item[web] Set the web site URL. Default: |www.afes.org.au|
+  \item[width] Set the width of the signature block. Default: |50.8mm|
+
+    The signature block will be resized to this width or less. The value of
+    |50.8mm| translates to |600px| at 300dpi for easy conversion to bitmap.
+    If a value of |0pt| is given, the natural width based off the |height|
+    option will be used. (If both |width| and |height| are |0pt|, the
+    signature block is sized based off a |13ex| high logo.)
 \end{description}
 
-Any of these can be left out of the signature block by setting them to an
-empty token list, e.g., |campus=|.
+Any of the field options can be left out of the signature block by setting
+them to an empty token list, e.g., |campus=|.
 
 These options can also be set using \cs{AFESBrandSetOptions} and the prefix
 |email/|.
+
+Convert the signature block to a PNG with an alpha channel, e.g., using
+GhostScript. The default dimensions will produce a signature block with
+maximum width 600px and maximum height 125px. This should be safe for most
+email clients.
+
+\begin{lstlisting}
+/usr/bin/gs -dSAFER -dNOPAUSE -dBATCH -sOutputFile=email_signature.png \
+  -sDEVICE=pngalpha -r300 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 \
+  email_signature.pdf
+\end{lstlisting}
+
 
 \section{Local Applications}
 
