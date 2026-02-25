@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/02/25}{1.2a}
+\ProvidesExplPackage{afesbrand}{2026/02/25}{1.2b}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -198,10 +198,13 @@
             \tl_set:Nn \l__afesbrand_font_letterspace_tl { 0 }
           }
       }
-    \tl_if_exist:cT { l__afesbrand_font_ \l__afesbrand_font_family_tl _tl }
+    \tl_if_exist:cTF { l__afesbrand_font_ \l__afesbrand_font_family_tl _tl }
       {
         \exp_args:Nc \fontfamily
           { l__afesbrand_font_ \l__afesbrand_font_family_tl _tl }
+      }
+      {
+        \fontfamily \l__afesbrand_font_family_tl
       }
     \fontsize
       { \l__afesbrand_font_size_tl }
@@ -351,11 +354,17 @@
               x = 1cm , y = 1cm , nonzero~rule
             ]
             {
-              \use:c
+              \cs_if_exist_use:cTF
                 { __afesbrand_logo_#2_ \l__afesbrand_logo_variant_tl :nnn }
+                {
                   { \l__afesbrand_logo_padding_tl }
                   { \l__afesbrand_logo_bgcolour_tl }
                   { \l__afesbrand_logo_colour_tl }
+                }
+                {
+                  \node [ draw , font = \ttfamily ]
+                    { Logo ~ not ~ found. };
+                }
             }
         }
       \__afesbrand_resize_use_box:VVN
@@ -1046,6 +1055,11 @@
 %%% Icons
 %%%
 
+\msg_new:nnnn { afesbrand } { icon-not-found }
+  { Icon~#1~not~found.}
+  { Could~not~find~a~definition~for~icon~#1.\\
+    Check~for~typos~in~the~icon~name.}
+
 \file_input:n { afesbrand_icons.def }
 
 \keys_define:nn { afesbrand / icon }
@@ -1078,6 +1092,11 @@
         {
           \text_lowercase:n {#2}
         }
+      \cs_if_exist:cF { __afesbrand_icon_ \l__afesbrand_icon_name_tl :nn }
+        {
+          \msg_error:nne { afesbrand } { icon-not-found }
+            { \l__afesbrand_icon_name_tl }
+        }
       \dim_compare:nNnT
         { \l__afesbrand_icon_size_dim } = { \c_zero_dim }
         {
@@ -1093,9 +1112,16 @@
               x = 1cm , y = 1cm , nonzero~rule
             ]
             {
-              \use:c { __afesbrand_icon_ \l__afesbrand_icon_name_tl :nn }
-                { \l__afesbrand_icon_bgcolour_tl }
-                { \l__afesbrand_icon_colour_tl }
+              \cs_if_exist_use:cTF
+                { __afesbrand_icon_ \l__afesbrand_icon_name_tl :nn }
+                {
+                  { \l__afesbrand_icon_bgcolour_tl }
+                  { \l__afesbrand_icon_colour_tl }
+                }
+                {
+                  \node [ draw , font = \ttfamily ]
+                    { Icon ~ not ~ found. };
+                }
             }
         }
       \fp_set:Nn \l__afesbrand_icon_scale_fp
@@ -1221,6 +1247,11 @@
 %%% Social Media Post
 %%%
 
+\msg_new:nnnn { afesbrand } { social-not-found }
+  { Social~post~#1~with~type~#2~not~found.}
+  { Could~not~find~a~definition~for~social~post~#1~with~type~#2.\\
+    Check~for~typos~in~the~social~post~name~and~type.}
+
 \file_input:n { afesbrand_socials.def }
 
 \keys_define:nn { afesbrand / social }
@@ -1243,12 +1274,21 @@
     \group_begin:
       \keys_set_known:nn { afesbrand } {#1}
       \keys_set_known:nn { afesbrand / social } {#1}
+      \cs_if_exist:cF { __afesbrand_social_#2_ \l__afesbrand_social_type_tl : }
+        {
+          \msg_error:nnee { afesbrand } { social-not-found }
+            {#2} { \l__afesbrand_social_type_tl }
+        }
       \dim_compare:nNnT
         { \l__afesbrand_social_width_dim + \l__afesbrand_social_height_dim }
         =
         { \c_zero_dim }
         {
-          \use:c { __afesbrand_social_#2_ \l__afesbrand_social_type_tl : }
+          \cs_if_exist_use:cF
+            { __afesbrand_social_#2_ \l__afesbrand_social_type_tl : }
+            {
+              \__afesbrand_social_set_dimensions:nn { 1080 } { 1080 }
+            }
         }
       \begin { tikzpicture } [ x = 1cm , y = 1cm ]
         \path [ fill = \l__afesbrand_social_colour_tl ]
