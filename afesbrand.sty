@@ -288,13 +288,13 @@
 %%%
 
 \msg_new:nnnn { afesbrand } { logo-variant-not-found }
-  { Falling~back~to~primary~logo~variant~for~logo~#1.}
+  { Falling~back~to~primary~logo~variant~for~logo~#1. }
   { Could~not~find~a~definition~for~logo~#1~with~variant~#2.\\
-    Falling~back~to~primary~logo~variant~for~logo~#1.}
+    Falling~back~to~primary~logo~variant~for~logo~#1. }
 \msg_new:nnnn { afesbrand } { logo-not-found }
-  { Logo~#1~with~variant~#2~not~found.}
+  { Logo~#1~with~variant~#2~not~found. }
   { Could~not~find~a~definition~for~logo~#1~with~variant~#2.\\
-    Check~for~typos~and~whether~the~logo~set~has~been~loaded.}
+    Check~for~typos~and~whether~the~logo~set~has~been~loaded. }
 
 \file_input:n { afesbrand_logos.def }
 \file_input:n { afesbrand_logos_focus.def }
@@ -363,7 +363,7 @@
                 }
                 {
                   \node [ draw , font = \ttfamily ]
-                    { Logo ~ not ~ found. };
+                    { Logo ~ not ~ found. } ;
                 }
             }
         }
@@ -1058,9 +1058,9 @@
 %%%
 
 \msg_new:nnnn { afesbrand } { icon-not-found }
-  { Icon~#1~not~found.}
+  { Icon~#1~not~found. }
   { Could~not~find~a~definition~for~icon~#1.\\
-    Check~for~typos~in~the~icon~name.}
+    Check~for~typos~in~the~icon~name. }
 
 \file_input:n { afesbrand_icons.def }
 
@@ -1122,7 +1122,7 @@
                 }
                 {
                   \node [ draw , font = \ttfamily ]
-                    { Icon ~ not ~ found. };
+                    { Icon ~ not ~ found. } ;
                 }
             }
         }
@@ -1250,9 +1250,9 @@
 %%%
 
 \msg_new:nnnn { afesbrand } { social-not-found }
-  { Social~post~#1~with~type~#2~not~found.}
+  { Social~post~#1~with~type~#2~not~found. }
   { Could~not~find~a~definition~for~social~post~#1~with~type~#2.\\
-    Check~for~typos~in~the~social~post~name~and~type.}
+    Check~for~typos~in~the~social~post~name~and~type. }
 
 \file_input:n { afesbrand_socials.def }
 
@@ -1602,7 +1602,7 @@
                   \__afesbrand_logo:nn
                     \l_tmpa_clist
                     \l__afesbrand_email_logo_tl
-              };
+              } ;
             \node ( name )
               [
                 , font   = \__afesbrand_font_select:n
@@ -1617,7 +1617,7 @@
               ]
               {
                 \l__afesbrand_email_name_tl
-              };
+              } ;
             \group_begin:
               \__afesbrand_font_select:n
                 {
@@ -1642,7 +1642,7 @@
                 \l__afesbrand_email_role_tl
                 \tl_if_empty:NF \l__afesbrand_email_campus_tl
                   { , \enspace \l__afesbrand_email_campus_tl }
-              };
+              } ;
             \group_begin:
               \__afesbrand_font_select:n { size = 8 }
               \skip_gset_eq:NN \g_tmpa_skip \baselineskip
@@ -1660,7 +1660,7 @@
                     , anchor = base ~ west
                     , yshift = -2ex
                   ]
-                  { Work ~ days \, : \enspace \l__afesbrand_email_days_tl };
+                  { Work ~ days \, : \enspace \l__afesbrand_email_days_tl } ;
                 \tl_set:Nn \l_tmpa_tl { days }
                 \tl_set:Nn \l_tmpb_tl { 0pt }
               }
@@ -1733,14 +1733,15 @@
                               { A \, : \hfill }
                             \vbox_top:n
                               {
-                                \dim_set_eq:NN \hsize \g__afesbrand_text_width_dim
+                                \dim_set_eq:NN
+                                  \hsize \g__afesbrand_text_width_dim
                                 \raggedright
                                 \l__afesbrand_email_postal_tl
                               }
                           }
                       }
                   }
-              };
+              } ;
             \tl_if_empty:NT \l__afesbrand_email_postal_tl
               { \tl_clear:N \l__afesbrand_email_web_tl }
             \node ( company )
@@ -1805,7 +1806,7 @@
                           }
                       }
                   }
-              };
+              } ;
           \end { tikzpicture }
         }
       \__afesbrand_resize_use_box:VVN
