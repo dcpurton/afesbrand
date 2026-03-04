@@ -12,14 +12,17 @@
 
 \AFESBrandSetColours{hero=tangerineorange}
 
+\AFESBrandSetOptions{
+  email/local ,
+  email/logo = focus ,
+  email/campus = Adelaide University ,
+  email/web = focusadelaide.org.au
+}
+
 \AFESBrandEmailSignature{
-  local ,
-  logo   = focus ,
-  name   = David Purton ,
-  role   = FOCUS Staff Team Leader ,
-  campus = Adelaide University ,
-  days   = {Tuesday, Wednesday and Thursday} ,
-  phone  = 0413 626 862 ,
-  web    = focusadelaide.org.au ,
+  name  = David Purton ,
+  role  = FOCUS Staff Team Leader ,
+  days  = {Tuesday, Wednesday and Thursday} ,
+  phone = 0413 626 862 ,
 }
 \end{document}

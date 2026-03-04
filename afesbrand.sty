@@ -14,7 +14,7 @@
 %% This work is "maintained" (as per the LPPL maintenance status)
 %% by David Purton.
 %% 
-\ProvidesExplPackage{afesbrand}{2026/03/03}{1.2c}
+\ProvidesExplPackage{afesbrand}{2026/03/04}{1.2d}
   {AFES Brand Style (DCP)}
 
 \RequirePackage { fontspec }
@@ -566,6 +566,7 @@
 \cs_new_protected:Nn \__afesbrand_frame_device:nn
   {
     \group_begin:
+      \keys_set_known:nV { afesbrand } \l__afesbrand_opt_frame_clist
       \keys_set_known:nn { afesbrand } {#1}
       \keys_set_known:nn { afesbrand / frame } {#1}
       \hcoffin_set:Nn \l__afesbrand_frame_wave_coffin
@@ -829,6 +830,7 @@
   {
     \group_begin:
       \dim_set_eq:NN \l__afesbrand_grid_head_width_dim \linewidth
+      \keys_set_known:nV { afesbrand } \l__afesbrand_opt_grid_clist
       \keys_set_known:nn { afesbrand } {#1}
       \keys_set_known:nn { afesbrand / grid } {#1}
       \hbox_set:Nn \l__afesbrand_grid_url_box
@@ -1461,6 +1463,7 @@
 \cs_new_protected:Nn \__afesbrand_wave_effect:nn
   {
     \group_begin:
+      \keys_set_known:nV { afesbrand } \l__afesbrand_opt_wave_clist
       \keys_set_known:nn { afesbrand } {#1}
       \keys_set_known:nn { afesbrand / wave } {#1}
       \mode_if_vertical:T
@@ -1574,14 +1577,10 @@
   {
     \group_begin:
       \__afesbrand_font_body:
+      \keys_set_known:nV { afesbrand } \l__afesbrand_opt_email_clist
       \keys_set_known:nn { afesbrand } {#1}
       \keys_set_known:nn { afesbrand / email } {#1}
-      \clist_set:Nn \l_tmpa_clist
-        {
-          , logo / height  = 13ex
-          , logo / padding = none
-          , logo / variant = primarytagline
-        }
+      \clist_clear:N \l_tmpa_clist
       \clist_map_inline:nn {#1}
         {
           \tl_if_regex_match:nnF {##1} { \A (?: width | height ) }
@@ -1942,9 +1941,60 @@
 
 \ExplSyntaxOn
 
+\clist_new:N \l__afesbrand_opt_email_clist
+\clist_new:N \l__afesbrand_opt_frame_clist
+\clist_new:N \l__afesbrand_opt_grid_clist
+\clist_new:N \l__afesbrand_opt_wave_clist
+\regex_const:Nn \c__afesbrand_opt_email_regex { \A email / ( .* ) }
+\regex_const:Nn \c__afesbrand_opt_frame_regex { \A frame / ( .* ) }
+\regex_const:Nn \c__afesbrand_opt_grid_regex  { \A grid  / ( .* ) }
+\regex_const:Nn \c__afesbrand_opt_wave_regex  { \A wave  / ( .* ) }
+
+\clist_put_right:Nn \l__afesbrand_opt_email_clist
+  {
+    , logo / height  = 13ex
+    , logo / padding = none
+    , logo / variant = primarytagline
+  }
+
 \cs_new_protected:Nn \__afesbrand_set_options:n
   {
-    \keys_set:nn { afesbrand } {#1}
+    \keys_set_known:nn { afesbrand } {#1}
+    \clist_map_inline:nn {#1}
+      {
+        \regex_extract_once:NnNT
+          \c__afesbrand_opt_email_regex {##1} \l_tmpa_seq
+          {
+            \clist_put_right:Ne \l__afesbrand_opt_email_clist
+              {
+                \seq_item:Nn \l_tmpa_seq { 2 }
+              }
+          }
+        \regex_extract_once:NnNT
+          \c__afesbrand_opt_frame_regex {##1} \l_tmpa_seq
+          {
+            \clist_put_right:Ne \l__afesbrand_opt_frame_clist
+              {
+                \seq_item:Nn \l_tmpa_seq { 2 }
+              }
+          }
+        \regex_extract_once:NnNT
+          \c__afesbrand_opt_grid_regex {##1} \l_tmpa_seq
+          {
+            \clist_put_right:Ne \l__afesbrand_opt_grid_clist
+              {
+                \seq_item:Nn \l_tmpa_seq { 2 }
+              }
+          }
+        \regex_extract_once:NnNT
+          \c__afesbrand_opt_wave_regex {##1} \l_tmpa_seq
+          {
+            \clist_put_right:Ne \l__afesbrand_opt_wave_clist
+              {
+                \seq_item:Nn \l_tmpa_seq { 2 }
+              }
+          }
+      }
   }
 
 \cs_new_protected:Nn \__afesbrand_uni_meet_jesus:

@@ -48,7 +48,7 @@
 
 \title{The \pkg{afesbrand} Package}
 \author{David Purton\thanks{Email: \url{david.purton@afes.org.au}}}
-\date{2026/03/03 v1.2c}
+\date{2026/03/04 v1.2d}
 
 \maketitle
 
@@ -75,6 +75,24 @@ Include the package |\usepackage{afesbrand}|.
   Set package global \meta{options}. Options set using
   \cs{AFESBrandSetOptions} need a prefix outlined below in each section.
 \end{function}
+
+For functions that include other brand components, it's usually possible to
+set the options for the inner function by adding it's prefix as well. For
+example,
+
+{\centering
+ |\AFESBrandSetOptions{logo/variant=vertical, email/logo/variant=primary}|\par
+}
+
+will set the default logo variant to |vertical| for |\AFESBrandLogo|, but the
+|primary| variant will be used in |\AFESBrandEmailSignature|.
+
+Mostly fonts are fairly hard coded to comply with the style guidelines, so
+defaults can only be set for inner functions occasionally.
+
+The following functions can have inner functions options set:
+\cs{AFESBrandEmailSignature}, \cs{AFESBrandFrameDevice},
+\cs{AFESBrandGridSystem}, \cs{AFESBrandWaveEffect}.
 
 \section{Brand Basics}
 
@@ -746,11 +764,12 @@ The following \meta{options} are supported:
   \item[width] Set the width of the box that \meta{text} is set in.
 \end{description}
 
-These options can also be set using \cs{AFESBrandSetOptions} and the prefix
-|wave/|.
-
 The options supported by \cs{AFESBrandFontSelect} can also be used with or
 without the |font/| prefix to style the font of the wave.
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|wave/|. Default settings for the font can be set using the prefix
+|wave/font|.
 
 \subsection{Frame Device}
 
@@ -794,13 +813,14 @@ See Figure \ref{framedevice}.
     frame from it's default position. Default: |0pt|
 \end{description}
 
-These options can also be set using \cs{AFESBrandSetOptions} and the prefix
-|frame/|.
-
 The options supported by \cs{AFESBrandWaveEffect} and \cs{AFESBrandFontSelect}
-can also be used to style the wave without or without the |wave/| and |font/|
-prefixes. Note that where options clash (such as |colour|) then you need to
-specify |wave/colour|.
+can also be used to style the wave with or without the |wave/| and |font/| (or
+|wave/font/|) prefixes. Note that where options clash such as |colour|, then
+you need to specify |wave/colour|.
+
+These options can also be set using \cs{AFESBrandSetOptions} and the prefix
+|frame/|. Default settings for the wave and font can be set using the prefixes
+|frame/wave/| and |frame/wave/font/|.
 
 \begin{function}{\AFESBrandFrameImage}
   \begin{syntax}
@@ -897,8 +917,12 @@ The following \meta{options} are supported:
   \item[url/colour] The colour of the AFES URL. Default: |body/colour|
 \end{description}
 
+The options supported by \cs{AFESBrandLogo} can also be used to style the logo
+with or without the |logo/| prefix.
+
 These options can also be set using \cs{AFESBrandSetOptions} and the prefix
-|grid/|.
+|grid/|. Default settings for the logo can be set using the prefix
+|grid/logo/|.
 
 \subsection{Email Signature}
 
@@ -1001,8 +1025,13 @@ The following \meta{options} are supported:
 Any of the field options can be left out of the signature block by setting
 them to an empty token list, e.g., |campus=|.
 
+The options supported by \cs{AFESBrandLogo} can also be used to style the logo
+with the |logo/| prefix. Note that where options clash such as |height|, then
+you need to specify |logo/height|.
+
 These options can also be set using \cs{AFESBrandSetOptions} and the prefix
-|email/|.
+|email/|. Default settings for the logo can be set using the prefix
+|email/logo/|.
 
 Convert the signature block to a PNG with an alpha channel, e.g., using
 GhostScript. The default dimensions will produce a signature block with
@@ -1014,7 +1043,6 @@ email clients.
   -sDEVICE=pngalpha -r300 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 \
   email_signature.pdf
 \end{lstlisting}
-
 
 \section{Local Applications}
 
