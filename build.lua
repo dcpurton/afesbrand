@@ -1,8 +1,9 @@
 module = "afesbrand"
 
 unpackexe        = ""
-sourcefiles      = {"*.def", "*.def", "*bg.pdf", "*fg.pdf", "*.sty", "contrib/*.def"}
-installfiles     = {"*.def", "*.def", "*bg.pdf", "*fg.pdf", "*.sty", "contrib/*.def"}
+sourcefiles      = {"*.def", "*bg.pdf", "*fg.pdf", "*.sty", "contrib/*.def",
+                    "support/*", "afesbrand.tex" }
+installfiles     = {"*.def", "*bg.pdf", "*fg.pdf", "*.sty", "contrib/*.def"}
 typesetfiles     = {"afesbrand.tex"}
 typesetsuppfiles = {"*.png", "*.jpg"}
 docfiles         = {"illustration_remove_colour.sh"}
