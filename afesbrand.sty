@@ -94,15 +94,14 @@
 \tl_new:N \l__afesbrand_font_poetsenone_tl
 \tl_new:N \l__afesbrand_font_livvic_tl
 
-\fontspec_set_family:Nnn \l__afesbrand_font_poetsenone_tl
+\clist_const:Nn \c__afesbrand_font_poetsenone_options_clist
   {
-    , LetterSpace = -5
+    , Extension   = .ttf
     , Ligatures   = TeX
+    , LetterSpace = -5
     , WordSpace   = 0.765
   }
-  { PoetsenOne-Regular.ttf }
-
-\fontspec_set_family:Nnn \l__afesbrand_font_livvic_tl
+\clist_const:Nn \c__afesbrand_font_livvic_options_clist
   {
     , Extension      = .ttf
     , Ligatures      = TeX
@@ -123,7 +122,58 @@
     , FontFace       = { ub } { n }  { Font = *-Black }
     , FontFace       = { ub } { it } { Font = *-BlackItalic }
   }
-  { Livvic }
+
+\hook_gput_code:nnn { begindocument / before } { afesbrand }
+  {
+    \@ifpackageloaded { babel }
+      {
+        \babelfont { poetsenone }
+          [ \c__afesbrand_font_poetsenone_options_clist ]
+          { PoetsenOne-Regular }
+        \babelfont { livvic }
+          [ \c__afesbrand_font_livvic_options_clist ]
+          { Livvic }
+        \tl_set_eq:NN \l__afesbrand_font_poetsenone_tl \poetsenonedefault
+        \tl_set_eq:NN \l__afesbrand_font_livvic_tl \livvicdefault
+      }
+      {
+        \exp_args:NNV
+          \fontspec_set_family:Nnn
+            \l__afesbrand_font_poetsenone_tl
+            \c__afesbrand_font_poetsenone_options_clist
+            { PoetsenOne-Regular }
+
+        \exp_args:NNV
+          \fontspec_set_family:Nnn
+            \l__afesbrand_font_livvic_tl
+            \c__afesbrand_font_livvic_options_clist
+            { Livvic }
+        \tl_set_eq:NN \poetsenonedefault \l__afesbrand_font_poetsenone_tl
+        \tl_set_eq:NN \livvicdefault \l__afesbrand_font_livvic_tl
+        \NewDocumentCommand \poetsenonefamily { }
+          {
+            \__afesbrand_font_select:n { family = poetsenone }
+          }
+        \NewDocumentCommand \textpoetsenone { m }
+          {
+            \group_begin:
+              \__afesbrand_font_select:n { family = poetsenone }
+              #1
+            \group_end:
+          }
+        \NewDocumentCommand \livvicfamily { }
+          {
+            \__afesbrand_font_select:n { family = livvic }
+          }
+        \NewDocumentCommand \textlivvic { m }
+          {
+            \group_begin:
+              \__afesbrand_font_select:n { family = livvic }
+              #1
+            \group_end:
+          }
+      }
+  }
 
 \keys_define:nn { afesbrand / font }
   {

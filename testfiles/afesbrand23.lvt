@@ -1,0 +1,14 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\usepackage[australian]{babel}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\START
+\showoutput
+{\AFESBrandFontHeadOne Level one heading\par}
+{\AFESBrandFontHeadTwo Level two heading\par}
+{\AFESBrandFontHeadThree Level three heading\par}
+{\AFESBrandFontBody Body text\par}
+\end{document}
