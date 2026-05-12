@@ -33,13 +33,13 @@ Completed box being shipped out [1]
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\TU/Livvic(1)/ub/n/37.5 M
+....\TU/Livvic(0)/ub/n/37.5 M
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\kern0.3975 (font)
-....\TU/Livvic(1)/ub/n/37.5 T
+....\TU/Livvic(0)/ub/n/37.5 T
 ....\penalty 10000
 ....\glue 0.0 plus 1.0fil
 ....\penalty -10000
@@ -47,32 +47,32 @@ Completed box being shipped out [1]
 ...\penalty 150
 ...\glue(\baselineskip) 7.40625
 ...\hbox(27.0+0.45)x345.0, glue set 44.48833fil, direction TLT
-....\TU/Livvic(1)/ub/n/37.5 S
+....\TU/Livvic(0)/ub/n/37.5 S
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\glue(\spaceskip) 9.07956 plus 4.53523 minus 3.02954
-....\TU/Livvic(1)/ub/n/37.5 T
+....\TU/Livvic(0)/ub/n/37.5 T
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 H
+....\TU/Livvic(0)/ub/n/37.5 H
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\glue(\spaceskip) 9.07956 plus 4.53523 minus 3.02954
-....\TU/Livvic(1)/ub/n/37.5 B
+....\TU/Livvic(0)/ub/n/37.5 B
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 I
+....\TU/Livvic(0)/ub/n/37.5 I
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 G
+....\TU/Livvic(0)/ub/n/37.5 G
 ....\discretionary (penalty 50)
 .....< \kern-0.3525 (font)
-.....< \TU/Livvic(1)/ub/n/37.5 -
+.....< \TU/Livvic(0)/ub/n/37.5 -
 .....= \kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 G
+....\TU/Livvic(0)/ub/n/37.5 G
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 R
+....\TU/Livvic(0)/ub/n/37.5 R
 ....\penalty 10000
 ....\glue 0.0 plus 1.0fil
 ....\penalty -10000
@@ -80,19 +80,19 @@ Completed box being shipped out [1]
 ...\penalty 150
 ...\glue(\baselineskip) 6.95625
 ...\hbox(27.0+0.45)x345.0, glue set 181.85245fil, direction TLT
-....\TU/Livvic(1)/ub/n/37.5 P
+....\TU/Livvic(0)/ub/n/37.5 P
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 I
+....\TU/Livvic(0)/ub/n/37.5 I
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 C
+....\TU/Livvic(0)/ub/n/37.5 C
 ....\kern2.01001 (font)
-....\TU/Livvic(1)/ub/n/37.5 T
+....\TU/Livvic(0)/ub/n/37.5 T
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 U
+....\TU/Livvic(0)/ub/n/37.5 U
 ....\kern-0.3525 (font)
-....\TU/Livvic(1)/ub/n/37.5 R
+....\TU/Livvic(0)/ub/n/37.5 R
 ....\kern-0.05249 (font)
-....\TU/Livvic(1)/ub/n/37.5 E
+....\TU/Livvic(0)/ub/n/37.5 E
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0

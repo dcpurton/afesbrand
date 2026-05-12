@@ -1,13 +1,5 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-Inserting `luaotfload.letterspace' in `pre_linebreak_filter'.
-Inserting `luaotfload.letterspace' in `hpack_filter'.
-Package fontspec Info: 
-(fontspec)             Font family 'PoetsenOne-Regular(1)' created for font 'PoetsenOne-Regular' with options [Extension=.ttf,Ligatures=TeX,LetterSpace=-5,WordSpace=0.765,LetterSpace=-5.02].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[PoetsenOne-Regular.ttf]:mode=node;script=latn;language=dflt;letterspace=-5;letterspace=-5.02;+tlig;"
 Module luamplib Info: flushing figure 1 on input line ...
 Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0, direction TLT

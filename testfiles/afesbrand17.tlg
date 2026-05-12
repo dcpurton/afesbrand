@@ -34,15 +34,15 @@ Completed box being shipped out [1]
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\TU/Livvic(1)/ub/n/10 T
-....\TU/Livvic(1)/ub/n/10 H
-....\TU/Livvic(1)/ub/n/10 E
-....\TU/Livvic(1)/ub/n/10 R
+....\TU/Livvic(0)/ub/n/10 T
+....\TU/Livvic(0)/ub/n/10 H
+....\TU/Livvic(0)/ub/n/10 E
+....\TU/Livvic(0)/ub/n/10 R
 ....\kern0.08 (font)
-....\TU/Livvic(1)/ub/n/10 E
+....\TU/Livvic(0)/ub/n/10 E
 ....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
-....\TU/Livvic(1)/ub/n/10 I
-....\TU/Livvic(1)/ub/n/10 S
+....\TU/Livvic(0)/ub/n/10 I
+....\TU/Livvic(0)/ub/n/10 S
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
@@ -58,13 +58,13 @@ Completed box being shipped out [1]
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\TU/Livvic(1)/ub/n/10 O
-....\TU/Livvic(1)/ub/n/10 N
-....\TU/Livvic(1)/ub/n/10 E
+....\TU/Livvic(0)/ub/n/10 O
+....\TU/Livvic(0)/ub/n/10 N
+....\TU/Livvic(0)/ub/n/10 E
 ....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
-....\TU/Livvic(1)/ub/n/10 W
-....\TU/Livvic(1)/ub/n/10 H
-....\TU/Livvic(1)/ub/n/10 O
+....\TU/Livvic(0)/ub/n/10 W
+....\TU/Livvic(0)/ub/n/10 H
+....\TU/Livvic(0)/ub/n/10 O
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
@@ -80,11 +80,11 @@ Completed box being shipped out [1]
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\TU/Livvic(1)/ub/n/10 G
-....\TU/Livvic(1)/ub/n/10 I
-....\TU/Livvic(1)/ub/n/10 V
-....\TU/Livvic(1)/ub/n/10 E
-....\TU/Livvic(1)/ub/n/10 S
+....\TU/Livvic(0)/ub/n/10 G
+....\TU/Livvic(0)/ub/n/10 I
+....\TU/Livvic(0)/ub/n/10 V
+....\TU/Livvic(0)/ub/n/10 E
+....\TU/Livvic(0)/ub/n/10 S
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
@@ -100,16 +100,16 @@ Completed box being shipped out [1]
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\TU/Livvic(1)/ub/n/10 M
-....\TU/Livvic(1)/ub/n/10 E
+....\TU/Livvic(0)/ub/n/10 M
+....\TU/Livvic(0)/ub/n/10 E
 ....\kern0.14 (font)
-....\TU/Livvic(1)/ub/n/10 A
-....\TU/Livvic(1)/ub/n/10 N
+....\TU/Livvic(0)/ub/n/10 A
+....\TU/Livvic(0)/ub/n/10 N
 ....\discretionary (penalty 50)
-.....< \TU/Livvic(1)/ub/n/10 -
-....\TU/Livvic(1)/ub/n/10 I
-....\TU/Livvic(1)/ub/n/10 N
-....\TU/Livvic(1)/ub/n/10 G
+.....< \TU/Livvic(0)/ub/n/10 -
+....\TU/Livvic(0)/ub/n/10 I
+....\TU/Livvic(0)/ub/n/10 N
+....\TU/Livvic(0)/ub/n/10 G
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil
@@ -125,16 +125,16 @@ Completed box being shipped out [1]
 .....\localleftbox=null
 .....\localrightbox=null
 ....\hbox(0.0+0.0)x0.0, direction TLT
-....\TU/Livvic(1)/ub/n/10 T
+....\TU/Livvic(0)/ub/n/10 T
 ....\kern-0.25 (font)
-....\TU/Livvic(1)/ub/n/10 O
+....\TU/Livvic(0)/ub/n/10 O
 ....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
-....\TU/Livvic(1)/ub/n/10 I
-....\TU/Livvic(1)/ub/n/10 T
+....\TU/Livvic(0)/ub/n/10 I
+....\TU/Livvic(0)/ub/n/10 T
 ....\glue(\spaceskip) 2.62 plus 1.30869 minus 0.8742
-....\TU/Livvic(1)/ub/n/10 A
-....\TU/Livvic(1)/ub/n/10 L
-....\TU/Livvic(1)/ub/n/10 L
+....\TU/Livvic(0)/ub/n/10 A
+....\TU/Livvic(0)/ub/n/10 L
+....\TU/Livvic(0)/ub/n/10 L
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0
 ....\glue(\rightskip) 0.0 plus 1.0fil

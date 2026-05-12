@@ -7,7 +7,7 @@
 \frenchspacing
 \centering
 \AFESBrandFontSelect{family=poetsenone, letterspace=-5.02, linespace=0.8,
-  series=m, wordspace=1}
+  series=m}
 \START
 \showoutput
 There is\\ one who\\ gives\\ meaning\\ to it all

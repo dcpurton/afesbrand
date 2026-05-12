@@ -1,26 +1,5 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-Package fontspec Info: 
-(fontspec)             Font family 'Livvic(1)' created for font 'Livvic' with options [Extension=.ttf,Ligatures=TeX,FontFace={ul}{n}{Font=*-Thin},FontFace={ul}{it}{Font=*-ThinItalic},FontFace={el}{n}{Font=*-ExtraLight},FontFace={el}{it}{Font=*-ExtraLightItalic},FontFace={l}{n}{Font=*-Light},FontFace={l}{it}{Font=*-LightItalic},FontFace={sl}{n}{Font=*-Regular},FontFace={sl}{it}{Font=*-Italic},UprightFont=*-Medium,ItalicFont=*-MediumItalic,FontFace={sb}{n}{Font=*-SemiBold},FontFace={sb}{it}{Font=*-SemiBoldItalic},BoldFont=*-Bold,BoldItalicFont=*-BoldItalic,FontFace={ub}{n}{Font=*-Black},FontFace={ub}{it}{Font=*-BlackItalic},LetterSpace=0].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS series/shapes:
-(fontspec)              
-(fontspec)             - (ul/n) with NFSS spec.: <->"[Livvic-Thin.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (ul/it) with NFSS spec.: <->"[Livvic-ThinItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (el/n) with NFSS spec.: <->"[Livvic-ExtraLight.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (el/it) with NFSS spec.: <->"[Livvic-ExtraLightItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (l/n) with NFSS spec.: <->"[Livvic-Light.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (l/it) with NFSS spec.: <->"[Livvic-LightItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (sl/n) with NFSS spec.: <->"[Livvic-Regular.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (sl/it) with NFSS spec.: <->"[Livvic-Italic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (sb/n) with NFSS spec.: <->"[Livvic-SemiBold.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (sb/it) with NFSS spec.: <->"[Livvic-SemiBoldItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (ub/n) with NFSS spec.: <->"[Livvic-Black.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - (ub/it) with NFSS spec.: <->"[Livvic-BlackItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"[Livvic-Medium.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"[Livvic-Bold.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"[Livvic-MediumItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"[Livvic-BoldItalic.ttf]:mode=node;script=latn;language=dflt;letterspace=0;+tlig;"
 Completed box being shipped out [1]
 \vbox(633.0+0.0)x407.0, direction TLT
 .\hbox(0.0+0.0)x0.0, direction TLT
@@ -56,28 +35,28 @@ Completed box being shipped out [1]
 ....\hbox(0.0+0.0)x0.0, direction TLT
 ....\vbox(24.78+0.11)x31.18001, direction TLT
 .....\hbox(7.1+0.37769)x20.99974, direction TLT
-......\TU/Livvic(1)/ub/n/10 U
-......\TU/Livvic(1)/ub/n/10 N
-......\TU/Livvic(1)/ub/n/10 I
+......\TU/Livvic(0)/ub/n/10 U
+......\TU/Livvic(0)/ub/n/10 N
+......\TU/Livvic(0)/ub/n/10 I
 ......\hbox(2.90416+0.37769)x2.40974, direction TLT
 .......\hbox(1.7442+1.53764)x2.40974, shifted -1.15996, direction TLT
-........\TU/Livvic(1)/ub/n/7.65 ,
+........\TU/Livvic(0)/ub/n/7.65 ,
 .....\glue(\baselineskip) 1.3623
 .....\hbox(7.1+0.0)x27.79999, direction TLT
-......\TU/Livvic(1)/ub/n/10 M
-......\TU/Livvic(1)/ub/n/10 E
-......\TU/Livvic(1)/ub/n/10 E
+......\TU/Livvic(0)/ub/n/10 M
+......\TU/Livvic(0)/ub/n/10 E
+......\TU/Livvic(0)/ub/n/10 E
 ......\kern0.2 (font)
-......\TU/Livvic(1)/ub/n/10 T
+......\TU/Livvic(0)/ub/n/10 T
 .....\glue(\baselineskip) 1.64
 .....\hbox(7.2+0.11)x31.18001, direction TLT
-......\TU/Livvic(1)/ub/n/10 J
-......\TU/Livvic(1)/ub/n/10 E
+......\TU/Livvic(0)/ub/n/10 J
+......\TU/Livvic(0)/ub/n/10 E
 ......\discretionary (penalty 50)
-.......< \TU/Livvic(1)/ub/n/10 -
-......\TU/Livvic(1)/ub/n/10 S
-......\TU/Livvic(1)/ub/n/10 U
-......\TU/Livvic(1)/ub/n/10 S
+.......< \TU/Livvic(0)/ub/n/10 -
+......\TU/Livvic(0)/ub/n/10 S
+......\TU/Livvic(0)/ub/n/10 U
+......\TU/Livvic(0)/ub/n/10 S
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
