@@ -21,6 +21,19 @@ be installed by running:
 l3build install --full
 ```
 
+You will need to install the fonts below to recompile the documentation.
+
+## Fonts
+
+A number of fonts are distributed with the `afesbrand` package releases:
+
+- [Livvic](https://fonts.google.com/specimen/Livvic)
+    - Licence: OFL-1.1
+- [Poetsen One](https://fonts.google.com/specimen/Poetsen+One)
+    - Licence: OFL-1.1
+- [Phosphor Fill](https://phosphoricons.com/?weight=fill)
+    - Licence: MIT
+
 ## Licence
 
 ```
