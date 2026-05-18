@@ -175,6 +175,10 @@
 
 % tracking code
 
+% initialise \__afesbrand_set_tracking:n here to keep explcheck happy;
+% actual definition is in afesbrand_tracking.lua
+\cs_new_eq:NN \__afesbrand_set_tracking:n \use_none:n
+
 \directlua
   {
     require("afesbrand_tracking.lua")
@@ -1771,7 +1775,8 @@
               [
                 , align  = left
                 , font   = \__afesbrand_font_select:n { size = 8 }
-                , below  = \skip_use:N \g_tmpa_skip ~ of ~ \l_tmpa_tl .base ~ west
+                , below  = \skip_use:N \g_tmpa_skip ~ of ~
+                             \l_tmpa_tl .base ~ west
                 , anchor = base ~ west
                 , yshift = \l_tmpb_tl
               ]
