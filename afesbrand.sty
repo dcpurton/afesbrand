@@ -1552,7 +1552,6 @@
     , width       .initial:n        = 4em
   }
 
-\box_new:N  \l__afesbrand_wave_box
 \dim_new:N  \g__afesbrand_wave_upper_left_dim
 \dim_new:N  \g__afesbrand_wave_lower_right_dim
 \skip_new:N \g__afesbrand_wave_baseline_skip
@@ -1568,7 +1567,7 @@
         { \mode_leave_vertical: }
       \__afesbrand_font_select:n {#1}
       \skip_gset_eq:NN \g__afesbrand_wave_baseline_skip \baselineskip
-      \vbox_set:Nn \l__afesbrand_wave_box
+      \vbox_set:Nn \l_tmpa_box
         {
           \tl_if_empty:NF \l__afesbrand_wave_width_tl
             {
