@@ -182,6 +182,11 @@
 
 % font selection
 
+\tl_new:N \l__afesbrand_font_letterspace_tl
+\tl_new:N \l__afesbrand_font_linespace_tl
+\tl_new:N \l__afesbrand_font_size_tl
+\tl_new:N \l__afesbrand_font_wordspace_tl
+
 \keys_define:nn { afesbrand / font }
   {
     , family      .tl_set:N         = \l__afesbrand_font_family_tl
@@ -366,6 +371,10 @@
 \file_input:n { afesbrand_logos.def }
 \file_input:n { afesbrand_logos_focus.def }
 
+\dim_new:N \l__afesbrand_logo_height_dim
+\dim_new:N \l__afesbrand_logo_width_dim
+\tl_new:N  \l__afesbrand_logo_variant_tl
+
 \keys_define:nn { afesbrand / logo }
   {
     , bgcolor  .meta:n           = { bgcolour = {#1} }
@@ -382,7 +391,7 @@
                                    {
                                      \tl_set_eq:NN
                                        \l__afesbrand_logo_padding_tl
-                                       \l_keys_choice_tl
+                                       \l_keys_choice_str
                                    }
     , padding  .initial:n        = centred
     , variant  .tl_set:N         = \l__afesbrand_logo_variant_tl
@@ -451,6 +460,9 @@
 %%% Brand Mark
 %%%
 
+\dim_new:N \l__afesbrand_mark_height_dim
+\dim_new:N \l__afesbrand_mark_width_dim
+
 \keys_define:nn { afesbrand / mark }
   {
     , bgcolor  .meta:n           = { bgcolour = {#1} }
@@ -474,7 +486,7 @@
                                    {
                                      \tl_set_eq:NN
                                        \l__afesbrand_mark_padding_tl
-                                       \l_keys_choice_tl
+                                       \l_keys_choice_str
                                    }
     , padding  .initial:n        = centred
     , right    .tl_set:N         = \l__afesbrand_mark_right_tl
@@ -739,6 +751,9 @@
     \group_end:
   }
 
+\dim_new:N \l__afesbrand_frame_image_height_dim
+\dim_new:N \l__afesbrand_frame_image_width_dim
+
 \keys_define:nn { afesbrand / frame / image }
   {
     , bgcolor  .meta:n           = { bgcolour = {#1} }
@@ -755,7 +770,7 @@
                                    {
                                      \tl_set_eq:NN
                                        \l__afesbrand_frame_image_padding_tl
-                                       \l_keys_choice_tl
+                                       \l_keys_choice_str
                                    }
     , padding  .initial:n        = centred
     , width  .dim_set:N        = \l__afesbrand_frame_image_width_dim
@@ -846,6 +861,8 @@
 %%%
 %%% Grid System
 %%%
+
+\dim_new:N \l__afesbrand_grid_head_width_dim
 
 \keys_define:nn { afesbrand / grid }
   {
@@ -1028,6 +1045,9 @@
 %%% Hero Graphic
 %%%
 
+\dim_new:N \l__afesbrand_hero_height_dim
+\dim_new:N \l__afesbrand_hero_width_dim
+
 \keys_define:nn { afesbrand / hero }
   {
     , color         .meta:n           = { colour = {#1} }
@@ -1131,6 +1151,8 @@
     Check~for~typos~in~the~icon~name. }
 
 \file_input:n { afesbrand_icons.def }
+
+\dim_new:N \l__afesbrand_icon_size_dim
 
 \keys_define:nn { afesbrand / icon }
   {
@@ -1261,6 +1283,9 @@
 %%% Illustrations
 %%%
 
+\dim_new:N \l__afesbrand_illustration_height_dim
+\dim_new:N \l__afesbrand_illustration_width_dim
+
 \keys_define:nn { afesbrand / illustration }
   {
     , bgcolor  .meta:n           = { bgcolour = {#1} }
@@ -1323,6 +1348,9 @@
     Check~for~typos~in~the~social~post~name~and~type. }
 
 \file_input:n { afesbrand_socials.def }
+
+\dim_new:N \l__afesbrand_social_height_dim
+\dim_new:N \l__afesbrand_social_width_dim
 
 \keys_define:nn { afesbrand / social }
   {
@@ -1397,6 +1425,8 @@
 %%%
 %%% Profile Picture
 %%%
+
+\dim_new:N \l__afesbrand_profile_size_dim
 
 \keys_define:nn { afesbrand / profile }
   {
@@ -1586,6 +1616,9 @@
 %%% Email Signature Block
 %%%
 
+\dim_new:N \l__afesbrand_email_height_dim
+\dim_new:N \l__afesbrand_email_width_dim
+
 \keys_define:nn { afesbrand / email }
   {
     , abn        .tl_set:N         = \l__afesbrand_email_abn_tl
@@ -1639,7 +1672,6 @@
 \box_new:N \l__afesbrand_email_box
 \box_new:N \l__afesbrand_email_block_box
 \dim_new:N \l__afesbrand_email_label_width_dim
-\dim_new:N \l__afesbrand_email_postal_width_dim
 
 \cs_new_protected:Nn \__afesbrand_email_signature:n
   {
@@ -1941,10 +1973,14 @@
       {
         \dim_compare:nNnT
           { \l_tmpa_dim } = { \c_zero_dim }
-          { \dim_set_eq:NN \l_tmpa_dim \c_max_dim }
+          {
+            \dim_set:Nn \l_tmpa_dim { \c_max_dim }
+          }
         \dim_compare:nNnT
           { \l_tmpb_dim } = { \c_zero_dim }
-          { \dim_set_eq:NN \l_tmpb_dim \c_max_dim }
+          {
+            \dim_set:Nn \l_tmpb_dim { \c_max_dim }
+          }
         \box_autosize_to_wd_and_ht:Nnn #3
           { \l_tmpa_dim }
           { \l_tmpb_dim }
