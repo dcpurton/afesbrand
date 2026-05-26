@@ -396,9 +396,17 @@
     , height   .value_required:n = true
     , padding  .choices:nn       = { anchored , centred , none }
                                    {
-                                     \str_set_eq:NN
-                                       \l__afesbrand_logo_padding_str
-                                       \l_keys_choice_str
+                                     \str_if_exist:NTF \l_keys_choice_str
+                                       {
+                                         \str_set_eq:NN
+                                           \l__afesbrand_logo_padding_str
+                                           \l_keys_choice_str
+                                       }
+                                       {
+                                         \str_set:NV
+                                           \l__afesbrand_logo_padding_str
+                                           \l_keys_choice_tl
+                                       }
                                    }
     , padding  .initial:n        = centred
     , variant  .tl_set:N         = \l__afesbrand_logo_variant_tl
@@ -492,9 +500,17 @@
     , left     .value_required:n = true
     , padding  .choices:nn       = { anchored , centred , none }
                                    {
-                                     \str_set_eq:NN
-                                       \l__afesbrand_mark_padding_str
-                                       \l_keys_choice_str
+                                     \str_if_exist:NTF \l_keys_choice_str
+                                       {
+                                         \str_set_eq:NN
+                                           \l__afesbrand_mark_padding_str
+                                           \l_keys_choice_str
+                                       }
+                                       {
+                                         \str_set:NV
+                                           \l__afesbrand_mark_padding_str
+                                           \l_keys_choice_tl
+                                       }
                                    }
     , padding  .initial:n        = centred
     , right    .tl_set:N         = \l__afesbrand_mark_right_tl
@@ -777,9 +793,17 @@
     , height   .value_required:n = true
     , padding  .choices:nn       = { anchored , centred , none }
                                    {
-                                     \str_set_eq:NN
-                                       \l__afesbrand_frame_image_padding_str
-                                       \l_keys_choice_str
+                                     \str_if_exist:NTF \l_keys_choice_str
+                                       {
+                                         \str_set_eq:NN
+                                           \l__afesbrand_frame_image_padding_str
+                                           \l_keys_choice_str
+                                       }
+                                       {
+                                         \str_set:NV
+                                           \l__afesbrand_frame_image_padding_str
+                                           \l_keys_choice_tl
+                                       }
                                    }
     , padding  .initial:n        = centred
     , width  .dim_set:N        = \l__afesbrand_frame_image_width_dim
