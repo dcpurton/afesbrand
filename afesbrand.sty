@@ -379,6 +379,7 @@
 
 \dim_new:N \l__afesbrand_logo_height_dim
 \dim_new:N \l__afesbrand_logo_width_dim
+\str_new:N \l__afesbrand_logo_padding_str
 \tl_new:N  \l__afesbrand_logo_variant_tl
 
 \keys_define:nn { afesbrand / logo }
@@ -395,8 +396,8 @@
     , height   .value_required:n = true
     , padding  .choices:nn       = { anchored , centred , none }
                                    {
-                                     \tl_set_eq:NN
-                                       \l__afesbrand_logo_padding_tl
+                                     \str_set_eq:NN
+                                       \l__afesbrand_logo_padding_str
                                        \l_keys_choice_str
                                    }
     , padding  .initial:n        = centred
@@ -439,7 +440,7 @@
               \cs_if_exist_use:cTF
                 { __afesbrand_logo_#2_ \l__afesbrand_logo_variant_tl :nnn }
                 {
-                  { \l__afesbrand_logo_padding_tl }
+                  { \l__afesbrand_logo_padding_str }
                   { \l__afesbrand_logo_bgcolour_tl }
                   { \l__afesbrand_logo_colour_tl }
                 }
@@ -468,6 +469,7 @@
 
 \dim_new:N \l__afesbrand_mark_height_dim
 \dim_new:N \l__afesbrand_mark_width_dim
+\str_new:N \l__afesbrand_mark_padding_str
 
 \keys_define:nn { afesbrand / mark }
   {
@@ -490,8 +492,8 @@
     , left     .value_required:n = true
     , padding  .choices:nn       = { anchored , centred , none }
                                    {
-                                     \tl_set_eq:NN
-                                       \l__afesbrand_mark_padding_tl
+                                     \str_set_eq:NN
+                                       \l__afesbrand_mark_padding_str
                                        \l_keys_choice_str
                                    }
     , padding  .initial:n        = centred
@@ -530,7 +532,7 @@
               , outer~sep    = 0cm
             ]
             \__afesbrand_logo_brandmark_primary:nnn
-              { \l__afesbrand_mark_padding_tl }
+              { \l__afesbrand_mark_padding_str }
               { \l__afesbrand_mark_bgcolour_tl }
               { \l__afesbrand_mark_colour_tl }
             \tl_if_eq:NnT \l__afesbrand_mark_bgcolour_tl { none }
@@ -759,6 +761,7 @@
 
 \dim_new:N \l__afesbrand_frame_image_height_dim
 \dim_new:N \l__afesbrand_frame_image_width_dim
+\str_new:N \l__afesbrand_frame_image_padding_str
 
 \keys_define:nn { afesbrand / frame / image }
   {
@@ -774,8 +777,8 @@
     , height   .value_required:n = true
     , padding  .choices:nn       = { anchored , centred , none }
                                    {
-                                     \tl_set_eq:NN
-                                       \l__afesbrand_frame_image_padding_tl
+                                     \str_set_eq:NN
+                                       \l__afesbrand_frame_image_padding_str
                                        \l_keys_choice_str
                                    }
     , padding  .initial:n        = centred
@@ -826,17 +829,17 @@
               , outer~sep    = 0cm
             ]
             {
-              \str_if_eq:VnT \l__afesbrand_frame_image_padding_tl { anchored }
+              \str_if_eq:VnT \l__afesbrand_frame_image_padding_str { anchored }
                 {
                   \path [ fill = \l__afesbrand_frame_image_bgcolour_tl ]
                   (-1.7779, 7.4934) rectangle (5.905, 0.0);
                 }
-              \str_if_eq:VnT \l__afesbrand_frame_image_padding_tl { centred }
+              \str_if_eq:VnT \l__afesbrand_frame_image_padding_str { centred }
                 {
                   \path [ fill = \l__afesbrand_frame_image_bgcolour_tl ]
                   (-1.7779, 7.4934) rectangle (5.905, -0.8889);
                 }
-              \str_if_eq:VnT \l__afesbrand_frame_image_padding_tl { none }
+              \str_if_eq:VnT \l__afesbrand_frame_image_padding_str { none }
                 {
                   \path [ fill = \l__afesbrand_frame_image_bgcolour_tl ] (0.0,
                   5.7156) rectangle (4.9148, 0.0);
