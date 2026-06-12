@@ -195,13 +195,10 @@
   {
     , family      .tl_set:N         = \l__afesbrand_font_family_tl
     , family      .value_required:n = true
-    , family      .initial:n        = \familydefault
     , series      .tl_set:N         = \l__afesbrand_font_series_tl
     , series      .value_required:n = true
-    , series      .initial:n        = \seriesdefault
     , shape       .tl_set:N         = \l__afesbrand_font_shape_tl
     , shape       .value_required:n = true
-    , shape       .initial:n        = \shapedefault
     , letterspace .tl_set:N         = \l__afesbrand_font_letterspace_tl
     , letterspace .value_required:n = true
     , linespace   .tl_set:N         = \l__afesbrand_font_linespace_tl
@@ -219,6 +216,9 @@
 \cs_new_protected:Nn \__afesbrand_font_select:n
   {
     \fp_zero:N \l__afesbrand_font_relsize_fp
+    \tl_set:NV \l__afesbrand_font_family_tl \f@family
+    \tl_set:NV \l__afesbrand_font_series_tl \f@series
+    \tl_set:NV \l__afesbrand_font_shape_tl \f@shape
     \tl_set:NV \l__afesbrand_font_size_tl \f@size
     \keys_set_known:nn { afesbrand } {#1}
     \keys_set_known:nn { afesbrand / font } {#1}
@@ -279,7 +279,7 @@
           { l__afesbrand_font_ \l__afesbrand_font_family_tl _tl }
       }
       {
-        \fontfamily \l__afesbrand_font_family_tl
+        \fontfamily { \l__afesbrand_font_family_tl }
       }
     \fontsize
       { \l__afesbrand_font_size_tl }
@@ -312,6 +312,7 @@
       {
         , family      = livvic
         , series      = l
+        , shape       = n
         , linespace   = 1.375
         , letterspace = 0
         , wordspace   = 1
@@ -325,6 +326,7 @@
       {
         , family      = livvic
         , series      = ub
+        , shape       = n
         , relsize     = 3.75
         , linespace   = 0.9175
         , letterspace = -0.94
@@ -340,6 +342,7 @@
         , family      = poetsenone
         , relsize     = 1.625
         , series      = m
+        , shape       = n
         , linespace   = 1
         , letterspace = -5.05
         , wordspace   = 0.765
@@ -353,6 +356,7 @@
       {
         , family      = livvic
         , series      = ub
+        , shape       = n
         , relsize     = 0.9375
         , linespace   = 0.9175
         , letterspace = 10.18
@@ -534,6 +538,7 @@
           , letterspace = 0
           , linespace   = 0.884 ,
           , series      = ub
+          , shape       = n
           , size        = 23.4
           , wordspace   = 1
         }
@@ -703,8 +708,9 @@
           , letterspace = 0
           , linespace   = 0.884
           , series      = ub
-          , size = 17.962
-          , wordspace = 1
+          , shape       = n
+          , size        = 17.962
+          , wordspace   = 1
         }
       \fp_set:Nn \l__afesbrand_frame_scale_fp
         {
@@ -956,6 +962,7 @@
             {
               , family = livvic
               , series = ub
+              , shape  = n
             }
           \skip_horizontal:n { 1ex }
           \textcolor
@@ -1527,13 +1534,13 @@
     , simple      .initial:n        = false
     , style       .choice:
     , style / a   .code:n           = {
-                                        \keys_set_known:nn
-                                          { afesbrand / font }
+                                        \__afesbrand_font_select:n
                                           {
                                             , family      = poetsenone
                                             , letterspace = -5.02
                                             , linespace   = 0.8
                                             , series      = m
+                                            , shape       = n
                                             , wordspace   = 0.765
                                           }
                                         \keys_set_known:nn
@@ -1544,13 +1551,13 @@
                                           }
                                       }
     , style / b   .code:n           = {
-                                        \keys_set_known:nn
-                                          { afesbrand / font }
+                                        \__afesbrand_font_select:n
                                           {
                                             , family      = poetsenone
                                             , letterspace = -5.02
                                             , linespace   = 0.8
                                             , series      = m
+                                            , shape       = n
                                             , wordspace   = 0.765
                                           }
                                         \keys_set_known:nn
@@ -1561,13 +1568,13 @@
                                           }
                                       }
     , style / c   .code:n           = {
-                                        \keys_set_known:nn
-                                          { afesbrand / font }
+                                        \__afesbrand_font_select:n
                                           {
                                             , family      = livvic
                                             , letterspace = 0
                                             , linespace   = 0.8
                                             , series      = ub
+                                            , shape       = n
                                             , wordspace   = 1
                                           }
                                         \keys_set_known:nn
@@ -1740,7 +1747,8 @@
                 , font   = \__afesbrand_font_select:n
                              {
                                , series = ub
-                               , size = 12
+                               , size   = 12
+                               , shape  = n
                              }
                 , text   = hero
                 , right  = of ~ logo.north ~ east
@@ -1755,6 +1763,7 @@
                 {
                   , family      = poetsenone
                   , series      = m
+                  , shape       = n
                   , size        = 9
                   , letterspace = -5
                   , wordspace   = 0.765
@@ -1768,6 +1777,7 @@
                                , family      = poetsenone
                                , series      = m
                                , size        = 9
+                               , shape       = n
                                , letterspace = -5
                                , wordspace   = 0.765
                              }
