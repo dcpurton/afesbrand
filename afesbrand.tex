@@ -23,9 +23,9 @@
     \AFESBrandFontHeadOne, \AFESBrandFontHeadTwo, \AFESBrandFontHeadThree,
     \AFESBrandFontBody, \AFESBrandIcon, \AFESBrandHeroGraphic, \AFESBrandMark,
     \AFESBrandUniMeetJesus, \AFESBrandWaveEffect, \AFESBrandFrameDevice,
-    \AFESBrandGridSystem, \AFESBrandIllustration, \AFESBrandFontSelect,
-    \AFESBrandEmailSignature, \AFESBrandSetColours, \centering, \color, \huge,
-    \colorbox, \textcolor, \raggedright, \quad, \node, \begin, \end
+    \AFESBrandIllustration, \AFESBrandFontSelect, \AFESBrandEmailSignature,
+    \AFESBrandSetColours, \centering, \color, \huge, \colorbox, \textcolor,
+    \raggedright, \quad, \node, \begin, \end
   },
   sensitive=true,
   morecomment=[l]\%
@@ -90,9 +90,14 @@ will set the default logo variant to |vertical| for |\AFESBrandLogo|, but the
 Mostly fonts are fairly hard coded to comply with the style guidelines, so
 defaults can only be set for inner functions occasionally.
 
-The following functions can have inner functions options set:
-\cs{AFESBrandEmailSignature}, \cs{AFESBrandFrameDevice},
-\cs{AFESBrandGridSystem}, \cs{AFESBrandWaveEffect}.
+These functions and environments can have inner functions options set:
+
+\begin{itemize}
+  \item \cs{AFESBrandEmailSignature}
+  \item \cs{AFESBrandFrameDevice}
+  \item |AFESBrandGridSystem|
+  \item \cs{AFESBrandWaveEffect}
+\end{itemize}
 
 \section{Brand Basics}
 
@@ -861,28 +866,36 @@ The following \meta{options} are supported:
 
 \subsection{Grid System}
 
-\begin{function}{\AFESBrandGridSystem}
+\begin{function}{AFESBrandGridSystem}
   \begin{syntax}
-    \oarg{options}\marg{text}
+    \oarg{options}
   \end{syntax}
-  Print and AFES brand grid system with the specified \meta{options}
-  containing \meta{text} in the body area.
+  Print an AFES brand grid system with the specified \meta{options}.
 
   See Figure \ref{gridsystem}.
 \end{function}
 
 \begin{figure}
   \begin{lstlisting}
-\colorbox{neutral}{\AFESBrandGridSystem[body/colour=hero,
-  head/colour=white]{\AFESBrandFontHeadOne\color{accent}COMMS\\
-  \textcolor{white}{TITLE GOES}\\ HERE}}
+\colorbox{neutral}{%
+  \begin{AFESBrandGridSystem}[body/colour=hero,
+      head/colour=white]
+    \AFESBrandFontHeadOne\color{accent}COMMS\\
+    \textcolor{white}{TITLE GOES}\\
+    HERE
+  \end{AFESBrandGridSystem}%
+}
   \end{lstlisting}
   
   \setlength{\fboxsep}{5mm}%
-  \colorbox{neutral}{\AFESBrandGridSystem[body/colour=hero,
-    head/colour=white, head/width=\dimexpr\linewidth-1cm]{%
-    \AFESBrandFontHeadOne\color{accent}COMMS\\
-    \textcolor{white}{TITLE GOES}\\ HERE}}
+  \colorbox{neutral}{%
+    \begin{AFESBrandGridSystem}[body/colour=hero,
+        head/colour=white, head/width=\dimexpr\linewidth-1cm]
+      \AFESBrandFontHeadOne\color{accent}COMMS\\
+      \textcolor{white}{TITLE GOES}\\
+      HERE
+    \end{AFESBrandGridSystem}%
+  }
   \caption{Example AFES brand grid system}\label{gridsystem}
 \end{figure}
 
@@ -892,8 +905,10 @@ The following \meta{options} are supported:
   \item[body] A \meta{boolean} value specifying whether to include the body
     (and sidebar) or not. Default: |true|
   \item[body/colour] The colour of the body. Default: |neutral|
-\item[body/height] The height of the body. Default: \emph{Natural height of
-  content}
+  \item[body/height] The height of the body. Default: \emph{Natural height of
+    content}
+  \item[head] A \meta{boolean} value specifying whether to include the header.
+    Default: |true|
   \item[head/colour] The colour of the header. Default: |hero|
   \item[head/height] The height of the header. Default: |2cm|
   \item[head/width] The width of the header. Default: |\linewidth|
@@ -913,6 +928,9 @@ The following \meta{options} are supported:
   \item[sidebar] A \meta{boolean} value specifying whether to include the
     sidebar or note. Default: |true|
   \item[sidebar/colour] The colour of the sidebar. Default: |accent|
+  \item[sidebar/width] The width of the |sidebar| unless less the |url| is
+    shown and wider than the specified width. If |0pt| then the natural
+    width of the |url| is used. Default: 0pt
   \item[url] A \meta{boolean} value specifying whether to include the AFES URL
     in the header. Default: |true|
   \item[url/colour] The colour of the AFES URL. Default: |body/colour|
