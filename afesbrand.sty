@@ -914,6 +914,9 @@
     , body / colour    .initial:n        = neutral
     , body / height    .dim_set:N        = \l__afesbrand_grid_body_height_dim
     , body / height    .value_required:n = true
+    , head             .bool_set:N       = \l__afesbrand_grid_head_bool
+    , head             .default:n        = true
+    , head             .initial:n        = true
     , head / color     .meta:n           = { colour = {#1} }
     , head / colour    .tl_set:N         = \l__afesbrand_grid_head_colour_tl
     , head / colour    .value_required:n = true
@@ -934,6 +937,9 @@
     , sidebar / colour .tl_set:N         = \l__afesbrand_grid_sidebar_colour_tl
     , sidebar / colour .value_required:n = true
     , sidebar / colour .initial:n        = accent
+    , sidebar / width  .dim_set:N        = \l__afesbrand_grid_sidebar_width_dim
+    , sidebar / width  .value_required:n = true
+    , sidebar / width  .initial:n        = 0pt
     , url              .bool_set:N       = \l__afesbrand_grid_url_bool
     , url              .default:n        = true
     , url              .initial:n        = true
@@ -947,7 +953,6 @@
 \box_new:N \l__afesbrand_grid_url_box
 \dim_new:N \l__afesbrand_grid_body_text_width_dim
 \dim_new:N \l__afesbrand_grid_body_xshift_dim
-\dim_new:N \l__afesbrand_grid_sidebar_width_dim
 
 \cs_new_protected:Nn \__afesbrand_grid_system:nn
   {
@@ -976,9 +981,40 @@
         { 1ex + \box_dp:N \l__afesbrand_grid_url_box }
       \box_resize_to_wd:Nn \l__afesbrand_grid_url_box
         { \l__afesbrand_grid_head_height_dim }
+      \dim_set:Nn \l_tmpa_dim
+        { \box_ht_plus_dp:N \l__afesbrand_grid_url_box }
+      \dim_compare:nNnT
+        { \l__afesbrand_grid_sidebar_width_dim } > { \l_tmpa_dim }
+        {
+          \dim_set:Nn \l_tmpb_dim
+            {
+              ( \l__afesbrand_grid_sidebar_width_dim - \l_tmpa_dim ) / 2
+            }
+          \box_set_ht:Nn \l__afesbrand_grid_url_box
+            {
+              \box_ht:N \l__afesbrand_grid_url_box + \l_tmpb_dim
+            }
+          \box_set_dp:Nn \l__afesbrand_grid_url_box
+            {
+              \box_dp:N \l__afesbrand_grid_url_box + \l_tmpb_dim
+            }
+        }
       \box_rotate:Nn \l__afesbrand_grid_url_box { 90 }
-      \dim_set:Nn \l__afesbrand_grid_sidebar_width_dim
-        { \box_wd:N \l__afesbrand_grid_url_box }
+      \bool_lazy_and:nnTF
+        { \l__afesbrand_grid_url_bool }
+        { \l__afesbrand_grid_head_bool }
+        {
+          \dim_set:Nn \l__afesbrand_grid_sidebar_width_dim
+            { \box_wd:N \l__afesbrand_grid_url_box }
+        }
+        {
+          \dim_compare:nNnT
+            { \l__afesbrand_grid_sidebar_width_dim } = { \c_zero_dim }
+            {
+              \dim_set:Nn \l__afesbrand_grid_sidebar_width_dim
+                { \box_wd:N \l__afesbrand_grid_url_box }
+            }
+        }
       \bool_if:NTF \l__afesbrand_grid_sidebar_bool
         {
           \dim_set_eq:NN
@@ -1027,29 +1063,35 @@
           , nonzero~rule = true
           , outer~sep    = 0cm
         ]
-        \node
-          ( head )
-          [
-            , align      = right
-            , fill       = \l__afesbrand_grid_head_colour_tl
-            , text~width = \l__afesbrand_grid_head_width_dim
-          ]
+        \bool_if:NTF \l__afesbrand_grid_head_bool
           {
-            \bool_if:NT \l__afesbrand_grid_url_bool
+            \node
+              ( head )
+              [
+                , align      = right
+                , fill       = \l__afesbrand_grid_head_colour_tl
+                , text~width = \l__afesbrand_grid_head_width_dim
+              ]
               {
-                \box_use_drop:N \l__afesbrand_grid_url_box
-              }
-            \hfill
-            \__afesbrand_logo:nn
-              {
-                , logo / colour  = \l__afesbrand_grid_body_colour_tl
-                , logo / height  = \l__afesbrand_grid_head_height_dim
-                , logo / padding = anchored
-                , logo / variant = primarytagline
-                , #1
-              }
-              { \l__afesbrand_grid_logo_tl }
-          } ;
+                \bool_if:NT \l__afesbrand_grid_url_bool
+                  {
+                    \box_use_drop:N \l__afesbrand_grid_url_box
+                  }
+                \hfill
+                \__afesbrand_logo:nn
+                  {
+                    , logo / colour  = \l__afesbrand_grid_body_colour_tl
+                    , logo / height  = \l__afesbrand_grid_head_height_dim
+                    , logo / padding = anchored
+                    , logo / variant = primarytagline
+                    , #1
+                  }
+                  { \l__afesbrand_grid_logo_tl }
+              } ;
+          }
+          {
+            \coordinate ( head ) at ( 0 , 0 ) ;
+          }
         \bool_if:NT \l__afesbrand_grid_body_bool
           {
             \node

@@ -1,0 +1,15 @@
+\documentclass{article}
+\input{regression-test}
+\usepackage{afesbrand}
+\pagestyle{empty}
+\parindent 0pt
+\begin{document}
+\START
+\showoutput
+\begin{AFESBrandGridSystem}[head=false]
+  \AFESBrandFontSelect{family=livvic, series=b, size=\huge}%
+  A line of text.
+
+  Another line of text.
+\end{AFESBrandGridSystem}
+\end{document}

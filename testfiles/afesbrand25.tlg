@@ -1,0 +1,184 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0, direction TLT
+.\hbox(0.0+0.0)x0.0, direction TLT
+..\kern-72.26999
+..\vbox(0.0+0.0)x0.0, glue set 72.26999fil, direction TLT
+...\kern-72.26999
+...\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(0.0+0.0)x0.0, glue set 72.26999fil, shifted 72.26999, direction TLT
+.....\kern-72.26999
+.....\glue 0.0 plus 1.0fil minus 1.0fil
+....\glue 0.0 plus 1.0fil minus 1.0fil
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0, direction TLT
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil, direction TLT
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 push {0 g 0 G}
+....\hbox(0.0+0.0)x345.0, direction TLT
+....\pdfcolorstack 0 pop
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 477.92221fil, direction TLT
+...\write-{}
+...\pdfcolorstack 0 push {0 g 0 G}
+...\glue(\topskip) 0.0
+...\hbox(72.02673+0.0)x345.0, direction TLT
+....\localpar
+.....\localinterlinepenalty=0
+.....\localbrokenpenalty=0
+.....\localleftbox=null
+.....\localrightbox=null
+....\hbox(0.0+0.0)x0.0, direction TLT
+....\hbox(72.02673+0.0)x345.0, direction TLT
+.....\glue 0.0
+.....\hbox(0.0+0.0)x0.0, shifted -72.02673, direction TLT
+......\pdfliteral origin{q }
+......\pdfliteral origin{0 G }
+......\pdfliteral origin{0 g }
+......\pdfliteral origin{0.3985 w }
+......\hbox(0.0+0.0)x0.0, direction TLT
+.......\pdfliteral origin{q }
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\pdfliteral origin{q }
+.........\glue(\spaceskip) 0.0
+.........\pdfliteral origin{Q }
+.......\hbox(0.0+0.0)x0.0, direction TLT
+........\hbox(0.0+0.0)x0.0, direction TLT
+.........\pdfliteral origin{q }
+.........\pdfliteral origin{0.90196 0.90196 0.87451 rg }
+.........\glue(\spaceskip) 0.0
+.........\glue(\spaceskip) 0.0
+.........\glue(\spaceskip) 0.0
+.........\glue(\spaceskip) 0.0
+.........\pdfliteral origin{q }
+.........\pdfliteral origin{0.90196 0.90196 0.87451 rg }
+.........\pdfliteral origin{15.56363 -71.75856 328.15187 71.75856 re }
+.........\pdfliteral origin{f }
+.........\glue(\spaceskip) 0.0
+.........\pdfliteral origin{Q }
+.........\pdfliteral origin{q }
+.........\hbox(0.0+0.0)x0.0, direction TLT
+..........\glue 31.24359
+..........\hbox(0.0+0.0)x0.0, shifted 31.19754, direction TLT
+...........\pdfliteral origin{1.0 0.0 0.0 1.0 0.0 0.0 cm }
+...........\pdfliteral origin{q }
+...........\hbox(0.0+0.0)x0.0, direction TLT
+............\hbox(15.57574+25.2074)x298.13461, direction TLT
+.............\pdfliteral origin{0 G }
+.............\pdfliteral origin{0 g }
+.............\hbox(15.57574+25.2074)x298.13461, direction TLT
+..............\vbox(15.57574+25.2074)x298.13461, direction TLT
+...............\hbox(15.57574+0.2074)x298.13461, glue set 82.87558fil, direction TLT
+................\localpar
+.................\localinterlinepenalty=0
+.................\localbrokenpenalty=0
+.................\localleftbox=null
+.................\localrightbox=null
+................\hbox(0.0+0.0)x0.0, direction TLT
+................\hbox(0.0+0.0)x0.0, direction TLT
+................\TU/Livvic(0)/b/n/20.74 A
+................\glue(\spaceskip) 5.22649 plus 2.61061 minus 1.7439
+................\TU/Livvic(0)/b/n/20.74 l
+................\TU/Livvic(0)/b/n/20.74 i
+................\TU/Livvic(0)/b/n/20.74 n
+................\TU/Livvic(0)/b/n/20.74 e
+................\glue(\spaceskip) 5.22649 plus 2.61324 minus 1.74216
+................\TU/Livvic(0)/b/n/20.74 o
+................\TU/Livvic(0)/b/n/20.74 f
+................\glue(\spaceskip) 5.22649 plus 2.61324 minus 1.74216
+................\TU/Livvic(0)/b/n/20.74 t
+................\kern-0.2074 (font)
+................\TU/Livvic(0)/b/n/20.74 e
+................\kern0.04147 (font)
+................\TU/Livvic(0)/b/n/20.74 x
+................\TU/Livvic(0)/b/n/20.74 t
+................\kern0.4148 (font)
+................\TU/Livvic(0)/b/n/20.74 .
+................\penalty 10000
+................\glue(\parfillskip) 0.0 plus 1.0fil
+................\glue(\rightskip) 0.0 plus 1.0fil
+...............\glue(\parskip) 0.0
+...............\glue(\parskip) 0.0
+...............\glue(\baselineskip) 9.21686
+...............\hbox(15.57574+0.2074)x298.13461, glue set 49.28714fil, direction TLT
+................\localpar
+.................\localinterlinepenalty=0
+.................\localbrokenpenalty=0
+.................\localleftbox=null
+.................\localrightbox=null
+................\hbox(0.0+0.0)x0.0, direction TLT
+................\TU/Livvic(0)/b/n/20.74 A
+................\TU/Livvic(0)/b/n/20.74 n
+................\discretionary (penalty 50)
+.................< \TU/Livvic(0)/b/n/20.74 -
+................\TU/Livvic(0)/b/n/20.74 o
+................\kern-0.1037 (font)
+................\TU/Livvic(0)/b/n/20.74 t
+................\TU/Livvic(0)/b/n/20.74 h
+................\TU/Livvic(0)/b/n/20.74 e
+................\TU/Livvic(0)/b/n/20.74 r
+................\glue(\spaceskip) 5.22649 plus 2.61324 minus 1.74216
+................\TU/Livvic(0)/b/n/20.74 l
+................\TU/Livvic(0)/b/n/20.74 i
+................\TU/Livvic(0)/b/n/20.74 n
+................\TU/Livvic(0)/b/n/20.74 e
+................\glue(\spaceskip) 5.22649 plus 2.61324 minus 1.74216
+................\TU/Livvic(0)/b/n/20.74 o
+................\TU/Livvic(0)/b/n/20.74 f
+................\glue(\spaceskip) 5.22649 plus 2.61324 minus 1.74216
+................\TU/Livvic(0)/b/n/20.74 t
+................\kern-0.2074 (font)
+................\TU/Livvic(0)/b/n/20.74 e
+................\kern0.04147 (font)
+................\TU/Livvic(0)/b/n/20.74 x
+................\TU/Livvic(0)/b/n/20.74 t
+................\kern0.4148 (font)
+................\TU/Livvic(0)/b/n/20.74 .
+................\penalty 10000
+................\glue(\parfillskip) 0.0 plus 1.0fil
+................\glue(\rightskip) 0.0 plus 1.0fil
+.............\glue(\spaceskip) 0.0
+...........\pdfliteral origin{Q }
+...........\glue(\spaceskip) 0.0
+..........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\pdfliteral origin{Q }
+.........\glue(\spaceskip) 0.0
+.........\pdfliteral origin{Q }
+.......\glue(\spaceskip) 0.0
+.......\glue(\spaceskip) 0.0
+.......\pdfliteral origin{q }
+.......\pdfliteral origin{0.60393 0.85098 0.91374 rg }
+.......\pdfliteral origin{0.0 0.0 m }
+.......\pdfliteral origin{0.0 0.0 m }
+.......\pdfliteral origin{0.0 -71.75856 l }
+.......\pdfliteral origin{15.56363 -71.75856 l }
+.......\pdfliteral origin{15.56363 0.0 l }
+.......\pdfliteral origin{h }
+.......\pdfliteral origin{15.56363 -71.75856 m }
+.......\pdfliteral origin{f }
+.......\glue(\spaceskip) 0.0
+.......\pdfliteral origin{Q }
+.......\glue(\spaceskip) 0.0
+.......\pdfliteral origin{Q }
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+......\pdfliteral origin{n }
+......\pdfliteral origin{Q }
+......\glue 0.0 plus 1.0fil minus 1.0fil
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 push {0 g 0 G}
+...\hbox(0.0+0.0)x345.0, direction TLT
+...\pdfcolorstack 0 pop
+.\kern0.0
+(afesbrand25.aux)
