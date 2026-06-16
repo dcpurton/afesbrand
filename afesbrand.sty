@@ -2228,13 +2228,6 @@
       { \__afesbrand_frame_image:nn {#1} {#2} }
   }
 
-\NewDocumentCommand { \AFESBrandGridSystem } { o+m }
-  {
-    \tl_if_novalue:nTF {#1}
-      { \__afesbrand_grid_system:nn { }  {#2} }
-      { \__afesbrand_grid_system:nn {#1} {#2} }
-  }
-
 \NewDocumentCommand { \AFESBrandHeroGraphic } { om }
   {
     \tl_if_novalue:nTF {#1}
@@ -2318,6 +2311,15 @@
       { \__afesbrand_wave_effect:nn { }  {#2} }
       { \__afesbrand_wave_effect:nn {#1} {#2} }
   }
+
+\NewDocumentEnvironment { AFESBrandGridSystem } { o+b }
+  {
+    \tl_if_novalue:nTF {#1}
+      { \__afesbrand_grid_system:nn { }  {#2} }
+      { \__afesbrand_grid_system:nn {#1} {#2} }
+    \ignorespaces
+  }
+  { }
 
 \NewDocumentEnvironment { AFESBrandSocialPost } { om }
   {
