@@ -19,19 +19,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_national_primary:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (6.1925, 0.5302);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (6.1925, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (1.0605, 3.9395) rectangle (5.6019, 0.5302);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0 , 5.0 , 6.1925 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.0605 , 3.9395 , 5.6019 , 0.5302 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (4.0009, 2.3414).. controls (3.9697, 2.3414) and (3.9382,
     2.345) .. (3.9062, 2.3522).. controls (3.8743, 2.3594) and (3.8445, 2.3714)
     .. (3.8169, 2.3881).. controls (3.7894, 2.4049) and (3.766, 2.4279) ..
@@ -133,19 +125,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_national_primarytagline:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (8.3388, 0.5302);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (8.3388, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (1.0605, 3.9395) rectangle (7.7483, 0.5302);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0 , 5.0 , 8.3388 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.0605 , 3.9395 , 7.7483 , 0.5302 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (6.515, 2.2784).. controls (6.4841, 2.2784) and (6.46,
     2.2858) .. (6.4426, 2.3007).. controls (6.4253, 2.3156) and (6.4155,
     2.3373) .. (6.4132, 2.3653).. controls (6.4346, 2.3686) and (6.4559,
@@ -407,19 +391,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_national_vertical:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (0.0, 9.921) rectangle (5.0, 0.5735);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (0.0, 9.921) rectangle (5.0, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (1.147, 8.774) rectangle (4.3612, 0.5735);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0 , 9.921 , 5.0 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.147 , 8.774 , 4.3612 , 0.5735 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (2.4943, 2.5624).. controls (2.3611, 2.5624) and (2.2573,
     2.5907) .. (2.1828, 2.6473).. controls (2.1083, 2.704) and (2.0661, 2.7864)
     .. (2.0562, 2.8947) -- (2.3319, 2.935).. controls (2.3338, 2.8972) and
@@ -466,19 +442,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_national_verticaltagline:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (0.0, 12.3536) rectangle (5.0, 0.5735);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (0.0, 12.3536) rectangle (5.0, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (1.147, 11.2066) rectangle (4.3612, 0.5735);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0 , 12.3536 , 5.0 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.147, 11.2066 , 4.3612 , 0.5735 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (3.0138, 2.4604).. controls (2.9796, 2.4604) and (2.9528,
     2.4686) .. (2.9337, 2.4851).. controls (2.9145, 2.5016) and (2.9036,
     2.5256) .. (2.9011, 2.5566).. controls (2.9247, 2.5602) and (2.9484,
@@ -679,19 +647,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_tagline_primary:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (4.5827, 0.5302);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (4.5827, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (1.0605, 3.9395) rectangle (3.9921, 0.5302);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0, 5.0 , 4.5827 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.0605 , 3.9395 , 3.9921 , 0.5302 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (2.7511, 2.2761).. controls (2.7202, 2.2761) and (2.696,
     2.2835) .. (2.6787, 2.2984).. controls (2.6614, 2.3133) and (2.6516,
     2.3349) .. (2.6493, 2.363).. controls (2.6706, 2.3662) and (2.692, 2.3692)
@@ -873,19 +833,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_tagline_secondary:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (5.6606, 1.3719);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (0.0, 5.0) rectangle (5.6606, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (1.3719, 3.6281) rectangle (4.2887, 1.3719);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0 , 5.0 , 5.6606 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.3719 , 3.6281 , 4.2887 , 1.3719 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (4.0198, 1.3728).. controls (3.9398, 1.3728) and (3.8774,
     1.3919) .. (3.8325, 1.4305).. controls (3.7878, 1.4691) and (3.7623,
     1.5251) .. (3.7564, 1.5975).. controls (3.8116, 1.606) and (3.8669, 1.6138)
@@ -1062,19 +1014,11 @@
 
 \cs_new_protected:Nn \__afesbrand_logo_brandmark_primary:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        \path[fill=#2] (-2.0178, 9.8627) rectangle (8.0567, 0.0);
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        \path[fill=#2] (-2.0178, 9.8627) rectangle (8.0567, -1.0089);
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        \path[fill=#2] (0.0, 7.8449) rectangle (6.9302, 0.0);
-      }
+    \__afesbrand_padding_set:nn { centred }
+      { -2.0178 , 9.8627 , 8.0567 , -1.0089 }
+    \__afesbrand_padding_set:nn { none }
+      { 0.0 , 7.8449 , 6.9302 , 0.0 }
+    \__afesbrand_padding_draw:nn {#1} {#2}
     \path[fill=#3] (0.0, 7.8449) -- (0.0, 1.9554) -- (3.4951, 1.9554) --
     (3.4951, 3.0138) -- (1.0583, 3.0138) -- (1.0583, 6.7866) -- (4.9806,
     6.7866) -- (4.9806, 4.5865) -- (6.039, 4.5865) -- (6.039, 7.8449) --

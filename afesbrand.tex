@@ -144,6 +144,9 @@ The following \meta{options} are supported:
       \item[none] The logo is printed without padding.
 
         \AFESBrandLogo[bgcolour=neutral, height=1cm, padding=none]{national}
+
+      \item[{[north] [east] [south] [west]}] The logo is printed with padding
+        on the specified sides.
     \end{description}
   \item[variant] Print a logo variant. See below for defined values of
     |variant| for each supported \meta{logo}.
@@ -198,24 +201,17 @@ specified for coordinates it is assumed to be |cm|.
 \begin{lstlisting}[float, caption={Template for adding new logos}, label=newlogos]
 \cs_new_protected:Nn \__afesbrand_logo_<name>_<variant>:nnn
   {
-    \str_set:Ne \l_tmpa_str {#1}
-    % Paths assume a default unit of cm
-    \str_if_eq:VnT \l_tmpa_str { anchored }
-      {
-        % path for the anchored bounding box
-        \path[fill=#2] ...;
-      }
-    \str_if_eq:VnT \l_tmpa_str { centred }
-      {
-        % path for centred bounding box
-        \path[fill=#2] ...;
-      }
-    \str_if_eq:VnT \l_tmpa_str { none }
-      {
-        % path for the unpadded bounding box
-        \path[fill=#2] ...;
-      }
+    % padding values assume a default unit of cm
+    % order of values is: upperx, uppery, lowerx, lowery
+    \__afesbrand_padding_set:nn { centred }
+      { 0.0 , 5.0 , 6.1925 , 0.0 }
+    \__afesbrand_padding_set:nn { none }
+      { 1.0605 , 3.9395 , 5.6019 , 0.5302 }
+    % #1: some combination of north south east west separated by spaces
+    % #2: colour for the background
+    \__afesbrand_padding_draw:nn {#1} {#2}
     % path for logo
+    % #3: colour of logo
     \path[fill=#3] ...;
   }
 \end{lstlisting}
@@ -698,6 +694,8 @@ The following \meta{options} are supported:
       \item[centred] The brand mark is centred with padding equal to twice the
         height of the top of the cross. This is the default.
       \item[none] The brand mark is printed without padding.
+      \item[{[north] [east] [south] [west]}] The brand mark is printed with
+        padding on the specified sides.
     \end{description}
   \item[right] Text on the right of the brand mark.
   \item[top] Text on the top of the brand mark.
@@ -856,6 +854,8 @@ The following \meta{options} are supported:
       \item[centred] The image frame is centred with padding equal to twice
         the height of the top of the cross. This is the default.
       \item[none] The image frame is printed without padding.
+      \item[{[north] [east] [south] [west]}] The image frame is printed with
+        padding on the specified sides.
     \end{description}
   \item[width] Set the width of the image frame (including any |padding|).  If
     both |height| and |width| are specified the image frame will be scaled to
