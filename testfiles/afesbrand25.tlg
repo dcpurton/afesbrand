@@ -39,7 +39,7 @@ Completed box being shipped out [1]
 ......\pdfliteral origin{q }
 ......\pdfliteral origin{0 G }
 ......\pdfliteral origin{0 g }
-......\pdfliteral origin{0.3985 w }
+......\pdfliteral origin{0.39851 w }
 ......\hbox(0.0+0.0)x0.0, direction TLT
 .......\pdfliteral origin{q }
 .......\hbox(0.0+0.0)x0.0, direction TLT
@@ -57,7 +57,7 @@ Completed box being shipped out [1]
 .........\glue(\spaceskip) 0.0
 .........\pdfliteral origin{q }
 .........\pdfliteral origin{0.90196 0.90196 0.87451 rg }
-.........\pdfliteral origin{15.56363 -71.75856 328.15187 71.75856 re }
+.........\pdfliteral origin{15.56345 -71.75764 328.14766 71.75764 re }
 .........\pdfliteral origin{f }
 .........\glue(\spaceskip) 0.0
 .........\pdfliteral origin{Q }
@@ -72,6 +72,7 @@ Completed box being shipped out [1]
 .............\pdfliteral origin{0 G }
 .............\pdfliteral origin{0 g }
 .............\hbox(15.57574+25.2074)x298.13461, direction TLT
+..............\begindir TLT
 ..............\vbox(15.57574+25.2074)x298.13461, direction TLT
 ...............\hbox(15.57574+0.2074)x298.13461, glue set 82.87558fil, direction TLT
 ................\localpar
@@ -142,6 +143,7 @@ Completed box being shipped out [1]
 ................\penalty 10000
 ................\glue(\parfillskip) 0.0 plus 1.0fil
 ................\glue(\rightskip) 0.0 plus 1.0fil
+..............\enddir TLT
 .............\glue(\spaceskip) 0.0
 ...........\pdfliteral origin{Q }
 ...........\glue(\spaceskip) 0.0
@@ -155,11 +157,11 @@ Completed box being shipped out [1]
 .......\pdfliteral origin{0.60393 0.85098 0.91374 rg }
 .......\pdfliteral origin{0.0 0.0 m }
 .......\pdfliteral origin{0.0 0.0 m }
-.......\pdfliteral origin{0.0 -71.75856 l }
-.......\pdfliteral origin{15.56363 -71.75856 l }
-.......\pdfliteral origin{15.56363 0.0 l }
+.......\pdfliteral origin{0.0 -71.75764 l }
+.......\pdfliteral origin{15.56345 -71.75764 l }
+.......\pdfliteral origin{15.56345 0.0 l }
 .......\pdfliteral origin{h }
-.......\pdfliteral origin{15.56363 -71.75856 m }
+.......\pdfliteral origin{15.56345 -71.75764 m }
 .......\pdfliteral origin{f }
 .......\glue(\spaceskip) 0.0
 .......\pdfliteral origin{Q }

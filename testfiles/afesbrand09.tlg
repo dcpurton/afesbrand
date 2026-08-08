@@ -40,7 +40,7 @@ Completed box being shipped out [1]
 .......\pdfliteral origin{q }
 .......\pdfliteral origin{0 G }
 .......\pdfliteral origin{0 g }
-.......\pdfliteral origin{0.3985 w }
+.......\pdfliteral origin{0.39851 w }
 .......\hbox(0.0+0.0)x0.0, direction TLT
 ........\pdfliteral origin{q }
 ........\glue(\spaceskip) 0.0
@@ -69,29 +69,29 @@ Completed box being shipped out [1]
 ........\glue(\spaceskip) 0.0
 ........\pdfliteral origin{q }
 ........\pdfliteral origin{0.20392 0.38039 0.23137 rg }
-........\pdfliteral origin{0.0 222.37772 m }
-........\pdfliteral origin{0.0 55.42929 l }
-........\pdfliteral origin{99.07498 55.42929 l }
-........\pdfliteral origin{99.07498 85.43143 l }
-........\pdfliteral origin{29.99951 85.43143 l }
-........\pdfliteral origin{29.99951 192.37862 l }
-........\pdfliteral origin{141.18428 192.37862 l }
-........\pdfliteral origin{141.18428 130.0127 l }
-........\pdfliteral origin{171.18642 130.0127 l }
-........\pdfliteral origin{171.18642 222.37772 l }
+........\pdfliteral origin{0.0 222.37486 m }
+........\pdfliteral origin{0.0 55.42859 l }
+........\pdfliteral origin{99.07372 55.42859 l }
+........\pdfliteral origin{99.07372 85.43034 l }
+........\pdfliteral origin{29.99915 85.43034 l }
+........\pdfliteral origin{29.99915 192.37614 l }
+........\pdfliteral origin{141.18246 192.37614 l }
+........\pdfliteral origin{141.18246 130.01103 l }
+........\pdfliteral origin{171.18422 130.01103 l }
+........\pdfliteral origin{171.18422 222.37486 l }
 ........\pdfliteral origin{h }
-........\pdfliteral origin{141.01949 114.02782 m }
-........\pdfliteral origin{141.01949 85.43143 l }
-........\pdfliteral origin{115.59836 85.43143 l }
-........\pdfliteral origin{115.59836 55.42929 l }
-........\pdfliteral origin{141.01949 55.42929 l }
-........\pdfliteral origin{141.01949 0.0 l }
-........\pdfliteral origin{171.02205 0.0 l }
-........\pdfliteral origin{171.02205 55.42929 l }
-........\pdfliteral origin{194.44788 55.42929 l }
-........\pdfliteral origin{196.44923 85.43143 l }
-........\pdfliteral origin{171.02205 85.43143 l }
-........\pdfliteral origin{171.02205 114.02782 l }
+........\pdfliteral origin{141.01768 114.02635 m }
+........\pdfliteral origin{141.01768 85.43034 l }
+........\pdfliteral origin{115.59688 85.43034 l }
+........\pdfliteral origin{115.59688 55.42859 l }
+........\pdfliteral origin{141.01768 55.42859 l }
+........\pdfliteral origin{141.01768 0.0 l }
+........\pdfliteral origin{171.01987 0.0 l }
+........\pdfliteral origin{171.01987 55.42859 l }
+........\pdfliteral origin{194.44539 55.42859 l }
+........\pdfliteral origin{196.44672 85.43034 l }
+........\pdfliteral origin{171.01987 85.43034 l }
+........\pdfliteral origin{171.01987 114.02635 l }
 ........\pdfliteral origin{h }
 ........\pdfliteral origin{f }
 ........\glue(\spaceskip) 0.0
@@ -121,6 +121,7 @@ Completed box being shipped out [1]
 ..............\pdfliteral origin{1 G }
 ..............\pdfliteral origin{1 g }
 ..............\hbox(16.614+0.2574)x130.77473, direction TLT
+...............\begindir TLT
 ...............\vbox(16.614+0.2574)x130.77473, direction TLT
 ................\hbox(16.614+0.2574)x130.77473, glue set 87.27414fil, direction TLT
 .................\localpar
@@ -139,6 +140,7 @@ Completed box being shipped out [1]
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0 plus 1.0fil
 .................\glue(\rightskip) 0.0 plus 46.79999
+...............\enddir TLT
 ..............\glue(\spaceskip) 0.0
 ............\pdfliteral origin{Q }
 ............\glue(\spaceskip) 0.0
@@ -172,6 +174,7 @@ Completed box being shipped out [1]
 ..............\pdfliteral origin{1 G }
 ..............\pdfliteral origin{1 g }
 ..............\hbox(16.614+0.0)x128.45853, direction TLT
+...............\begindir TLT
 ...............\vbox(16.614+0.0)x128.45853, direction TLT
 ................\hbox(16.614+0.0)x128.45853, glue set 63.40656fil, direction TLT
 .................\localpar
@@ -192,6 +195,7 @@ Completed box being shipped out [1]
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0 plus 1.0fil
 .................\glue(\rightskip) 0.0 plus 46.79999
+...............\enddir TLT
 ..............\glue(\spaceskip) 0.0
 ............\pdfliteral origin{Q }
 ............\glue(\spaceskip) 0.0
@@ -225,6 +229,7 @@ Completed box being shipped out [1]
 ..............\pdfliteral origin{1 G }
 ..............\pdfliteral origin{1 g }
 ..............\hbox(16.84799+0.2574)x79.45723, direction TLT
+...............\begindir TLT
 ...............\vbox(16.84799+0.2574)x79.45723, direction TLT
 ................\hbox(16.84799+0.2574)x79.45723, glue set 0.13881, direction TLT
 .................\glue(\leftskip) 0.0 plus 46.79999
@@ -248,6 +253,7 @@ Completed box being shipped out [1]
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0
 .................\glue(\rightskip) 0.0
+...............\enddir TLT
 ..............\glue(\spaceskip) 0.0
 ............\pdfliteral origin{Q }
 ............\glue(\spaceskip) 0.0
@@ -281,6 +287,7 @@ Completed box being shipped out [1]
 ..............\pdfliteral origin{0.20392 0.38039 0.23137 RG }
 ..............\pdfliteral origin{0.20392 0.38039 0.23137 rg }
 ..............\hbox(0.0+0.0)x98.34686, direction TLT
+...............\begindir TLT
 ...............\vbox(0.0+0.0)x98.34686, direction TLT
 ................\hbox(0.0+0.0)x98.34686, glue set 0.94765, direction TLT
 .................\glue(\leftskip) 0.0 plus 51.89001
@@ -296,6 +303,7 @@ Completed box being shipped out [1]
 .................\penalty 10000
 .................\glue(\parfillskip) 0.0
 .................\glue(\rightskip) 0.0 plus 51.89001
+...............\enddir TLT
 ..............\glue(\spaceskip) 0.0
 ............\pdfliteral origin{Q }
 ............\glue(\spaceskip) 0.0
@@ -329,9 +337,11 @@ Completed box being shipped out [1]
 ..............\pdfliteral origin{0.20392 0.38039 0.23137 RG }
 ..............\pdfliteral origin{0.20392 0.38039 0.23137 rg }
 ..............\hbox(0.0+0.0)x0.0, direction TLT
+...............\begindir TLT
 ...............\pdfcolorstack 0 push {0.20392 0.38039 0.23137 rg 0.20392 0.38039 0.23137 RG}
 ...............\hbox(0.0+0.0)x0.0, direction TLT
 ...............\pdfcolorstack 0 pop
+...............\enddir TLT
 ..............\glue(\spaceskip) 0.0
 ............\pdfliteral origin{Q }
 ............\glue(\spaceskip) 0.0
